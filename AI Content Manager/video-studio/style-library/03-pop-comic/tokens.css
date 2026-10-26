@@ -1,0 +1,73 @@
+/* ============================================================================
+   Comic Brand Style — Style Tokens for Video & HyperFrames Motion Graphics
+   {{NOMBRE_MARCA}} — Canonical Personal Brand Video Style
+   Inspiración: Comic / Cel-Shaded Pop Comic (Warm Editorial Print)
+   ============================================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  /* --- PALETTE POP_COMIC CANÓNICA ----------------------------------------------- */
+  --paper:          #faf6ee;   /* Warm cream papel mate editorial */
+  --paper-2:        #f3ede0;   /* Papel paneles secundarios / tarjetas */
+  --paper-3:        #e8dfcd;   /* Papel oscuro / fondos hundidos */
+  --ink:            #161513;   /* Tinta negra densa principal (textos, trazos, sombras) */
+  --ink-muted:      #6b6459;   /* Tinta atenuada para subtítulos o metadata */
+  --yellow:         #ffd60a;   /* Amarillo Señal — THE HERO ACCENT (callouts, badges) */
+  --yellow-hover:   #ffe047;   /* Amarillo brillante */
+  --red:            #c8252b;   /* Rojo alerta / sellos comic */
+  --teal:           #1f7a63;   /* Verde azulado para métricas positivas */
+  --steel:          #475569;   /* Neutro técnico / etiquetas de código */
+
+  /* Blueprint aliases */
+  --bg:             var(--paper);
+  --fg:             var(--ink);
+  --accent:         var(--yellow);
+  --muted:          var(--ink-muted);
+
+  /* --- TYPOGRAPHY ----------------------------------------------------------- */
+  /* Anton = Títulos brutales, números gigantes de impacto, hooks
+     Hanken Grotesk = Lectura editorial fluida, clara y cálida
+     Space Mono = Datos técnicos, códigos, timestamps, kickers */
+  --font-display:   "Anton", Impact, sans-serif;
+  --font-body:      "Hanken Grotesk", system-ui, sans-serif;
+  --font-mono:      "Space Mono", monospace;
+  --font-label:     var(--font-mono);
+
+  /* Video sizes (1080x1920 vertical & 1920x1080 horizontal) */
+  --size-mega:      240px;   /* Número de impacto o palabra clave monumental */
+  --size-display:   110px;   /* Titular de takeover */
+  --size-title:     72px;    /* Título de sección o tarjeta grande */
+  --size-headline:  48px;    /* Titular de tarjeta overlay */
+  --size-body:      32px;    /* Texto de lectura */
+  --size-label:     22px;    /* Kicker o etiqueta técnica */
+
+  /* --- MOTION & EASING SIGNATURE (CEL-ANIMATION SNAPPY) ------------------- */
+  /* Cero rebotes blandos estilo SaaS; transiciones pop rápidas, audaces */
+  --ease-snap:      cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:        cubic-bezier(0.4, 0, 1, 1);
+  --ease-out:       cubic-bezier(0, 0, 0.2, 1);
+  --gsap-pop:       back.out(2.4);     /* Pop comic con leve anticipación */
+  --gsap-punch:     power4.out;        /* Punch-in inmediato para zooms */
+  --dur-in:         0.35s;
+  --dur-out:        0.25s;
+
+  /* --- COMIC CEL-SHADED SHAPES & BORDERS ----------------------------------- */
+  --border-thick:   4px solid var(--ink);
+  --border-mid:     3px solid var(--ink);
+  --border-thin:    2px solid var(--ink);
+  --radius:         0px;               /* Cortes rectos de papel cómic o bordes duros */
+  --radius-sm:      4px;               /* Leve curvatura para badges */
+  --pad:            48px;
+
+  /* SOMBRAS DURAS (ZERO-BLUR MANDATORY) */
+  --shadow-sm:      3px 3px 0 var(--ink);
+  --shadow-md:      5px 5px 0 var(--ink);
+  --shadow-lg:      8px 8px 0 var(--ink);
+  --shadow-yellow:  5px 5px 0 var(--yellow);
+
+  /* --- TEXTURAS CÓMIC VÍDEO ------------------------------------------------ */
+  /* Halftone dots para fondos y sombreados */
+  --tex-halftone:   radial-gradient(circle at center, var(--ink) 1.2px, transparent 1.6px);
+  --tex-halftone-size: 8px 8px;
+}

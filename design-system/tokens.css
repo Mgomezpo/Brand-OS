@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Brand OS — Tokens Canónicos de Diseño
+   Sobrescribir estos valores con los tokens específicos de cada marca
+   ========================================================================== */
+
+:root {
+  /* --- Superficies & Lienzo --- */
+  --surface-page:    #000000;
+  --surface-raised:  #161513;
+  --surface-sunken:  #0a0a0a;
+  --border:          #262626;
+  --border-strong:   #404040;
+
+  /* --- Tipografía & Lectura --- */
+  --text-strong:     #ffffff;
+  --text-body:       #e8e0d0;
+  --text-muted:      #8c877d;
+
+  /* --- Acento Focal (Reservado para 1 palabra y CTA) --- */
+  --accent:          #ffd60a;
+  --accent-contrast: #000000;
+
+  /* --- Familias Tipográficas --- */
+  --font-display:    "Anton", sans-serif;
+  --font-serif:      "Newsreader", serif;
+  --font-body:       "Hanken Grotesk", sans-serif;
+  --font-mono:       "Space Mono", monospace;
+
+  /* --- Jerarquía de Tamaños (Base 1080px) --- */
+  --text-hero:       72px;
+  --text-title:      54px;
+  --text-subtitle:   32px;
+  --text-body-size:  24px;
+  --text-badge:      18px;
+
+  /* --- Espaciado & Geometría --- */
+  --safe-margin:     96px;
+  --radius-sm:       4px;
+  --radius-md:       8px;
+  --radius-lg:       16px;
+
+  /* --- Sombras Duras Zero-Blur --- */
+  --shadow-hard:     6px 6px 0px #000000;
+}

@@ -1,0 +1,73 @@
+<!doctype html>
+<!--
+  Comic Brand Style CARD · tier2 · stat (Monumental Stat Callout)
+  {{NOMBRE_MARCA}} — Supporting Stat Overlay
+  Transparent background: Overlays speaker with massive Anton number
+-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <style>
+      html, body { margin: 0; background: transparent; }
+      #t2-stat {
+        position: absolute; inset: 0; width: 1920px; height: 1080px;
+        background: transparent;
+        pointer-events: none;
+        overflow: hidden;
+      }
+      .stat-container {
+        position: absolute;
+        top: 140px;
+        right: 120px;
+        background: var(--paper);
+        border: var(--border-thick);
+        box-shadow: var(--shadow-lg);
+        padding: 32px 48px;
+        text-align: right;
+        display: flex; flex-direction: column; align-items: flex-end;
+      }
+      .stat-number {
+        font-family: var(--font-display);
+        font-size: var(--size-mega);
+        color: var(--ink);
+        line-height: 0.9;
+        margin: 0;
+        text-shadow: 4px 4px 0 var(--yellow);
+      }
+      .stat-label {
+        font-family: var(--font-body);
+        font-size: var(--size-headline);
+        font-weight: 800;
+        color: var(--ink);
+        margin-top: 12px;
+        text-transform: uppercase;
+        max-width: 450px;
+        line-height: 1.1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="t2-stat" data-composition-id="t2-stat" data-start="0" data-width="1920" data-height="1080">
+      <div class="stat-container">
+        <h1 class="stat-number" data-slot="stat">80%</h1>
+        <div class="stat-label" data-slot="label">DE LAS TAREAS SE PUEDEN AUTOMATIZAR</div>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.from(".stat-container", {
+        autoAlpha: 0,
+        y: -30,
+        scale: 0.92,
+        duration: 0.4,
+        ease: "back.out(2)"
+      })
+      .from(".stat-number", { scale: 0.8, duration: 0.3, ease: "power4.out" }, "-=0.2")
+      .set({}, {}, 5.0);
+      window.__timelines["t2-stat"] = tl;
+    </script>
+  </body>
+</html>

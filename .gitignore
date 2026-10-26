@@ -1,0 +1,53 @@
+# Operating Systems & IDEs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+myenv/
+.venv/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Private Captures & Ephemeral Logs (Brand OS Standards)
+audits/
+brainstorms/
+temp/
+scratch/
+*.tmp
+*.log
+
+# Large media outputs (Video renders & heavy export batches)
+AI Content Manager/**/output/*.mp4
+AI Content Manager/**/output/*.avi
+AI Content Manager/**/output/*.mov
+AI Content Manager/carousel-studio/renders/*.png
+AI Content Manager/video-studio/renders/*.mp4

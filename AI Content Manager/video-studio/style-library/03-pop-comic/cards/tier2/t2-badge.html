@@ -1,0 +1,76 @@
+<!doctype html>
+<!--
+  Comic Brand Style CARD · tier2 · badge (Floating Cel-Shaded Badge)
+  {{NOMBRE_MARCA}} — Supporting Overlay Card
+  Transparent background: Overlays speaker with hard shadow
+-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <style>
+      html, body { margin: 0; background: transparent; }
+      #t2-badge {
+        position: absolute; inset: 0; width: 1920px; height: 1080px;
+        background: transparent;
+        pointer-events: none;
+        overflow: hidden;
+      }
+      .badge-container {
+        position: absolute;
+        bottom: 120px;
+        left: 120px;
+        background: var(--paper);
+        border: var(--border-thick);
+        box-shadow: var(--shadow-lg);
+        padding: 24px 36px;
+        max-width: 800px;
+        display: flex; flex-direction: column; gap: 8px;
+      }
+      .badge-tag {
+        font-family: var(--font-mono);
+        font-size: var(--size-label);
+        font-weight: 700;
+        background: var(--yellow);
+        color: var(--ink);
+        padding: 4px 14px;
+        display: inline-block;
+        align-self: flex-start;
+        border: var(--border-thin);
+        box-shadow: 2px 2px 0 var(--ink);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+      .badge-text {
+        font-family: var(--font-body);
+        font-size: var(--size-headline);
+        font-weight: 800;
+        color: var(--ink);
+        line-height: 1.15;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="t2-badge" data-composition-id="t2-badge" data-start="0" data-width="1920" data-height="1080">
+      <div class="badge-container">
+        <span class="badge-tag" data-slot="tag">REGLA 01</span>
+        <h2 class="badge-text" data-slot="headline">Cero intros tibias. Hook en el segundo uno.</h2>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.from(".badge-container", {
+        autoAlpha: 0,
+        x: -40,
+        duration: 0.35,
+        ease: "back.out(2.2)"
+      })
+      .from(".badge-tag", { scale: 0.8, autoAlpha: 0, duration: 0.2, ease: "power2.out" }, "-=0.15")
+      .set({}, {}, 5.0);
+      window.__timelines["t2-badge"] = tl;
+    </script>
+  </body>
+</html>

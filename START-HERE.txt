@@ -1,0 +1,26 @@
+BRAND OS - START HERE
+
+1. Extract or clone this folder to your computer. Keep every file and folder together, including the hidden .agents and .claude folders.
+2. Open the Brand OS folder in Obsidian to visualize your Brand Brain, Content Dashboard, and Strategy frameworks.
+3. Open the same Brand OS folder as a project in your AI coding agent (Claude Code, Antigravity, or Codex).
+4. Run /brand-onboard (in Claude Code or Antigravity) or select $brand-onboard (in Codex) to trigger the Brand Intake Wizard.
+5. Answer the 7 setup blocks. Have your brand mission, core offer, target audience pains, and sample copy ready.
+6. Once onboarded, ask: "Based on my active content pillar and proof bank, generate our first 3:4 carousel batch with /carousel-batch."
+
+Skills at your command:
+- /brand-onboard     -> Day-1 setup wizard to populate your Brand Brain (vault/Conceptos/).
+- /brand-audit       -> Evidence-based system audit (checks 3:4 & 9:16 ratios, 96px safe margins, proof citations, link integrity).
+- /carousel-batch    -> Guided 3-phase production engine for weekly 3:4 carousels (1080 x 1440 px).
+- /script-shortform  -> 4-movement high-retention 9:16 shortform video script generator with audio cues and visual directions.
+- /grill-me          -> Interactive adversarial interview to stress-test ideas, hooks, and contrarian angles before drafting.
+- /level-up          -> Weekly calibration skill to review content metrics and append discoveries to Findings.md and Repos.md.
+
+If skills do not appear, verify that you opened the root Brand OS folder (containing AGENTS.md, CLAUDE.md, and README.md), ensure .claude and .agents are present, and restart your agent.
+
+Format Guarantees:
+- Carousels: Canonical 3:4 aspect ratio (1080 x 1440 px) rendered via AI Content Manager/carousel-studio.
+- Shortform Video: Canonical 9:16 aspect ratio (1080 x 1920 px) rendered via AI Content Manager/video-studio.
+- Backgrounds: AI-generated images are 100% clean of text; typography is stamped deterministically in code.
+
+MIT License. Copyright 2026 Brand OS Contributors.
+The Three As of Brand Intelligence™, The Four Ps of Content Production™, and The Hybrid Engine Protocol™ are trademarks of Brand OS. All rights reserved.

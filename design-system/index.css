@@ -1,0 +1,86 @@
+@import "./tokens.css";
+
+/* Reset y caja */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--surface-page);
+  color: var(--text-body);
+  font-family: var(--font-body);
+  font-size: var(--text-body-size);
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Lienzo de Carrusel 3:4 (1080 x 1440) */
+.slide-frame, .slide {
+  width: 1080px;
+  height: 1440px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--surface-page);
+  padding: var(--safe-margin);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Fondo generado por IA */
+.slide-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Capa de tipografÃ­a sobre espacio negativo */
+.slide-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+/* Eyebrow de categorÃ­a */
+.slide-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-badge);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Titular monumental */
+.slide-title {
+  font-family: var(--font-display);
+  font-size: var(--text-title);
+  line-height: 1.05;
+  color: var(--text-strong);
+  letter-spacing: -0.02em;
+}
+
+/* Acento focal de palabra */
+.accent {
+  color: var(--accent);
+}
+
+/* Badge con sombra dura */
+.badge-tag {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: var(--surface-raised);
+  border: 2px solid var(--border-strong);
+  box-shadow: var(--shadow-hard);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-badge);
+  color: var(--text-strong);
+}

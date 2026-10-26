@@ -1,0 +1,84 @@
+<!doctype html>
+<!--
+  Comic Brand Style CARD · tier1 · takeover (Comic Panel Full-Frame)
+  {{NOMBRE_MARCA}} — Canonical Brand Style
+  Background: Papel crema con trama halftone y marco de tinta gruesa
+-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <style>
+      html, body { margin: 0; background: transparent; }
+      #t1-takeover {
+        position: absolute; inset: 0; width: 1920px; height: 1080px;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: var(--font-body);
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: center; text-align: center;
+        overflow: hidden;
+        box-sizing: border-box;
+        border: 16px solid var(--ink);
+      }
+      .panel-inner {
+        max-width: 1400px;
+        padding: var(--pad);
+        display: flex; flex-direction: column; align-items: center;
+      }
+      .kicker-tag {
+        font-family: var(--font-mono);
+        font-size: var(--size-label);
+        font-weight: 700;
+        background: var(--yellow);
+        color: var(--ink);
+        padding: 8px 24px;
+        border: var(--border-mid);
+        box-shadow: var(--shadow-sm);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        margin-bottom: 32px;
+      }
+      .headline {
+        font-family: var(--font-display);
+        font-size: var(--size-display);
+        line-height: 1.0;
+        letter-spacing: 0.02em;
+        color: var(--ink);
+        text-transform: uppercase;
+        margin: 0 0 28px 0;
+      }
+      .caption {
+        font-size: var(--size-body);
+        font-weight: 700;
+        line-height: 1.4;
+        color: var(--ink-muted);
+        max-width: 1000px;
+        background: var(--paper-2);
+        padding: 16px 32px;
+        border: var(--border-thin);
+        box-shadow: var(--shadow-sm);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="t1-takeover" data-composition-id="t1-takeover" data-start="0" data-width="1920" data-height="1080">
+      <div class="panel-inner">
+        <div class="kicker-tag" data-slot="kicker">{{NOMBRE_MARCA}}</div>
+        <h1 class="headline" data-slot="headline">EL SECRETO DE LOS AGENTES</h1>
+        <div class="caption" data-slot="caption">No es más contexto, es mejor arquitectura de decisión.</div>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.from("#t1-takeover", { duration: 0.35, ease: "power4.out", scale: 1.04 })
+        .from(".kicker-tag", { autoAlpha: 0, y: -24, duration: 0.35, ease: "back.out(2)" }, "-=0.15")
+        .from(".headline", { autoAlpha: 0, y: 30, duration: 0.4, ease: "back.out(1.8)" }, "-=0.2")
+        .from(".caption", { autoAlpha: 0, y: 20, duration: 0.35, ease: "power2.out" }, "-=0.15")
+        .set({}, {}, 5.0);
+      window.__timelines["t1-takeover"] = tl;
+    </script>
+  </body>
+</html>

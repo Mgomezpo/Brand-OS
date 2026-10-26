@@ -1,0 +1,60 @@
+{
+  "$schema": "../registry.schema.json",
+  "id": "pop-comic",
+  "name": "Comic Brand Style ({{NOMBRE_MARCA}})",
+  "number": "03",
+  "status": "ready",
+  "inspiration": "Comic europeo de línea clara, estética fanzine editorial, sombras duras cel-shaded (zero-blur), papel crema #faf6ee y amarillo señal #ffd60a.",
+  "summary": "Estilo oficial de la marca personal {{NOMBRE_MARCA}}. Tinta negra densa, tarjetas con sombra proyectada dura, números gigantes en Anton y ritmo dinámico.",
+  "palette": {
+    "bg": "#faf6ee",
+    "fg": "#161513",
+    "accent": "#ffd60a",
+    "red": "#c8252b",
+    "teal": "#1f7a63",
+    "notes": "Papel crema cálido, tinta negra densa, amarillo señal hero y acentos editorial."
+  },
+  "fonts": {
+    "display": "Anton",
+    "body": "Hanken Grotesk",
+    "mono": "Space Mono"
+  },
+  "motion": "Snappy cel-animation con pop y settling rápido; punch-ins enérgicos de cámara.",
+  "transitions": "Pop-in angular con sombra dura proyectada; cortes limpios de panel cómic.",
+  "cards": [
+    {
+      "id": "pop-comic.t1.takeover",
+      "tier": "tier1",
+      "purpose": "takeover",
+      "file": "cards/tier1/t1-takeover.html",
+      "slots": [
+        { "name": "kicker", "type": "text", "maxChars": 28 },
+        { "name": "headline", "type": "text", "maxChars": 45 },
+        { "name": "caption", "type": "text", "maxChars": 80 }
+      ],
+      "duration": { "min": 3, "max": 7 }
+    },
+    {
+      "id": "pop-comic.t2.badge",
+      "tier": "tier2",
+      "purpose": "label",
+      "file": "cards/tier2/t2-badge.html",
+      "slots": [
+        { "name": "tag", "type": "text", "maxChars": 20 },
+        { "name": "headline", "type": "text", "maxChars": 42 }
+      ],
+      "duration": { "min": 4, "max": 10 }
+    },
+    {
+      "id": "pop-comic.t2.stat",
+      "tier": "tier2",
+      "purpose": "stat",
+      "file": "cards/tier2/t2-stat.html",
+      "slots": [
+        { "name": "stat", "type": "text", "maxChars": 10 },
+        { "name": "label", "type": "text", "maxChars": 50 }
+      ],
+      "duration": { "min": 4, "max": 8 }
+    }
+  ]
+}

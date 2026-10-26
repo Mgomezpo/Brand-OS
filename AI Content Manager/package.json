@@ -1,0 +1,15 @@
+{
+  "name": "ai-content-manager",
+  "version": "1.0.0",
+  "description": "A **local, Claude-Code-orchestrated** workflow that turns raw recordings into finished, on-brand **9:16 short-form videos** (Reels / Shorts / TikTok) — no web app, no server. You drop a recording in a folder, say \"edit these,\" approve a quick plan, and finished shorts show up on your phone via Google Drive. Raw footage archives itself; the pipeline stays clean.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.62.0"
+  }
+}
