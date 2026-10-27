@@ -134,8 +134,8 @@ Brand OS/
 │
 └── 🚀 Content Manager/             ← THE FACTORY (Deterministic Software Engines)
     ├── carousel-studio/               ← 3:4 Carousel engine (Playwright + batch_manager.py)
-    ├── video-studio/                  ← 9:16 Video engine (HyperFrames + GSAP + Whisper)
-    ├── pipeline/                      ← Assembly line & post-processing
+    ├── video-studio/                  ← 9:16 Video engine (HyperFrames + GSAP + ElevenLabs Scribe)
+    ├── postprocessing/                ← Publication table (packages ready to post)
     └── helper/                        ← Funnel & publishing scripts (Zernio comment-to-DM + distribution)
 ```
 

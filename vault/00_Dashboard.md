@@ -13,7 +13,7 @@ marca: "{{NOMBRE_MARCA}}"
 
 | Módulo | Enlace Central | Descripción Operativa |
 | :--- | :--- | :--- |
-| **🎬 Video Studio (9:16)** | [[SOPs/video_studio|🎬 SOP: Video Studio]] | Whispers, cortes de silencio/errores, zooms y overlays GSAP |
+| **🎬 Video Studio (9:16)** | [[SOPs/video_studio|🎬 SOP: Video Studio]] | Transcripción Scribe, cortes de silencio/errores, zooms y overlays GSAP |
 | **🎠 Carruseles en Lote (3:4)** | [[SOPs/carousel_batch|🎠 SOP: Batch de Carruseles]] | Rotación pentagonal, proporción 3:4 y compilación Playwright |
 | **🎠 Anatomía Editorial (3:4)** | [[SOPs/carousels|📐 SOP: Carruseles Editoriales]] | Fórmula de 7 slides, Hero Cover y caption en 4 bloques |
 | **🎯 Catálogo de Hooks** | [[SOPs/hooks|🎯 SOP: Hooks Maestros]] | 6 arquetipos neurocognitivos (<12 palabras) y filtros anti-cliché |

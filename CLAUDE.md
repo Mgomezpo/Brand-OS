@@ -116,7 +116,7 @@ Antes de proponer o escribir cualquier contenido:
 ## 🚫 Reglas Inmutables para Agentes (Guardrails)
 
 1. **El Vault es 100% Markdown de Instrucciones:** Nunca colocar archivos de salida pesados (MP4s, renders masivos de PNGs) en `vault/`.
-2. **Estudios por fuera del Pipeline:** El video se edita en `video-studio/` y los carruseles se compilan en `carousel-studio/`. El `pipeline/` es solo la mesa de trabajo y postprocesamiento.
+2. **Los estudios son el único lugar de producción:** El video se edita en `video-studio/`, los carruseles se compilan en `carousel-studio/` y las piezas terminadas desembarcan en `postprocessing/` (la mesa de publicación).
 3. **Formato Canónico de Carruseles: Proporción 3:4 (1080 × 1440 px).** Prohibido usar 4:5 o formatos cuadrados.
 4. **Formato Canónico de Video: Proporción 9:16 (1080 × 1920 px).**
 5. **Cero Texto en Imágenes de IA:** Los fondos generados por IA se solicitan 100% limpios de letras, logos y botones. La tipografía se estampa en código HTML/CSS determinista.

@@ -135,12 +135,12 @@ def update_tracker_md(batch_data):
             pending_found = True
             next_idx = check["missing_indices"][0]
             lines.append(f"👉 **Siguiente paso:** En `{slug}` falta **`bg_{next_idx:02d}.jpg`**.")
-            lines.append(f"Copiá la imagen generada en: `pipeline/carousels/{slug}/assets/bg_{next_idx:02d}.jpg`")
+            lines.append(f"Copiá la imagen generada en: `batches/<vuelta>/{slug}/assets/bg_{next_idx:02d}.jpg`")
             break
 
     if not pending_found:
         lines.append("🎉 **¡Todos los fondos del batch están completos!**")
-        lines.append("Podés correr `python pipeline/carousels/batch_manager.py compile-all` para generar todos los PNGs.")
+        lines.append("Podés compilar cada pieza con `batch_manager.py compile <slug>` (o `npm run capture -- <slug>/carousel.html`).")
 
     with open(BATCH_TRACKER_FILE, "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
