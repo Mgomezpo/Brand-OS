@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  KALLAWAY Â· tier1 Â· stat Â· GROWTHARROW
+  KALLAWAY · tier1 · stat · GROWTHARROW
   A big glowing number with a clean rising growth arrow: an SVG line draws upward
   diagonally then a sharp arrowhead snaps on; the whole arrow glows blue-white.
   Number counts up to value. Spacious, right-anchored arrow composition.
@@ -59,7 +59,7 @@
         font-style: normal; color: var(--text); text-shadow: var(--textglow);
       }
 
-      /* Arrow SVG â€” positioned right */
+      /* Arrow SVG — positioned right */
       #t1-stat-garrow .arrow-wrap {
         position: absolute; right: 120px; top: 50%; transform: translateY(-50%);
         width: 680px; height: 640px; z-index: 3;
@@ -92,12 +92,12 @@
         <div class="kicker" data-slot="kicker">COURSE COMPLETION GROWTH</div>
         <div class="stat" id="garrow-num" data-slot="stat">+340%</div>
         <div class="label" data-slot="label">
-          year-over-year increase in learners completing <em>full certification paths</em> â€” driven by cohort accountability features
+          year-over-year increase in learners completing <em>full certification paths</em> — driven by cohort accountability features
         </div>
       </div>
 
       <!--
-        Arrow SVG: 680Ã—640, main shaft rises diagonally from bottom-left to top-right.
+        Arrow SVG: 680×640, main shaft rises diagonally from bottom-left to top-right.
         Start: (80, 580)  End: (560, 60)
         The line is drawn via stroke-dashoffset animation.
         Arrowhead: triangle at tip (560,60), pointing upper-right.
@@ -138,13 +138,13 @@
                 stroke="url(#agShaft)" stroke-width="24" stroke-linecap="round"
                 filter="url(#agGlowSoft)" opacity="0.55"/>
 
-          <!-- main shaft line â€” drawn via dashoffset -->
+          <!-- main shaft line — drawn via dashoffset -->
           <line id="ag-shaft" x1="80" y1="580" x2="560" y2="60"
                 stroke="url(#agShaft)" stroke-width="6" stroke-linecap="round"
                 filter="url(#agGlow)"/>
 
           <!-- arrowhead: equilateral triangle pointing upper-right at (560,60) -->
-          <!-- Pointing direction: approx 315Â° (upper-right diagonal) -->
+          <!-- Pointing direction: approx 315° (upper-right diagonal) -->
           <polygon id="ag-head" points="560,60 510,100 550,120"
                    fill="white"
                    style="filter:drop-shadow(0 0 16px rgba(255,255,255,0.90)) drop-shadow(0 0 40px rgba(55,189,248,0.80));"/>
@@ -159,7 +159,7 @@
         </svg>
       </div>
 
-      <div class="source" data-slot="source">SOURCE Â· BRAND PLATFORM ANALYTICS 2026</div>
+      <div class="source" data-slot="source">SOURCE · BRAND PLATFORM ANALYTICS 2026</div>
       <div class="vignette"></div>
       <div class="grain"></div>
     </div>
@@ -181,7 +181,7 @@
       glowEl.style.strokeDasharray   = shaftLen;
       glowEl.style.strokeDashoffset  = shaftLen;
 
-      /* Count-up: stat reads "+340%" â€” animate the number 0â†’340, keep prefix/suffix */
+      /* Count-up: stat reads "+340%" — animate the number 0→340, keep prefix/suffix */
       const statEl   = document.getElementById("garrow-num");
       const statTarget = 340;
 
@@ -211,7 +211,7 @@
           }
         }, 0.80)
 
-        /* arrow shaft draws upward â€” animate strokeDashoffset to 0 */
+        /* arrow shaft draws upward — animate strokeDashoffset to 0 */
         .to([shaftEl, glowEl], {
           strokeDashoffset: 0,
           duration: 1.2, ease: "power3.out"

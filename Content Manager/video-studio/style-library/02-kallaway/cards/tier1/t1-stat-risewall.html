@@ -1,8 +1,8 @@
 <!doctype html>
 <!--
-  KALLAWAY Â· tier1 Â· stat Â· RISEWALL
+  KALLAWAY · tier1 · stat · RISEWALL
   The big number starts below a frosted glass "wall" (a wide glassmorphism panel)
-  and rises up through it as a mask reveal â€” going from obscured to fully visible
+  and rises up through it as a mask reveal — going from obscured to fully visible
   above the wall, with a trailing glow edge as it breaks through.
   Slots: kicker (~28 chars), stat (e.g. "97%"), label (~70 chars), source (~40 chars).
 -->
@@ -30,7 +30,7 @@
                 mask-image: radial-gradient(130% 110% at 50% 60%, #000 30%, transparent 78%);
       }
 
-      /* â”€â”€ frosted glass wall â€” fixed, mid-canvas â”€â”€ */
+      /* ── frosted glass wall — fixed, mid-canvas ── */
       #t1-stat-rwall .wall {
         position: absolute;
         left: 160px; right: 160px;
@@ -63,7 +63,7 @@
         border-radius: 2px;
       }
 
-      /* â”€â”€ content: stat rises through wall, text sits below â”€â”€ */
+      /* ── content: stat rises through wall, text sits below ── */
       #t1-stat-rwall .content {
         position: absolute; inset: 0; z-index: 4;
         display: flex; flex-direction: column; align-items: center;
@@ -78,7 +78,7 @@
         margin-top: 108px;
       }
 
-      /* stat â€” rises from y=750 up through wall to y~240 */
+      /* stat — rises from y=750 up through wall to y~240 */
       #t1-stat-rwall .stat {
         position: absolute; left: 0; right: 0;
         top: 0; /* driven by GSAP y */
@@ -146,7 +146,7 @@
       <div class="wall-rim" id="t1-stat-rwall-rim"></div>
 
       <div class="content">
-        <div class="kicker" data-slot="kicker">COURSE SATISFACTION Â· COHORT 8</div>
+        <div class="kicker" data-slot="kicker">COURSE SATISFACTION · COHORT 8</div>
 
         <!-- stat rises through wall -->
         <div class="stat" id="t1-stat-rwall-num" data-slot="stat">97%</div>
@@ -157,7 +157,7 @@
         </div>
       </div>
 
-      <div class="source" data-slot="source">SOURCE Â· BRAND GRADUATE SURVEY 2026</div>
+      <div class="source" data-slot="source">SOURCE · BRAND GRADUATE SURVEY 2026</div>
       <div class="vignette"></div>
       <div class="grain"></div>
     </div>

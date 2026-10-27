@@ -1,10 +1,10 @@
 /* ============================================================================
-   KALLAWAY â€” style tokens
+   KALLAWAY — style tokens
    Single source of palette / type / motion / texture for every card in this
    style. Cards reference these vars and never hardcode colors, fonts, easings,
    glows, or textures. Tweak here, all cards update.
    See DESIGN.md for the why.
-   Aesthetic: premium dark motion-graphics â€” near-black cool canvas, a blue
+   Aesthetic: premium dark motion-graphics — near-black cool canvas, a blue
    "aurora" glow blooming from below, glassmorphism cards, edge-lit neon
    elements, gradient glow text, focus-stack blur, smooth After-Effects easing.
    Palette is the BRAND brand (blue is the hero glow). The opposite of Vox in
@@ -18,7 +18,7 @@
 :root {
   /* --- palette (mirror style.json + DESIGN.md). BRAND brand, dark. ----------- */
   --canvas:       #0A0E14;   /* main near-black cool background */
-  --canvas-deep:  #07121C;   /* deeper navy â€” vignette / depth wells */
+  --canvas-deep:  #07121C;   /* deeper navy — vignette / depth wells */
   --ink:          #2A251F;   /* dark text for the rare light/cream surface */
   --paper:        #F0EEE9;   /* warm white surface (light glass / chips) */
   --white:        #FFFFFF;
@@ -27,10 +27,10 @@
   --text-dim:     rgba(240, 238, 233, 0.62);  /* secondary copy */
   --text-faint:   rgba(240, 238, 233, 0.34);  /* metadata, fine print */
 
-  --accent:       #37BDF8;   /* sky blue â€” THE hero glow (where refs used purple) */
-  --accent-2:     #F5D82A;   /* yellow â€” secondary pop / highlight numerals */
-  --alert:        #FF3B30;   /* red â€” alarm, negative delta, "lie" */
-  --warm:         #FF8A5C;   /* orange â€” warm secondary accent */
+  --accent:       #37BDF8;   /* sky blue — THE hero glow (where refs used purple) */
+  --accent-2:     #F5D82A;   /* yellow — secondary pop / highlight numerals */
+  --alert:        #FF3B30;   /* red — alarm, negative delta, "lie" */
+  --warm:         #FF8A5C;   /* orange — warm secondary accent */
 
   /* rgb triplets for building rgba() glows in cards without re-typing hex */
   --accent-rgb:   55, 189, 248;
@@ -46,7 +46,7 @@
   /* --- typography ---------------------------------------------------------- */
   /* Plus Jakarta Sans = the voice (headlines, big numbers, glow text): geometric,
      premium, rounds to match the glass radii, heavy at 800. Inter = body / labels /
-     captions, recedes. Space Mono = data chips, timestamps, %s â€” the "interface"
+     captions, recedes. Space Mono = data chips, timestamps, %s — the "interface"
      voice. No serif anywhere (that's Vox). */
   --font-display: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
   --font-body:    "Inter", system-ui, -apple-system, sans-serif;
@@ -61,7 +61,7 @@
   --wt-bold:   700;
   --wt-black:  800;
 
-  /* video sizes for 1920x1080 (big â€” readable in 2s) */
+  /* video sizes for 1920x1080 (big — readable in 2s) */
   --size-mega:     300px;   /* hero stat number */
   --size-display:  140px;   /* takeover headline */
   --size-title:    84px;    /* section title */
@@ -74,7 +74,7 @@
   --track-snug:  -0.01em;
   --track-wide:  0.18em;    /* uppercase label tracking */
 
-  /* --- glow â€” the signature. Soft, layered, never a hard ring. ------------- */
+  /* --- glow — the signature. Soft, layered, never a hard ring. ------------- */
   --glow-accent-sm: 0 0 10px rgba(var(--accent-rgb), 0.55);
   --glow-accent:    0 0 22px rgba(var(--accent-rgb), 0.55), 0 0 56px rgba(var(--accent-rgb), 0.30);
   --glow-accent-lg: 0 0 40px rgba(var(--accent-rgb), 0.60), 0 0 120px rgba(var(--accent-rgb), 0.32);
@@ -84,7 +84,7 @@
   --textglow:       0 0 18px rgba(255, 255, 255, 0.45), 0 0 40px rgba(var(--accent-rgb), 0.30);
   --textglow-accent:0 0 18px rgba(var(--accent-rgb), 0.65), 0 0 48px rgba(var(--accent-rgb), 0.35);
 
-  /* --- glass â€” frosted surfaces. Two tints: light (bright) + dark (recede). - */
+  /* --- glass — frosted surfaces. Two tints: light (bright) + dark (recede). - */
   --glass-bg:      rgba(255, 255, 255, 0.055);
   --glass-bg-dark: rgba(16, 22, 34, 0.55);
   --glass-border:  rgba(255, 255, 255, 0.14);
@@ -93,16 +93,16 @@
   --glass-shadow:  0 24px 70px rgba(0, 0, 0, 0.50);
 
   /* --- shape --------------------------------------------------------------- */
-  --radius:     28px;       /* glass cards, pills â€” generously rounded */
+  --radius:     28px;       /* glass cards, pills — generously rounded */
   --radius-sm:  16px;       /* chips, small tiles */
   --radius-lg:  40px;       /* phone frames, large surfaces */
   --pad:        80px;       /* canvas safe-area inset */
   --stroke:     1.5px;      /* hairline neon edge weight */
 
-  /* --- motion â€” smooth, premium, breathing. The anti-Vox. ------------------ */
+  /* --- motion — smooth, premium, breathing. The anti-Vox. ------------------ */
   /* Long expo/quint glides; spring overshoot for cards; blur-in for focus pull.
-     NEVER steps()/choppy â€” that is Vox's signature, not ours. */
-  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);   /* expo-out â€” the default glide */
+     NEVER steps()/choppy — that is Vox's signature, not ours. */
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);   /* expo-out — the default glide */
   --ease-inout:  cubic-bezier(0.65, 0, 0.35, 1);   /* symmetric, for drifts */
   --ease-soft:   cubic-bezier(0.33, 1, 0.68, 1);   /* gentle settle */
   /* GSAP string eases (used in card timelines) */
@@ -113,7 +113,7 @@
   --dur-out:  0.5s;
 
   /* --- textures (deterministic) ------------------------------------------- */
-  /* Aurora bloom â€” blue light rising from the bottom-center. The hero ambience.
+  /* Aurora bloom — blue light rising from the bottom-center. The hero ambience.
      Compose these as background layers under content; animate opacity/scale. */
   --bloom-bottom: radial-gradient(120% 85% at 50% 118%,
                     rgba(var(--accent-rgb), 0.45) 0%,
@@ -123,13 +123,13 @@
                     rgba(var(--accent-rgb), 0.30) 0%,
                     transparent 55%);
 
-  /* Vignette â€” pulls the eye to center, deepens the canvas edges. */
+  /* Vignette — pulls the eye to center, deepens the canvas edges. */
   --vignette: radial-gradient(125% 125% at 50% 45%, transparent 52%, rgba(0,0,0,0.55) 100%);
 
   /* Faint dot grid (the refs' subtle technical texture). Low contrast. */
   --dot:      radial-gradient(circle at center, rgba(255,255,255,0.06) 1px, transparent 1.4px);
   --dot-size: 46px 46px;
 
-  /* Fine film grain over everything â€” keeps the dark from banding. */
+  /* Fine film grain over everything — keeps the dark from banding. */
   --tex-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }

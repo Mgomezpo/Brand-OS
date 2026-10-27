@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  KALLAWAY Â· tier1 Â· stat Â· PICTOBAR
+  KALLAWAY · tier1 · stat · PICTOBAR
   A vertical bar built entirely from stacked glowing icon units (person silhouettes
   rendered as SVG). Units light up bottom-to-top as the bar "grows". Value counts
   up alongside. Left-aligned layout with label right of the bar.
@@ -42,7 +42,7 @@
         gap: 0; flex-shrink: 0;
       }
 
-      /* Each icon unit â€” a person SVG, 72Ã—96px */
+      /* Each icon unit — a person SVG, 72×96px */
       #t1-stat-picto .icon-unit {
         width: 72px; height: 88px; opacity: 0.15;
         transition: none; flex-shrink: 0;
@@ -116,22 +116,22 @@
       <div class="grid"></div>
 
       <div class="layout">
-        <!-- 9 icon units â€” built by JS, bottom unit = index 8, top = index 0 -->
+        <!-- 9 icon units — built by JS, bottom unit = index 8, top = index 0 -->
         <div class="icon-col" id="picto-col">
           <!-- filled by JS -->
         </div>
 
         <div class="text-col">
-          <div class="kicker" data-slot="kicker">ACTIVE LEARNERS Â· THIS QUARTER</div>
+          <div class="kicker" data-slot="kicker">ACTIVE LEARNERS · THIS QUARTER</div>
           <div class="stat" id="picto-num" data-slot="stat">12,400</div>
           <div class="sub">enrolled students</div>
           <div class="label" data-slot="label">
-            across all active cohorts â€” <em>highest single-quarter count</em> in platform history, up 38% year-over-year
+            across all active cohorts — <em>highest single-quarter count</em> in platform history, up 38% year-over-year
           </div>
         </div>
       </div>
 
-      <div class="source" data-slot="source">SOURCE Â· BRAND PLATFORM DATA Q4 2026</div>
+      <div class="source" data-slot="source">SOURCE · BRAND PLATFORM DATA Q4 2026</div>
       <div class="vignette"></div>
       <div class="grain"></div>
     </div>
@@ -161,7 +161,7 @@
       }
       /* Re-order: bottom units light first. DOM order top-to-bottom,
          but we want bottom-first lighting so reverse mapping: units[0]=top DOM, units[UNITS-1]=bottom DOM */
-      /* Actually let's rebuild correctly: first appended = bottom visually? No â€” flex column.
+      /* Actually let's rebuild correctly: first appended = bottom visually? No — flex column.
          We want stack bottom-to-top, so DOM order should be top icon first (flex-col renders top-first).
          We'll keep units[] where units[0]=top-rendered=index0, and light from bottom (units[UNITS-1] first). */
 

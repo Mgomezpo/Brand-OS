@@ -1,12 +1,12 @@
 <!doctype html>
 <!--
-  KALLAWAY Â· tier2 Â· lower-third Â· COORDBAR
-  A data/metadata readout bar in monospace â€” two or three metadata fields
+  KALLAWAY · tier2 · lower-third · COORDBAR
+  A data/metadata readout bar in monospace — two or three metadata fields
   in Space Mono separated by glow-rule dividers, with the name above in
   display type. Reads like a terminal HUD or broadcast ticker overlay.
   Anchored lower-left. Transparent overlay.
   Slots: name (~26 chars), meta (two metadata strings, ~30 chars each, shown
-         as "FIELD Â· VALUE" pairs in the mono bar).
+         as "FIELD · VALUE" pairs in the mono bar).
 -->
 <html>
   <head>
@@ -151,7 +151,7 @@
         flex-shrink: 0;
       }
 
-      /* Blinking cursor at end â€” finite */
+      /* Blinking cursor at end — finite */
       #t2-lt-coord .cursor {
         width: 10px; height: 20px;
         background: var(--accent);
@@ -240,7 +240,7 @@
         { autoAlpha: 0, scaleY: 0, transformOrigin: "bottom center",
           duration: 0.28, ease: "power2.out" }, 1.36);
 
-      /* cursor blinks â€” finite */
+      /* cursor blinks — finite */
       tl.to(`${C} .cursor`,
         { autoAlpha: 0, duration: 0.26, ease: "none",
           repeat: 7, yoyo: true }, 1.60);
@@ -249,7 +249,7 @@
       tl.to(`${C} .data-bar::after`,
         { width: 560, duration: 0.65, ease: "power3.out" }, 0.72);
 
-      /* data-bar glow rim pulse â€” finite */
+      /* data-bar glow rim pulse — finite */
       tl.to(`${C} .data-bar`,
         { boxShadow: "0 8px 30px rgba(0,0,0,0.45), 0 0 32px rgba(55,189,248,0.26), inset 0 -1px 0 rgba(255,255,255,0.08)",
           duration: 1.0, ease: "sine.inOut", repeat: 3, yoyo: true }, 1.80);

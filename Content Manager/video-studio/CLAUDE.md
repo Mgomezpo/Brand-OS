@@ -9,7 +9,8 @@ rendering, transcript-driven cuts, and reusable motion graphics.
 Claude Code uses `.claude/skills/`. Codex uses the generated `.agents/skills/`.
 Edit canonical skills in `.claude/skills/`, then run `npm run sync:skills`.
 Use `$edit-video` in Codex, `/edit-video` in Claude Code, or natural language.
-Work locally unless the user requests subagents.
+Model and permission choices belong to the user; `.codex/config.toml` only adds
+document loading defaults. Work locally unless the user requests subagents.
 
 ## Start and route
 

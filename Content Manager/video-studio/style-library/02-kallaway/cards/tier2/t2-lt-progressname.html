@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  KALLAWAY Â· tier2 Â· lower-third Â· PROGRESSNAME
+  KALLAWAY · tier2 · lower-third · PROGRESSNAME
   A name card with a thin talk-progress bar running beneath it. The bar fills
   left-to-right over the card's hold duration (simulating how long the speaker
   has been talking). The bar track is a hairline dark glass line; the fill is an
@@ -35,7 +35,7 @@
         z-index: 1;
       }
 
-      /* Outer wrapper â€” card + bar stacked */
+      /* Outer wrapper — card + bar stacked */
       #t2-lt-pname .wrapper {
         position: absolute;
         left: 80px; bottom: 120px;
@@ -100,7 +100,7 @@
         flex-shrink: 0;
       }
 
-      /* Progress bar track â€” sits flush below the card */
+      /* Progress bar track — sits flush below the card */
       #t2-lt-pname .bar-track {
         height: 5px;
         width: 100%;
@@ -114,7 +114,7 @@
         -webkit-backdrop-filter: blur(8px);
       }
 
-      /* Bar fill â€” animates via scaleX 0â†’1 using transformOrigin left */
+      /* Bar fill — animates via scaleX 0→1 using transformOrigin left */
       #t2-lt-pname .bar-fill {
         position: absolute;
         inset: 0;
@@ -203,7 +203,7 @@
       tl.from(`${C} .bar-track`,
         { autoAlpha: 0, duration: 0.35, ease: "power2.out" }, 0.90);
 
-      /* bar fills from left to right over a long hold â€” scaleX 0â†’1 */
+      /* bar fills from left to right over a long hold — scaleX 0→1 */
       /* Also moves the tip from 0% to 100% via a proxy to keep tip in sync */
       const barProxy = { pct: 0 };
       tl.to(barProxy, {
@@ -220,7 +220,7 @@
         }
       }, 1.05);
 
-      /* card glow rim pulse â€” finite */
+      /* card glow rim pulse — finite */
       tl.to(`${C} .card`, {
         boxShadow:
           "0 24px 70px rgba(0,0,0,0.50), 0 0 0 1.5px rgba(55,189,248,0.80), 0 0 28px rgba(55,189,248,0.42), inset 0 1px 0 rgba(255,255,255,0.22)",

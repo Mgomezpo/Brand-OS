@@ -39,7 +39,7 @@ body {
   z-index: 1;
 }
 
-/* Capa de tipografÃ­a sobre espacio negativo */
+/* Capa de tipografía sobre espacio negativo */
 .slide-content {
   position: relative;
   z-index: 2;
@@ -49,7 +49,7 @@ body {
   justify-content: space-between;
 }
 
-/* Eyebrow de categorÃ­a */
+/* Eyebrow de categoría */
 .slide-eyebrow {
   font-family: var(--font-mono);
   font-size: var(--text-badge);

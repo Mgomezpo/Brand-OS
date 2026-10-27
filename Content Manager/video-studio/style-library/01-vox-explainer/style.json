@@ -504,7 +504,7 @@
           "name": "ticker",
           "type": "text",
           "maxChars": 120,
-          "note": "scrolling band text, ' Â· ' separated"
+          "note": "scrolling band text, ' · ' separated"
         }
       ],
       "duration": {
@@ -1974,7 +1974,7 @@
           "name": "sign",
           "type": "text",
           "maxChars": 1,
-          "note": "+ or âˆ’"
+          "note": "+ or −"
         },
         {
           "name": "stat",
@@ -2106,7 +2106,7 @@
           "name": "tape",
           "type": "text",
           "maxChars": 120,
-          "note": "context items, ' Â· ' separated"
+          "note": "context items, ' · ' separated"
         },
         {
           "name": "label",

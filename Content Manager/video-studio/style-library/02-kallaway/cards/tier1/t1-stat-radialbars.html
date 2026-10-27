@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  KALLAWAY Â· tier1 Â· stat Â· RADIALBARS
+  KALLAWAY · tier1 · stat · RADIALBARS
   Several concentric arc bars of different lengths glow in from the outside in.
   A bold headline value sits at the center. Each arc represents a different metric.
   Knob: data-pct on the lead (outermost) arc element #t1-stat-radbar-svg (default 68).
@@ -216,26 +216,26 @@
             stroke-dasharray="691.2" stroke-dashoffset="172.8"
             transform="rotate(-225 290 290)"/>
 
-          <!-- Filled arcs â€” driven by JS -->
-          <!-- arc1: r=260 â€” lead, driven by data-pct -->
+          <!-- Filled arcs — driven by JS -->
+          <!-- arc1: r=260 — lead, driven by data-pct -->
           <circle id="t1-stat-radbar-arc1" cx="290" cy="290" r="260"
             stroke="url(#arc1Grad)" stroke-width="18"
             stroke-linecap="round" fill="none"
             filter="url(#arcGlow)"
             transform="rotate(-225 290 290)"/>
-          <!-- arc2: r=210 â€” 85% -->
+          <!-- arc2: r=210 — 85% -->
           <circle id="t1-stat-radbar-arc2" cx="290" cy="290" r="210"
             stroke="url(#arc2Grad)" stroke-width="18"
             stroke-linecap="round" fill="none"
             filter="url(#arcGlow)"
             transform="rotate(-225 290 290)"/>
-          <!-- arc3: r=160 â€” 72%, yellow -->
+          <!-- arc3: r=160 — 72%, yellow -->
           <circle id="t1-stat-radbar-arc3" cx="290" cy="290" r="160"
             stroke="url(#arc3Grad)" stroke-width="18"
             stroke-linecap="round" fill="none"
             filter="url(#arcGlow)"
             transform="rotate(-225 290 290)"/>
-          <!-- arc4: r=110 â€” 58%, orange -->
+          <!-- arc4: r=110 — 58%, orange -->
           <circle id="t1-stat-radbar-arc4" cx="290" cy="290" r="110"
             stroke="url(#arc4Grad)" stroke-width="18"
             stroke-linecap="round" fill="none"
@@ -250,7 +250,7 @@
       </div>
 
       <div class="right-block">
-        <div class="kicker" data-slot="kicker">SKILLS BENCHMARK Â· COHORT 12</div>
+        <div class="kicker" data-slot="kicker">SKILLS BENCHMARK · COHORT 12</div>
 
         <div class="label" data-slot="label">graduates score above industry average on <em>every core competency</em> tracked in the assessment</div>
 
@@ -282,7 +282,7 @@
         </div>
       </div>
 
-      <div class="source" data-slot="source">SOURCE Â· BRAND SKILLS FRAMEWORK 2026</div>
+      <div class="source" data-slot="source">SOURCE · BRAND SKILLS FRAMEWORK 2026</div>
 
       <div class="vignette"></div>
       <div class="grain"></div>
@@ -298,11 +298,11 @@
       const numEl  = document.getElementById("t1-stat-radbar-num");
       const l1El   = document.getElementById("t1-stat-radbar-l1");
 
-      /* Arc circumferences for 270Â° sweep (= 3/4 of full circle) */
-      /* For a circle with radius r: full circ = 2Ï€r, 270Â° arc = 0.75 * 2Ï€r */
+      /* Arc circumferences for 270° sweep (= 3/4 of full circle) */
+      /* For a circle with radius r: full circ = 2πr, 270° arc = 0.75 * 2πr */
       /* stroke-dashoffset = full_circ - arc_length, so:
-           dasharray  = 2Ï€r
-           dashoffset = 2Ï€r - (pct/100) * 0.75 * 2Ï€r = 2Ï€r * (1 - pct/100 * 0.75) */
+           dasharray  = 2πr
+           dashoffset = 2πr - (pct/100) * 0.75 * 2πr = 2πr * (1 - pct/100 * 0.75) */
 
       function arcDash(r, p) {
         const c = 2 * Math.PI * r;

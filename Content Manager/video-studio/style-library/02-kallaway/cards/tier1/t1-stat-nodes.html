@@ -1,10 +1,10 @@
 <!doctype html>
 <!--
-  KALLAWAY Â· tier1 Â· stat Â· NODES
+  KALLAWAY · tier1 · stat · NODES
   Five glowing nodes connected by thin animated-draw lines converge toward a
   central hero value. Lines draw from left to right, nodes pop with a spring,
   the central stat blooms last. Clean neon-graph aesthetic.
-  Slots: kicker (~28 chars), stat (e.g. "4.9Ã—"), label (~70 chars), source (~40 chars).
+  Slots: kicker (~28 chars), stat (e.g. "4.9×"), label (~70 chars), source (~40 chars).
 -->
 <html>
   <head>
@@ -30,13 +30,13 @@
                 mask-image: radial-gradient(130% 110% at 50% 60%, #000 30%, transparent 78%);
       }
 
-      /* â”€â”€ SVG graph layer â”€â”€ */
+      /* ── SVG graph layer ── */
       #t1-stat-nodes .node-svg {
         position: absolute; inset: 0; width: 1920px; height: 1080px; z-index: 3;
         overflow: visible;
       }
 
-      /* â”€â”€ content (kicker / stat / label) floats over â”€â”€ */
+      /* ── content (kicker / stat / label) floats over ── */
       #t1-stat-nodes .content {
         position: absolute; inset: 0; z-index: 4;
         display: flex; flex-direction: column;
@@ -51,7 +51,7 @@
         text-shadow: var(--textglow-accent);
       }
 
-      /* center stat â€” sits where the hub node is */
+      /* center stat — sits where the hub node is */
       #t1-stat-nodes .stat-wrap {
         display: flex; flex-direction: column; align-items: center;
       }
@@ -160,14 +160,14 @@
       <div class="node-label" id="nd-lbl5" style="left:1634px; top:808px; opacity:0" data-slot="">Data</div>
 
       <div class="content">
-        <div class="kicker" data-slot="kicker">OUTPUT MULTIPLIER Â· AI STUDENTS</div>
+        <div class="kicker" data-slot="kicker">OUTPUT MULTIPLIER · AI STUDENTS</div>
         <div class="stat-wrap">
-          <div class="stat" data-slot="stat">4.9Ã—</div>
+          <div class="stat" data-slot="stat">4.9×</div>
         </div>
         <div class="label" data-slot="label">AI-trained creators produce across <em>more output formats</em> simultaneously than pre-course</div>
       </div>
 
-      <div class="source" data-slot="source">SOURCE Â· BRAND COHORT STUDY 2026</div>
+      <div class="source" data-slot="source">SOURCE · BRAND COHORT STUDY 2026</div>
       <div class="vignette"></div>
       <div class="grain"></div>
     </div>
@@ -177,7 +177,7 @@
       window.__timelines = window.__timelines || {};
       const tl = gsap.timeline({ paused: true });
 
-      /* line lengths (approx sqrt of dxÂ²+dyÂ²) */
+      /* line lengths (approx sqrt of dx²+dy²) */
       const lens = [736, 736, 682, 736, 736];
       const lineIds   = ["nd-l1","nd-l2","nd-l3","nd-l4","nd-l5"];
       const nodeIds   = ["nd-n1","nd-n2","nd-n3","nd-n4","nd-n5"];

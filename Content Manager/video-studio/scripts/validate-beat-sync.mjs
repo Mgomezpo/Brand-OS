@@ -107,7 +107,7 @@ function readAnchor(srcRelative) {
   } catch (e) {
     return { err: `missing-file: ${srcRelative}` };
   }
-  // Root div: the inner div immediately inside <template id="..."> â€” its data-composition-id
+  // Root div: the inner div immediately inside <template id="..."> — its data-composition-id
   // matches the outer wiring. Match data-anchor on ANY div within the file (first occurrence).
   const m = html.match(/data-anchor\s*=\s*["']([^"']*)["']/);
   if (!m) return { anchor: null };
@@ -171,7 +171,7 @@ function main() {
   const html = readFileSync(INDEX_HTML, "utf8");
   const beats = parseIndex(html);
   if (beats.length === 0) {
-    console.error("No beats parsed from index.html â€” check the regex / file format");
+    console.error("No beats parsed from index.html — check the regex / file format");
     process.exit(2);
   }
   const starts = resolveStarts(beats);
@@ -263,7 +263,7 @@ function printTable(rows) {
     r.id,
     r.start != null ? r.start.toFixed(2) : "",
     r.duration.toFixed(2),
-    (r.anchor ?? "â€”").slice(0, 32),
+    (r.anchor ?? "—").slice(0, 32),
     r.wordStart != null ? r.wordStart.toFixed(2) : "",
     r.slack != null ? r.slack.toFixed(2) : "",
     r.status,

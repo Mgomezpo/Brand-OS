@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  KALLAWAY Â· tier2 Â· lower-third Â· LENSBAR
+  KALLAWAY · tier2 · lower-third · LENSBAR
   A horizontal lens-flare streak sweeps across once left-to-right, then the name
   resolves sharp on a faint glass underlay behind it. Role fades up below.
   The flare streak is a wide gradient bar with a bright hot core and soft wings.
@@ -43,7 +43,7 @@
         overflow: visible;
       }
 
-      /* Dark glass backing behind the name â€” thin horizontal slab */
+      /* Dark glass backing behind the name — thin horizontal slab */
       #t2-lt-lens .name-backing {
         position: absolute;
         left: -20px; top: -10px; right: -20px; bottom: -8px;
@@ -68,7 +68,7 @@
         white-space: nowrap;
       }
 
-      /* The sweeping flare streak â€” clipped to name zone width + overflow */
+      /* The sweeping flare streak — clipped to name zone width + overflow */
       #t2-lt-lens .flare-track {
         position: absolute;
         left: 80px; bottom: 132px;
@@ -147,7 +147,7 @@
         <div class="name" data-slot="name">Kallaway Osei</div>
       </div>
 
-      <!-- flare sweep â€” separate layer on top -->
+      <!-- flare sweep — separate layer on top -->
       <div class="flare-track">
         <div class="flare-bar" id="lens-bar"></div>
         <div class="flare-hot" id="lens-hot"></div>
@@ -177,16 +177,16 @@
         { autoAlpha: 0, scaleX: 0.6, transformOrigin: "left center",
           duration: 0.50, ease: "power3.out" }, 0.10);
 
-      /* name starts invisible â€” the flare reveals it */
+      /* name starts invisible — the flare reveals it */
       tl.set(`${C} .name`, { autoAlpha: 0 }, 0);
 
-      /* FLARE sweeps left â†’ right across the track (700px wide, bar starts at -320) */
+      /* FLARE sweeps left → right across the track (700px wide, bar starts at -320) */
       tl.to("#lens-bar",
         { left: 720, duration: 0.70, ease: "power2.inOut" }, 0.15);
       tl.to("#lens-hot",
         { left: 720, duration: 0.70, ease: "power2.inOut" }, 0.15);
 
-      /* name resolves right as flare passes over â€” use autoAlpha + scale, no blur
+      /* name resolves right as flare passes over — use autoAlpha + scale, no blur
          (avoid filter trap: name may have text-shadow) */
       tl.to(`${C} .name`,
         { autoAlpha: 1, scale: 1, duration: 0.40, ease: "power3.out" }, 0.42);
@@ -200,7 +200,7 @@
       tl.from(`${C} .role`,
         { autoAlpha: 0, y: 10, duration: 0.55, ease: "power3.out" }, 0.88);
 
-      /* subtle bloom breathe â€” finite */
+      /* subtle bloom breathe — finite */
       tl.to(`${C} .local-bloom`,
         { opacity: 0.55, scale: 1.12, duration: 1.6,
           ease: "sine.inOut", repeat: 2, yoyo: true }, 1.80);

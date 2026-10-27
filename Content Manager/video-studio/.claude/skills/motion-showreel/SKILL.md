@@ -21,13 +21,13 @@ Techniques per chapter live in [the chapter library](references/chapter-library.
    transition turns the current object into the next one. Hard cuts are reserved
    for the flurry.
 2. **Labeled craft chapters.** Six or seven, each named in the HUD by the discipline
-   it demonstrates (`01 Â· SQUASH & STRETCH`). Use the brand's own words when it has
+   it demonstrates (`01 · SQUASH & STRETCH`). Use the brand's own words when it has
    them (YouTube has "chapters" and an "end screen").
 3. **Show the work.** Every chapter gets one tool overlay: a physics readout, a
    selection box with a cursor, a parameter panel, a bezier graph, or a brand-native
    equivalent (a search bar, a counter, a settings menu).
 4. **Persistent HUD.** Corner crop marks, a title line top left, a spec line top
-   right (`1920Ã—1080 Â· 60P Â· 129 BPM`, blinking dot), timecode bottom left, a
+   right (`1920×1080 · 60P · 129 BPM`, blinking dot), timecode bottom left, a
    progress ruler with chapter gaps bottom center, and the chapter label bottom
    right. Mono caps, tracking 0.2em, about 16px. It flips ink/paper with the
    background. Start from [the HUD template](templates/hud.html).

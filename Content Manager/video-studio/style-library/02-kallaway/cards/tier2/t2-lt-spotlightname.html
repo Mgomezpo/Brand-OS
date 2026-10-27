@@ -1,8 +1,8 @@
 <!doctype html>
 <!--
-  KALLAWAY Â· tier2 Â· lower-third Â· SPOTLIGHTNAME
-  A soft localized pool of light blooms lower-left â€” like a theatre spotlight
-  on the speaker corner â€” and the name + role fade up within it, sitting on a
+  KALLAWAY · tier2 · lower-third · SPOTLIGHTNAME
+  A soft localized pool of light blooms lower-left — like a theatre spotlight
+  on the speaker corner — and the name + role fade up within it, sitting on a
   minimal transparent glass plate. No hard card edge; the glow IS the container.
   Transparent overlay over live footage.
   Slots: name (~26 chars), role (~40 chars).
@@ -20,7 +20,7 @@
         font-family: var(--font-display);
       }
 
-      /* THE spotlight pool â€” large, soft, blooms from lower-left corner */
+      /* THE spotlight pool — large, soft, blooms from lower-left corner */
       #t2-lt-spotn .spotlight {
         position: absolute;
         left: -80px; bottom: -60px;
@@ -50,7 +50,7 @@
         z-index: 2;
       }
 
-      /* Text content â€” no hard glass card; floats inside the glow pool */
+      /* Text content — no hard glass card; floats inside the glow pool */
       #t2-lt-spotn .text-content {
         position: absolute;
         left: 80px; bottom: 150px;
@@ -114,7 +114,7 @@
 
       const C = "#t2-lt-spotn";
 
-      /* spotlight blooms up from below â€” the key entrance */
+      /* spotlight blooms up from below — the key entrance */
       tl.from(`${C} .spotlight`,
         { autoAlpha: 0, scale: 0.50, y: 80,
           transformOrigin: "20% 90%",
@@ -123,7 +123,7 @@
       tl.from(`${C} .spotlight-core`,
         { autoAlpha: 0, scale: 0.40, duration: 1.1, ease: "power2.out" }, 0.30);
 
-      /* name fades up inside the glow â€” use autoAlpha + y only (no blur on
+      /* name fades up inside the glow — use autoAlpha + y only (no blur on
          text-shadow element to avoid filter trap) */
       tl.from(`${C} .name`,
         { autoAlpha: 0, y: 22, duration: 0.80, ease: "power4.out" }, 0.75);
@@ -137,7 +137,7 @@
       tl.from(`${C} .role`,
         { autoAlpha: 0, y: 14, duration: 0.65, ease: "power3.out" }, 1.36);
 
-      /* slow breathing of the spotlight pool â€” finite */
+      /* slow breathing of the spotlight pool — finite */
       tl.to(`${C} .spotlight`,
         { opacity: 0.60, scale: 1.10, transformOrigin: "20% 90%",
           duration: 2.0, ease: "sine.inOut", repeat: 2, yoyo: true }, 2.00);

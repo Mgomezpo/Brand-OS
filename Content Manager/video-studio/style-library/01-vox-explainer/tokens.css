@@ -1,5 +1,5 @@
 /* ============================================================================
-   VOX EXPLAINER â€” style tokens
+   VOX EXPLAINER — style tokens
    Single source of palette / type / motion / texture for every card in this
    style. Cards reference these vars and never hardcode colors, fonts, easings,
    or textures. Tweak here, all cards update.
@@ -15,8 +15,8 @@
   --paper:        #efe9dc;   /* warm newsprint background */
   --paper-2:      #e6dcc4;   /* kraft / aged paper variant */
   --ink:          #17130e;   /* warm near-black print ink (text + engravings) */
-  --yellow:       #37BDF8;   /* sky blue accent â€” THE highlight (circles, marker boxes). Token name kept --yellow; value is now blue. */
-  --red:          #e23b2e;   /* editorial red â€” circles, scribbles, alarm */
+  --yellow:       #37BDF8;   /* sky blue accent — THE highlight (circles, marker boxes). Token name kept --yellow; value is now blue. */
+  --red:          #e23b2e;   /* editorial red — circles, scribbles, alarm */
   --orange:       #f26a1b;   /* cutout outline / secondary accent */
 
   /* semantic aliases the blueprint contract expects */
@@ -40,7 +40,7 @@
   --wt-bold:  700;
   --wt-black: 900;
 
-  /* video sizes for 1920x1080 (big â€” readable in 2s) */
+  /* video sizes for 1920x1080 (big — readable in 2s) */
   --size-mega:     320px;   /* hero stat number */
   --size-display:  150px;   /* takeover headline */
   --size-title:    92px;    /* section title */
@@ -52,7 +52,7 @@
   --track-tight: -0.03em;   /* display tracking, tighter than web */
   --track-wide:  0.16em;    /* uppercase label tracking */
 
-  /* --- motion â€” the choppy, low-shutter Vox signature ---------------------- */
+  /* --- motion — the choppy, low-shutter Vox signature ---------------------- */
   /* Snap in hard, settle with a tiny overshoot. Stepped eases give the
      stop-motion / low-shutter feel. GSAP string eases live in the cards. */
   --ease-snap: cubic-bezier(0.16, 1, 0.3, 1);
@@ -69,10 +69,10 @@
   --marker-skew: -1.4deg;   /* highlight boxes sit slightly off-level */
 
   /* --- textures (deterministic SVG data-URIs + gradients) ------------------ */
-  /* Paper fiber grain â€” fractalNoise, fixed seed (deterministic render). */
+  /* Paper fiber grain — fractalNoise, fixed seed (deterministic render). */
   --tex-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 
-  /* Halftone dots â€” for filling cutout placeholders / shadows the Vox way. */
+  /* Halftone dots — for filling cutout placeholders / shadows the Vox way. */
   --tex-halftone: radial-gradient(circle at center, var(--ink) 1.1px, transparent 1.6px);
   --tex-halftone-size: 7px 7px;
 

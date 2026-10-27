@@ -1,7 +1,7 @@
 <!doctype html>
 <!--
-  VOX EXPLAINER Â· tier1 Â· stat Â· HEAT STRIP
-  A row of 7 graded intensity cells from pale paper â†’ yellow â†’ red (severity
+  VOX EXPLAINER · tier1 · stat · HEAT STRIP
+  A row of 7 graded intensity cells from pale paper → yellow → red (severity
   scale). The hero cell is called out by a thick outline + elevated label;
   big hero value. Cells built in JS deterministically, color interpolated from
   token-like RGB stops. data-level (1..7, default 5) marks the hero.
@@ -109,7 +109,7 @@
         <span data-slot="highLabel">CRITICAL</span>
       </div>
       <div class="label" data-slot="label">ranked <em>high-severity</em> by independent auditors</div>
-      <div class="source" data-slot="source">SOURCE Â· RISK REPORT 2026</div>
+      <div class="source" data-slot="source">SOURCE · RISK REPORT 2026</div>
       <div class="vignette"></div>
       <div class="grain"></div>
     </div>
@@ -121,7 +121,7 @@
       const COUNT = 7;
       const heroLevel = Math.max(1, Math.min(COUNT, parseInt(row.getAttribute("data-level"), 10) || 5));
 
-      // Color ramp: paper-2 (#e6dcc4) â†’ sky blue (#37BDF8) â†’ orange (#f26a1b) â†’ red (#e23b2e)
+      // Color ramp: paper-2 (#e6dcc4) → sky blue (#37BDF8) → orange (#f26a1b) → red (#e23b2e)
       // 7 stops spread deterministically
       function lerpColor(a, b, t) {
         return [

@@ -1,10 +1,10 @@
 <!doctype html>
 <!--
-  KALLAWAY Â· tier2 Â· lower-third Â· CORNERFRAME
+  KALLAWAY · tier2 · lower-third · CORNERFRAME
   Four L-shaped neon corner brackets that draw around a name block. The brackets
   animate-draw inward from the outer corners toward the center. The name block
   starts invisible inside the bracket cage and snaps into focus as the last
-  corner closes. Sits over live footage â€” only the brackets and text paint.
+  corner closes. Sits over live footage — only the brackets and text paint.
   Slots: name (~26 chars), role (~40 chars).
 -->
 <html>
@@ -35,7 +35,7 @@
         z-index: 1;
       }
 
-      /* Cage wrapper â€” positions the brackets + text block together */
+      /* Cage wrapper — positions the brackets + text block together */
       #t2-lt-cframe .cage {
         position: absolute;
         left: 80px; bottom: 108px;
@@ -43,7 +43,7 @@
         z-index: 2;
       }
 
-      /* Text block inside the cage â€” dark glass */
+      /* Text block inside the cage — dark glass */
       #t2-lt-cframe .text-block {
         position: absolute;
         inset: 16px;
@@ -78,7 +78,7 @@
         line-height: 1.2;
       }
 
-      /* SVG overlay for corner brackets â€” covers the full cage */
+      /* SVG overlay for corner brackets — covers the full cage */
       #t2-lt-cframe .brackets-svg {
         position: absolute;
         inset: 0;
@@ -110,20 +110,20 @@
 
       <div class="cage" id="cframe-cage">
 
-        <!-- Text block â€” starts invisible, snaps in when brackets close -->
+        <!-- Text block — starts invisible, snaps in when brackets close -->
         <div class="text-block" id="cframe-textblock">
           <div class="name" data-slot="name">Kai Watanabe</div>
           <div class="role" data-slot="role">Founding Engineer, BRAND Platform</div>
         </div>
 
         <!--
-          Corner brackets SVG â€” cage is 480Ã—140.
+          Corner brackets SVG — cage is 480×140.
           Arm length = 36px per side.
           Corners:
             TL: x=0,y=0   TR: x=480,y=0   BL: x=0,y=140   BR: x=480,y=140
           Each corner is two polyline segments (H arm + V arm).
           We animate stroke-dashoffset on each segment.
-          Arm length 36px â†’ dasharray 36, dashoffset starts at 36 (hidden), animates to 0.
+          Arm length 36px → dasharray 36, dashoffset starts at 36 (hidden), animates to 0.
         -->
         <svg class="brackets-svg" viewBox="0 0 480 140">
           <defs>
@@ -173,7 +173,7 @@
 
       const C = "#t2-lt-cframe";
 
-      /* Helper: animate a line's dashoffset 36â†’0 */
+      /* Helper: animate a line's dashoffset 36→0 */
       function drawLine(id, pos) {
         const el = document.getElementById(id);
         if (!el) return;
@@ -238,7 +238,7 @@
           duration: 0.45, ease: "power3.out" },
         bracketsDone + 0.22);
 
-      /* Corner bracket glow pulse â€” finite (animate SVG opacity) */
+      /* Corner bracket glow pulse — finite (animate SVG opacity) */
       tl.to(`${C} .brackets-svg`,
         { opacity: 0.50, duration: 1.0, ease: "sine.inOut", repeat: 3, yoyo: true },
         bracketsDone + 0.80);

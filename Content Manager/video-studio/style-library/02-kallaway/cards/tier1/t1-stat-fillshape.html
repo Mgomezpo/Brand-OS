@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  KALLAWAY Â· tier1 Â· stat Â· FILLSHAPE
+  KALLAWAY · tier1 · stat · FILLSHAPE
   A large rounded-square "vessel" fills upward with glowing blue light to the
   knob percentage. A clip-path wipe drives the fill; the count-up number sits
   centered inside and transitions from dim to bright as the fill reaches it.
@@ -31,7 +31,7 @@
                 mask-image: radial-gradient(130% 110% at 50% 60%, #000 30%, transparent 78%);
       }
 
-      /* â”€â”€ layout â”€â”€ */
+      /* ── layout ── */
       #t1-stat-fill .content {
         position: absolute; inset: 0; z-index: 4;
         display: flex; flex-direction: row;
@@ -73,7 +73,7 @@
         overflow: hidden;
       }
 
-      /* fill panel â€” clipped from the bottom up by JS via clip-path */
+      /* fill panel — clipped from the bottom up by JS via clip-path */
       #t1-stat-fill .vessel-fill {
         position: absolute; inset: 0;
         background: linear-gradient(to top,
@@ -136,7 +136,7 @@
 
       <div class="content">
         <div class="text-col">
-          <div class="kicker" data-slot="kicker">MODULE PASS RATE Â· COHORT 7</div>
+          <div class="kicker" data-slot="kicker">MODULE PASS RATE · COHORT 7</div>
           <div class="label" data-slot="label">students who reach the midpoint of any AI module go on to <em>pass on their first attempt</em></div>
         </div>
 
@@ -154,7 +154,7 @@
         </div>
       </div>
 
-      <div class="source" data-slot="source">SOURCE Â· BRAND ASSESSMENT DATA 2026</div>
+      <div class="source" data-slot="source">SOURCE · BRAND ASSESSMENT DATA 2026</div>
       <div class="vignette"></div>
       <div class="grain"></div>
     </div>
@@ -200,7 +200,7 @@
           val: pct, duration: 2.0, ease: "power2.out",
           onUpdate: function () {
             const v = this.targets()[0].val;
-            /* inset from top: when v=0 â†’ 100%; when v=100 â†’ 0% */
+            /* inset from top: when v=0 → 100%; when v=100 → 0% */
             const topPct = 100 - v;
             waterEl.style.clipPath = "inset(" + topPct + "% 0 0 0 round 4px)";
             numEl.textContent = Math.round(v) + "%";

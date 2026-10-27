@@ -1,7 +1,7 @@
 <!doctype html>
 <!--
-  KALLAWAY Â· tier1 Â· stat Â· NEEDLE
-  Horizontal linear gauge â€” a glowing track with a bright needle/marker that
+  KALLAWAY · tier1 · stat · NEEDLE
+  Horizontal linear gauge — a glowing track with a bright needle/marker that
   slides right to the target value; count-up number above. Tick marks, gradient
   fill, accent needle with a trailing glow. Centred, large and spacious.
   Knob: data-pct on #needle-track (default 60).
@@ -105,7 +105,7 @@
       <div class="grid"></div>
 
       <div class="content">
-        <div class="kicker" data-slot="kicker">KNOWLEDGE RETENTION Â· POST-TEST</div>
+        <div class="kicker" data-slot="kicker">KNOWLEDGE RETENTION · POST-TEST</div>
 
         <div class="stat-wrap">
           <div class="stat" id="needle-num">0</div>
@@ -117,7 +117,7 @@
           Track: y=80, height=28, rx=14, x=0..1500
           Fill rect starts at x=0, grows right.
           Needle: vertical line + circle at x position.
-          Ticks at 0,25,50,75,100% â†’ x=0,375,750,1125,1500
+          Ticks at 0,25,50,75,100% → x=0,375,750,1125,1500
           Track left x=60, right x=1440, width=1380
         -->
         <svg class="gauge-svg" id="needle-track" data-pct="60" viewBox="0 0 1500 180"
@@ -161,7 +161,7 @@
           <text x="1095" y="165" text-anchor="middle" font-family="Space Mono,monospace" font-size="18" fill="rgba(240,238,233,0.40)">75%</text>
           <text x="1440" y="165" text-anchor="middle" font-family="Space Mono,monospace" font-size="18" fill="rgba(240,238,233,0.40)">100%</text>
 
-          <!-- Needle (vertical line + circle) â€” x driven by GSAP -->
+          <!-- Needle (vertical line + circle) — x driven by GSAP -->
           <line id="nLine" x1="60" y1="38" x2="60" y2="144"
                 stroke="url(#ngNeedle)" stroke-width="4" stroke-linecap="round"
                 filter="url(#nGlow)"/>
@@ -175,7 +175,7 @@
         </div>
       </div>
 
-      <div class="source" data-slot="source">SOURCE Â· BRAND ASSESSMENT DATA 2026</div>
+      <div class="source" data-slot="source">SOURCE · BRAND ASSESSMENT DATA 2026</div>
       <div class="vignette"></div>
       <div class="grain"></div>
     </div>
@@ -219,7 +219,7 @@
         .from("#t1-stat-needle .kicker",
           { autoAlpha: 0, y: 18, filter: "blur(8px)", duration: 0.75, ease: "power3.out" }, 0.50)
 
-        /* number count-up + needle slide â€” 3-arg .to */
+        /* number count-up + needle slide — 3-arg .to */
         .from("#t1-stat-needle .stat-wrap",
           { autoAlpha: 0, duration: 0.5, ease: "power2.out" }, 0.80)
 

@@ -1,7 +1,7 @@
 <!doctype html>
 <!--
-  KALLAWAY Â· tier1 Â· stat Â· PAIR
-  Two metrics side-by-side â€” each a glowing mega-number with its own label.
+  KALLAWAY · tier1 · stat · PAIR
+  Two metrics side-by-side — each a glowing mega-number with its own label.
   A glowing vertical divider separates them. Both numbers count up on entry.
   Slots: kicker (~28 chars uppercase), statA, labelA, statB, labelB, source (~40 chars uppercase).
 -->
@@ -145,7 +145,7 @@
       <div class="grid"></div>
 
       <div class="content">
-        <div class="kicker" data-slot="kicker">OUTCOMES SNAPSHOT Â· Q2 2026</div>
+        <div class="kicker" data-slot="kicker">OUTCOMES SNAPSHOT · Q2 2026</div>
 
         <div class="pair-row">
           <div class="metric a">
@@ -156,7 +156,7 @@
           <div class="divider" id="t1-stat-pair-div"></div>
 
           <div class="metric b">
-            <div class="stat" id="t1-stat-pair-numB" data-slot="statB">3.2Ã—</div>
+            <div class="stat" id="t1-stat-pair-numB" data-slot="statB">3.2×</div>
             <div class="metric-label" data-slot="labelB">average <em>salary-growth multiplier</em> within 12 months of certification</div>
           </div>
         </div>
@@ -164,7 +164,7 @@
         <div class="bottom-label" data-slot="label">Two numbers that define what <em>completing this course actually means.</em></div>
       </div>
 
-      <div class="source" data-slot="source">SOURCE Â· BRAND OUTCOMES STUDY 2026</div>
+      <div class="source" data-slot="source">SOURCE · BRAND OUTCOMES STUDY 2026</div>
 
       <div class="vignette"></div>
       <div class="grain"></div>
@@ -206,7 +206,7 @@
           { scaleY: 0, transformOrigin: "50% 50%", autoAlpha: 0,
             duration: 0.8, ease: "power3.out" }, 0.85)
 
-        /* statA count-up: 0â†’94 */
+        /* statA count-up: 0→94 */
         .to({ val: 0 }, {
           val: 94,
           duration: 1.6, ease: "power2.out",
@@ -215,12 +215,12 @@
           }
         }, 0.95)
 
-        /* statB count-up: 0â†’3.2 (multiplier, 1 decimal) */
+        /* statB count-up: 0→3.2 (multiplier, 1 decimal) */
         .to({ val: 1.0 }, {
           val: 3.2,
           duration: 1.6, ease: "power2.out",
           onUpdate: function() {
-            numBEl.textContent = this.targets()[0].val.toFixed(1) + "Ã—";
+            numBEl.textContent = this.targets()[0].val.toFixed(1) + "×";
           }
         }, 0.95)
 

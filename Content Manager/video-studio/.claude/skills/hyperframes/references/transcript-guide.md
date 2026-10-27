@@ -68,7 +68,7 @@ After every transcription, **read the transcript and check for quality issues be
 
 | Signal                       | Example                                | Cause                                                                        |
 | ---------------------------- | -------------------------------------- | ---------------------------------------------------------------------------- |
-| Music note tokens (`♪`, `�`) | `{ "text": "♪" }` or `{ "text": "�" }` | Whisper detected music, not speech                                           |
+| Music note tokens (`♪`, `♫`) | `{ "text": "♪" }` or `{ "text": "♫" }` | Whisper detected music, not speech                                           |
 | Garbled / nonsense words     | "Do a chin", "Get so gay", "huh"       | Model misheard lyrics or background noise                                    |
 | Long gaps with no words      | 20+ seconds of only `♪` tokens         | Instrumental section — expected, but high ratio means speech is being missed |
 | Repeated filler              | Many "huh", "uh", "oh" entries         | Model is hallucinating on music                                              |
@@ -76,7 +76,7 @@ After every transcription, **read the transcript and check for quality issues be
 
 ### Automatic retry rules
 
-**If more than 20% of entries are `♪`/`�` tokens, or the transcript contains obvious nonsense words, the transcription failed.** Do not proceed with the bad transcript. Instead:
+**If more than 20% of entries are `♪`/`♫` tokens, or the transcript contains obvious nonsense words, the transcription failed.** Do not proceed with the bad transcript. Instead:
 
 1. **Retry with `medium.en`** if the original used `small.en` or smaller:
    ```bash
@@ -85,7 +85,7 @@ After every transcription, **read the transcript and check for quality issues be
 2. **If `medium.en` also fails** (still >20% music tokens or garbled), tell the user the audio is too noisy for local transcription and suggest:
    - Providing lyrics manually as an SRT/VTT file
    - Using an external API (OpenAI or Groq Whisper — see below)
-3. **Always clean the transcript** before building captions — filter out `♪`/`�` tokens and entries where `text` is a single non-word character. Only real words should reach the caption composition.
+3. **Always clean the transcript** before building captions — filter out `♪`/`♫` tokens and entries where `text` is a single non-word character. Only real words should reach the caption composition.
 
 ### Cleaning a transcript
 
@@ -95,7 +95,7 @@ After transcription (even with a good model), strip non-word entries:
 var raw = JSON.parse(transcriptJson);
 var words = raw.filter(function (w) {
   if (!w.text || w.text.trim().length === 0) return false;
-  if (/^[♪�\u266a\u266b\u266c\u266d\u266e\u266f]+$/.test(w.text)) return false;
+  if (/^[♪♫\u266a\u266b\u266c\u266d\u266e\u266f]+$/.test(w.text)) return false;
   if (/^(huh|uh|um|ah|oh)$/i.test(w.text) && w.end - w.start < 0.1) return false;
   return true;
 });
