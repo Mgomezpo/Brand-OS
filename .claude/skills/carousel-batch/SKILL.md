@@ -12,15 +12,16 @@ Guides the creation of high-converting, authority-building carousels in the cano
 ### Phase 1: Research & Angle Selection
 1. Read `vault/Conceptos/content_pillars.md` to identify the active pillar for the batch.
 2. Cross-reference `vault/Conceptos/user_persona.md` to select a specific scene of pain or micro-frustration.
-3. Select an angle from `vault/Estrategia/frameworks_guion.md`:
-   - *Framework 1: Negative Capability* (Desmantelar un mito popular con datos del `proof_bank.md`).
-   - *Framework 2: The Belief Shift* (Llevar de la Creencia Antigua A a la Creencia Nueva B).
-   - *Framework 3: Mechanism Unveiled* (Mostrar paso a paso el sistema propio).
-4. Propose 3 hook variations (<10 words each) for user approval before drafting slides.
+3. Select the angle with the router `vault/Estrategia/Frameworks-de-Guionizacion/decision_tree.md`, which routes to the real framework library:
+   - **Quiebre Cognitivo:** `quiebre_de_creencia` (desmantelar una creencia falsa) · `fuga_invisible` (exponer el coste oculto).
+   - **Autoridad y Sistemas:** `demostracion_de_mecanismo` (prueba en vivo del sistema propio) · `desglose_paso_a_paso` (metodología replicable).
+   - **Storytelling y Lore:** `arco_tres_actos` (vivencia propia) · `leccion_de_trinchera` (principio aprendido en batalla).
+   - **Conversión y Cierre:** `activacion_lead_magnet` (recurso a cambio de interacción) · `polarizacion_cualificada` (filtrar del grupo ideal).
+4. Propose 3 hook variations (≤ 12 words each, ideally 8–10) for user approval before drafting slides.
 
 ### Phase 2: Copywriting of One-Liners (5 to 8 Slides)
 Once the hook is approved, write the slide-by-slide copy strictly adhering to these rules:
-- **Slide 1 (Cover / Hook):** Maximum 10 words. High tension. 1 highlighted word in `--accent`.
+- **Slide 1 (Cover / Hook):** Maximum 12 words (ideally 8–10). High tension. 1 highlighted word in `--accent`.
 - **Slide 2 (The Villain / The Flawed Premise):** Validate the pain. Call out the flawed industry practice.
 - **Slide 3 (The Reframe / Shift):** Introduce the brand's contrarian belief.
 - **Slides 4-6 (The Mechanism / Proof):** 1 actionable concept per slide. Bullet points must be one-liners (no paragraphs). Cite verified metrics from `vault/Conceptos/proof_bank.md`.
@@ -39,11 +40,12 @@ Once the hook is approved, write the slide-by-slide copy strictly adhering to th
    - Prompts must generate background imagery ONLY.
    - Every prompt MUST include: `"pure background texture, minimalist, architectural, ultra high resolution, cinematic lighting, absolutely no text, no letters, no logos, no typography, clean negative space"`.
 2. **HTML/CSS Assembly:**
-   - Map slide copy to the deterministic HTML template in `Content Manager/carousel-studio/`.
+   - Build `<slug>/carousel.html` loading `design-system/index.css` (which imports `design-system/tokens.css`) and applying the design line tokens of this carousel.
    - Ensure 96px padding safe margins on top, bottom, and sides.
 3. **Deterministic Render:**
-   - Execute Playwright render script:
-     ```bash
-     node "Content Manager/carousel-studio/capture.cjs"
-     ```
-   - Exports pixel-perfect PNGs at exactly 1080 × 1440 px.
+   ```bash
+   cd "Content Manager/carousel-studio"
+   python batch_manager.py compile <slug>   # pieza del batch: carousel.html → slides/*.png
+   npm run capture -- <slug>/carousel.html  # compilación de una pieza suelta
+   ```
+   - Exporta PNG pixel-perfect a exactamente 1080 × 1440 px.

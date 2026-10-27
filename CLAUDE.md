@@ -89,7 +89,7 @@ Ejecuta estas skills en Claude Code, Codex o Antigravity:
 
 | Skill | Descripción | Cuándo ejecutar |
 |---|---|---|
-| `/brand-onboard` | Asistente de intake de marca en 7 bloques | Día 1, o al pivotar el posicionamiento. Puebla `vault/Conceptos/`. |
+| `/brand-onboard` | Asistente de intake de marca en 8 bloques (incluye generar el **Sistema de Diseño** sin pedir HEX) | Día 1, o al pivotar el posicionamiento. Puebla `vault/Conceptos/` y enchufa `design-system/` a los dos motores. |
 | `/brand-audit` | Auditoría de integridad, ratios y márgenes | Tras el setup, semanalmente o antes de compilar. Verifica 3:4, 9:16, márgenes de 96px, pruebas reales y enlaces wiki. |
 | `/carousel-batch` | Motor de producción de carruseles 3:4 en 3 fases | Producción semanal. Genera 5 carruseles 3:4 deterministas (1080 × 1440 px). |
 | `/script-shortform` | Generador de guiones de video 9:16 de alta retención | Para Reels/TikTok/Shorts. 4 movimientos (hook <12 palabras, tensión, mecanismo, CTA) con direcciones visuales. |

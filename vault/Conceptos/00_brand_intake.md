@@ -3,52 +3,62 @@ tags: [brand-brain, intake]
 status: pendiente
 ---
 
-# 📝 Brand Intake — Entrevista de Arranque
+# 📝 Brand Intake — Entrevista de Arranque (8 Bloques)
 
-> **Propósito:** Cuestionario maestro para poblar el Brand Brain de una marca nueva. El agente lo conduce **una pregunta a la vez** y vuelca cada respuesta en el documento destino indicado.
+> **Propósito:** Cuestionario maestro para poblar el Brand Brain de una marca nueva. El agente lo conduce **una pregunta a la vez** (skill `/brand-onboard`) y vuelca cada respuesta en el documento destino indicado.
 > **Regla:** No inventar respuestas. Si el humano no sabe, marcar `⚠️ HIPÓTESIS` y validar con datos en 30 días.
+> **Espejo:** Este archivo es el gemelo operativo de `.claude/skills/brand-onboard/SKILL.md` — si cambia una pregunta, cambian ambos.
 
 ---
 
-## Bloque 1 · Núcleo → `Conceptos/brand_core.md`
-1. ¿Cómo se llama la marca y quién/qué está detrás (persona, empresa, producto)?
-2. ¿Por qué existe? (el problema del mundo que la indigna)
-3. ¿Qué cree la marca que el mercado no cree? (3 creencias contrarias)
-4. ¿Qué arquetipo encarna? (Sabio, Rebelde, Creador, Explorador, Cuidador, Héroe, Mago, Bufón, Amante, Gobernante, Inocente, Persona Común)
-5. ¿Qué NO es la marca? (anti-identidad)
+## Bloque 1 · Identidad y Misión → `Conceptos/brand_core.md`
+1. Nombre de la marca y quién está detrás (persona, empresa, producto)?
+2. Misión principal: el problema del mundo que la indigna.
+3. Creencia contraria (lo que el nicho acepta y la marca rechaza): 2–3.
+4. Arquetipo (Sabio, Rebelde, Creador, Explorador, Cuidador, Héroe, Mago, Bufón, Amante, Gobernante, Inocente, Persona Común).
+5. Anti-identidad: ¿qué NO es la marca?
 
 ## Bloque 2 · Audiencia → `Conceptos/user_persona.md` + `Conceptos/jtbd_forces.md`
-6. ¿Quién es el cliente ideal? (rol, contexto, momento de vida/negocio)
-7. ¿Cuál es la escena exacta en que siente el dolor? (lugar, hora, herramienta, emoción)
-8. ¿Qué ha intentado antes y por qué falló?
-9. ¿Qué lo frena a comprar? (ansiedades y hábitos)
+6. ICP: rol, contexto, momento de vida/negocio.
+7. Escena exacta del dolor (lugar, hora, herramienta, emoción).
+8. Qué solucionó antes y por qué falló.
+9. Qué lo frena a comprar (ansiedades y hábitos).
 10. ¿Cómo se ve su "después" ideal?
 
-## Bloque 3 · Oferta y Posicionamiento → `Conceptos/offer.md` + `Conceptos/positioning.md`
-11. ¿Qué vende exactamente? (producto/servicio, precio, formato de entrega)
-12. ¿Cuál es el mecanismo único (el "cómo" propietario)?
-13. ¿Contra qué alternativas compite? (incluida "no hacer nada")
-14. ¿Qué categoría ocupa o quiere crear?
-15. ¿Cuál es el lead magnet / recurso de entrada?
+## Bloque 3 · Posicionamiento → `Conceptos/positioning.md`
+11. Categoría donde juega y enemigo común (mentalidad obsoleta, práctica tóxica, falso gurú).
+12. Mecanismo único con nombre memorable (el "cómo" propietario).
+13. Contra qué alternativas compite (incluida "no hacer nada").
 
-## Bloque 4 · Voz → `Conceptos/tone_of_voice.md`
-16. ¿Idioma, país/región y trato? (tú / vos / usted)
-17. 3 adjetivos de cómo suena · 3 de cómo NUNCA suena
-18. Palabras propias de la marca (léxico canónico)
-19. Expresiones prohibidas
+## Bloque 4 · Oferta y Embudo → `Conceptos/offer.md`
+14. Qué vende exactamente (producto/servicio, precio, formato de entrega).
+15. Keyword de DM para el funnel de comentarios (ej. `SISTEMA`, `AUDITORIA`).
+16. Lead magnet o activo que reciben al enviar la palabra.
 
-## Bloque 5 · Visual → `Conceptos/visual_identity.md` + `design-system/`
-20. Colores existentes (HEX) y tipografías
-21. Referencias visuales que ama / que odia
-22. ¿Cuántas líneas de diseño quiere rotar? (recomendado: 3 a 5)
+## Bloque 5 · Voz → `Conceptos/tone_of_voice.md`
+17. Idioma, país/región y trato (tú / vos / usted).
+18. Pega 1–2 textos reales tuyos que representen tu tono natural.
+19. 3 adjetivos de cómo suena · 3 de cómo NUNCA suena.
+20. Palabras propias (léxico canónico) y expresiones prohibidas (lista negra anti-AI-slop).
 
-## Bloque 6 · Contenido → `Conceptos/content_pillars.md`
-23. ¿En qué plataformas publica y con qué frecuencia realista?
-24. 3–5 temas sobre los que tiene autoridad legítima
-25. ¿Qué pruebas reales tiene? (casos, métricas, testimonios) → `Conceptos/proof_bank.md`
-26. ¿Qué referentes admira? → `Estrategia/Referentes-y-Benchmarking/`
+## Bloque 6 · Banco de Pruebas → `Conceptos/proof_bank.md`
+21. Métricas reales verificables (facturación, retención, horas ahorradas) — cero cifras inventadas.
+22. Casos de estudio y testimonios con nombre/situación concretos.
 
-## Bloque 7 · Operación
-27. Herramientas disponibles (edición, diseño, publicación, automatización de DM)
-28. Modo de gobernanza: **Copiloto** (aprobación humana) o **Autónomo**
-29. Horas por semana disponibles para grabar/aprobar
+## Bloque 7 · Contenido y Rotación → `Conceptos/content_pillars.md`
+23. Plataformas y cadencia realista (ej. 5 piezas semanales, 1–2 días de separación).
+24. 3–4 pilares temáticos y cuál arranca el primer lote.
+25. Referentes admirados → `Estrategia/Referentes-y-Benchmarking/`.
+
+## Bloque 8 · Sistema de Diseño → `Conceptos/visual_identity.md` + `design-system/` + `design_lines/`
+
+> **Nunca pedir HEX ni tipografías.** Se diseña a punta de preguntas de *vibe* y el agente deriva los tokens. Si la persona ya tiene colores/fuentes exactas y las ofrece, se honran tal cual.
+
+26. Lienzo: noche de estudio (oscuro) / editorial de papel (claro) / lienzo vivo saturado.
+27. Energía del acento: amarillo-ámbar (ganancia), rojo (rebeldía/alarma), cian (tech), dorado (premium), verde (orgánico) — 1–2 opciones.
+28. Voz tipográfica: MAYÚSCULAS monumentales / serif editorial / mono técnico / sans humanista.
+29. Geometría: esquinas duras o suaves; sombras duras estilo sticker ¿sí o no?
+30. Referencias que ama y anti-referencias prohibidas.
+31. ¿Cuántas líneas de diseño rotar (recomendado 3–5) y mapa funnel por línea (BOF/MOF/TOF)?
+
+**Salidas del Bloque 8** (contrato de enchufado): `design-system/tokens.css` + `DESIGN_SYSTEM.md` regenerados con los tokens de marca, `visual_identity.md` lleno (`status: completo`), `design_lines/index.md` + `line-<id>.md` por línea, `carousel-studio/BATCH_TRACKER.md` con la columna Línea real, y `{{NOMBRE_MARCA}}` reemplazado en `AGENTS.md`, `CLAUDE.md` y `README.md`.

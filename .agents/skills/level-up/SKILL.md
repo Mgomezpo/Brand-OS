@@ -29,7 +29,7 @@ Append this finding to `vault/Findings.md`.
 
 ### Step 3: Tool & Engine Calibration (Machine Layer)
 Ask:
-"¿Descubrimos o ajustamos alguna herramienta técnica esta semana (ej. nuevo flag de Playwright, mejora en Whisper, prompt de IA visual con mejor textura, conector de Zernio)?"
+"¿Descubrimos o ajustamos alguna herramienta técnica esta semana (ej. nuevo flag de Playwright, mejora en la transcripción ElevenLabs/Whisper, prompt de IA visual con mejor textura, conector de Zernio)?"
 
 If yes:
 - Update `vault/Repos.md` with the tool details, code snippet, and link.

@@ -42,4 +42,4 @@ Each script must be formatted in a two-column or interleaved structure (Audio / 
 - **Aspect Ratio:** Strict 9:16 (1080 × 1920 px).
 - **Safe Zone:** Keep key faces and critical typography between Y=320px and Y=1500px.
 - **Avoid Dead Zones:** Do not place captions on the bottom 420px (covered by username, sound title, and captions on Reels/TikTok) or the right 140px (covered by like, comment, share icons).
-- **Caption Pacing:** Synchronized with local Whisper transcription in `Content Manager/video-studio/`. 1-3 words per burst.
+- **Caption Pacing:** Synchronized with the studio transcript in `Content Manager/video-studio/` (ElevenLabs Scribe is the default engine; honor the user's chosen transcription provider). 1-3 words per burst.

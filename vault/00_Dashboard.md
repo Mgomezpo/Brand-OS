@@ -38,7 +38,7 @@ marca: "{{NOMBRE_MARCA}}"
 
 | Módulo | Documento | Propósito | Estado |
 | :--- | :--- | :--- | :---: |
-| **📝 Intake de Arranque** | [[Conceptos/00_brand_intake|Brand Intake]] | Cuestionario maestro de 29 preguntas en 7 bloques | `pendiente` |
+| **📝 Intake de Arranque** | [[Conceptos/00_brand_intake|Brand Intake]] | Cuestionario maestro en 8 bloques (gemelo del skill `/brand-onboard`; el Bloque 8 genera el Sistema de Diseño) | `pendiente` |
 | **🧬 Núcleo de Marca** | [[Conceptos/brand_core|Brand Core]] | Misión, creencias contrarias, arquetipo y anti-identidad | `pendiente` |
 | **🎯 Posicionamiento** | [[Conceptos/positioning|Positioning]] | Modelo April Dunford y mecanismo único propietario | `pendiente` |
 | **💰 Oferta & Funnel** | [[Conceptos/offer|Offer]] | Escalera de valor, tripwires, core y keywords DM | `pendiente` |

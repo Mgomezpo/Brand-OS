@@ -40,10 +40,10 @@ The kit operates on two complementary frameworks: **The Three As first, The Four
 | Pillar | One-liner |
 |---|---|
 | **Architecture** | The Brand Brain (`brand_core`, `user_persona`, `positioning`, `offer`, `tone_of_voice`, `content_pillars`, `proof_bank`). The foundational truth. |
-| **Angle** | Cognitive Frameworks (Negative Capability, Belief Shift, Mechanism Unveiled). Transforming raw facts into irresistible narrative tension. |
+| **Angle** | The framework router (`decision_tree.md` → quiebre de creencia, demostración de mecanismo, desglose paso a paso, activación lead magnet…). Transforming raw facts into irresistible narrative tension. |
 | **Authority** | The Proof Bank & Contrarian Posture. Real case metrics, zero fabricated numbers, and specific vocabulary that commands respect. |
 
-Full breakdown in `vault/Conceptos/` and `vault/Estrategia/frameworks_guion.md`.
+Full breakdown in `vault/Conceptos/` and `vault/Estrategia/Frameworks-de-Guionizacion/`.
 
 > *The Three As of Brand Intelligence™ is a trademark of Brand OS. © 2026 Brand OS Contributors.*
 
@@ -68,7 +68,7 @@ The kit includes setup, production engines, adversarial testing, quality audits,
 
 | Skill | Type | When to run |
 |---|---|---|
-| `/brand-onboard` | Setup wizard (one-time) | Day 1, immediately after clone. 7-block intake interview. Populates `vault/Conceptos/` and customizes all manuals. |
+| `/brand-onboard` | Setup wizard (one-time) | Day 1, immediately after clone. 8-block intake interview (Block 8 designs and wires the whole design system). Populates `vault/Conceptos/` + `design-system/` and customizes all manuals. |
 | `/brand-audit` | Evidence-based integrity check | Weekly or before batching. Verifies strict 3:4 and 9:16 ratios, 96px safe margins, proof citations, zero broken links, and saves a dated report in `audits/`. |
 | `/carousel-batch` | 3-phase production engine | Weekly batch day. Guides topic selection, writes 5-8 punchy slides, outputs text-free AI prompts, and triggers Playwright render. |
 | `/script-shortform` | 4-movement video script generator | For Reels/TikTok/Shorts. Hook <12 words, tension, unique mechanism, and CTA with visual directions and sound cues. |
