@@ -73,7 +73,7 @@ cd "Content Manager/carousel-studio"
 npm install                       # solo la primera vez (Playwright + Chromium)
 python batch_manager.py status            # retrato del batch: qué carrusel/fondo falta
 python batch_manager.py compile <slug>    # compila carousel.html → slides/*.png (3:4)
-node capture.cjs <slug>/carousel.html    # compilación directa de una pieza suelta
+node capture.cjs batches/<vuelta>/<slug>/carousel.html    # compilación directa de una pieza suelta
 ```
 
 Cada carrusel del batch vive en `batches/<vuelta>/<slug>/` con: `research.md` → `copy.md` (one-liners ≤12 palabras) → `assets/bg_0*.jpg` (fondos IA) → `carousel.html` (tokens de la línea) → `slides/*.png`.

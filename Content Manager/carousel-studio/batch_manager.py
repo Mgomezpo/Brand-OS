@@ -130,7 +130,7 @@ def update_tracker_md(batch_data):
     pending_found = False
     for item in batch_data.get("carousels", []):
         slug = item["slug"]
-        expected = item.get("slides_count", 5)
+        expected = item.get("slides_count", 7)
         check = check_carousel_assets(slug, expected)
         if check["missing_indices"]:
             pending_found = True

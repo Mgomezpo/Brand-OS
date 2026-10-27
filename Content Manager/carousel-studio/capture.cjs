@@ -1,5 +1,5 @@
 // Simple carousel capture — screenshots each .slide element to PNG
-// Usage: node capture.mjs <carousel.html> [outDir]
+// Usage: node capture.cjs <path-to-carousel.html> [outDir]
 
 const path = require('node:path');
 const fs = require('node:fs');
@@ -8,7 +8,7 @@ const { pathToFileURL } = require('node:url');
 
 const [, , htmlArg, outArg] = process.argv;
 if (!htmlArg) {
-  console.error('usage: node capture.mjs <carousel.html> [outDir]');
+  console.error('usage: node capture.cjs <path-to-carousel.html> [outDir]');
   process.exit(1);
 }
 const htmlPath = path.resolve(htmlArg);

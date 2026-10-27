@@ -39,7 +39,7 @@ Escribe `batches/<vuelta>/<slug>/copy.md`:
 - Hero Cover según la Ley del Hero Cover (`../../vault/SOPs/carousels.md` §1).
 - Doble registro tipográfico: display de la línea + acento serif itálica donde aplique.
 
-Actualiza `BATCH_TRACKER.md` (columna Estado Copy). 🛑 Gate: sin copy aprobado, Fase 3 no arranca.
+Marca el gate de copy en la conversación: 🛑 **sin copy aprobado por el dueño, Fase 3 no arranca** (el TRACKER refleja solo el estado de fondos/compilado que calcula `batch_manager.py status`).
 
 ## Fase 3 — Prompts Visuales (por línea) + Compilación
 
