@@ -34,7 +34,7 @@ Brand OS/
 │   ├── postprocessing/        → Mesa de publicación (paquetes <slug>/ → Zernio)
 │   └── helper/                → Embudos transversales (Zernio comment-to-DM)
 │
-├── ⚙️ connections.md          → Registro de motores, APIs y renderizadores alcanzables
+├── ⚙️ connections.md          → Registro de conexiones externas y estado (llaves en .env)
 ├── 📈 EXPANSIONS.md           → Guía de escala: qué agregar, cadencias y anti-patrones
 └── 🤖 AGENTS.md / CLAUDE.md   → Esta guía operativa
 ```

@@ -33,5 +33,5 @@ Ask:
 
 If yes:
 - Update `vault/Repos.md` with the tool details, code snippet, and link.
-- Update `connections.md` if a new service or engine status changed.
+- Update `connections.md` if a service connection status changed.
 - If relevant, adjust `design-system/tokens.css` or the rendering scripts in `Content Manager/`.

@@ -21,12 +21,12 @@ import urllib.request
 import urllib.error
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
+WORKSPACE_ROOT = Path(__file__).resolve().parent.parent.parent  # Brand OS root
 SERVER_URL = "https://mcp.zernio.com/mcp"
 API_BASE = "https://zernio.com/api/v1"
 
 def load_env():
-    env_file = REPO_ROOT / ".env"
+    env_file = WORKSPACE_ROOT / ".env"   # UN SOLO .env en la raíz del workspace
     if env_file.exists():
         for line in env_file.read_text(encoding="utf-8").splitlines():
             line = line.strip()
@@ -39,7 +39,7 @@ ZERNIO_API_KEY = os.environ.get("ZERNIO_API_KEY", "")
 
 def get_mcp_cmd():
     if not ZERNIO_API_KEY:
-        sys.exit("Error: ZERNIO_API_KEY missing in .env")
+        sys.exit("Error: ZERNIO_API_KEY missing — fill it in the workspace root .env (copy .env.example)")
     return [
         "cmd.exe",
         "/c",
@@ -165,7 +165,7 @@ def list_mcp_tools():
 # REST API helpers for Comment Automations
 def api_request(method, path, body=None):
     if not ZERNIO_API_KEY:
-        sys.exit("ZERNIO_API_KEY missing in .env")
+        sys.exit("ZERNIO_API_KEY missing — fill it in the workspace root .env (copy .env.example)")
     req = urllib.request.Request(
         f"{API_BASE}{path}",
         data=json.dumps(body).encode() if body is not None else None,

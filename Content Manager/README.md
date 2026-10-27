@@ -17,7 +17,7 @@ Capa operativa del Brand OS: los **motores de producción** (video 9:16 y carrus
 
 1. **Video:** `cd video-studio && npm install` (Node ≥ 22) · transcripción gratis vía Whisper ya incluida en el kit (`hyperframes transcribe`); el `.env` solo se necesita si activas ElevenLabs u otro proveedor de pago (`video-studio/.env.example` → `.env`).
 2. **Carrusel:** `cd carousel-studio && npm install` (Playwright + Chromium).
-3. **Funnels (Zernio):** copia `.env.example` → `.env` en esta carpeta y rellena `ZERNIO_API_KEY` + `ZERNIO_PROFILE_ID` + `ZERNIO_ACCOUNT_ID`. Primeras 2 cuentas conectadas gratis.
+3. **Funnels (Zernio):** en el `.env` **de la RAÍZ del workspace** (`cp .env.example .env`) rellena `ZERNIO_API_KEY` + `ZERNIO_PROFILE_ID` + `ZERNIO_ACCOUNT_ID` — `zernio.py` lee el `.env` raíz. Primeras 2 cuentas conectadas gratis.
 
 ## 🔗 Reglas transversales
 

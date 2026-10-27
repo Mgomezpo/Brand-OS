@@ -103,7 +103,7 @@ Brand OS/
 ├── AGENTS.md                          ← Matching operating manual for Codex & Antigravity
 ├── EXPANSIONS.md                      ← Scaling guide: what to add as you grow, cadences & anti-patterns
 ├── LICENSE                            ← MIT License + Trademark notices
-├── connections.md                     ← Registry of reachable engines, APIs and local renderers
+├── connections.md                     ← External connections & on/off status (keys in .env)
 ├── .env.example                       ← ALL external connection keys (copy to .env; free defaults need NO key)
 ├── .gitignore                         ← Excludes private captures, heavy media & node_modules
 │
