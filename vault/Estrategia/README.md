@@ -53,12 +53,8 @@
 
 ### 3. 👥 [[Referentes-y-Benchmarking/README|Deconstrucción de Referentes]]
 - Perfiles de ingeniería inversa con patrones visuales, narrativos y de conversión:
-  - [[Referentes-y-Benchmarking/helder-penaloza/analisis-carruseles-y-copies|Helder Peñaloza]]: Estudio profundo de 20 carruseles, layout y copies.
-  - [[Referentes-y-Benchmarking/aiwithremy/perfil|Remy]]: Flujos de IA visual.
-  - [[Referentes-y-Benchmarking/askcatgpt/perfil|Cat]]: Micro-tutoriales y retención.
-  - [[Referentes-y-Benchmarking/bradfordmarais/perfil|Bradford Marais]]: Marketing de sistemas y automatización.
-  - [[Referentes-y-Benchmarking/kaye-creatives/perfil|Kaye Creatives]]: Dirección de arte premium.
-  - [[Referentes-y-Benchmarking/nicktarmo/perfil|Nick Tarmo]]: Modelos de monetización y comunidad.
+  - La carpeta se entrega **vacía por diseño**: cada usuario pobla su propia biblioteca de referentes del nicho.
+  - Empieza con [[Templates/referente_perfil|la plantilla de perfil de referente]] y enlaza cada perfil aquí.
 
 ### 4. 🏛️ Arquitectura de Contenido y Gobernanza
 - [[Arquitectura-de-Contenido/arquitectura-motor-multimarca|Arquitectura de Motor Multimarca]]

@@ -28,7 +28,7 @@ import urllib.request
 from pathlib import Path
 from typing import Optional
 
-# Root del AI Content Manager (3 niveles arriba: helper/ → project root)
+# Root del Content Manager (un nivel arriba: helper/ → project root)
 ROOT = Path(__file__).resolve().parent.parent
 CACHE_DIR = ROOT / "assets" / "known-tools"
 PEOPLE_CACHE_DIR = CACHE_DIR / "people"

@@ -56,7 +56,7 @@ Cuando aparece el vocero o un referente: slot explícito en el prompt con imagen
 [4 · CTA automatizado]      → "Comentá {{KEYWORD}} y te paso…"
 ```
 - **Hashtags:** siempre en el primer comentario.
-- Análisis completo: `Estrategia/referentes_ejemplo/helder-penaloza/`.
+- Análisis completo: `Estrategia/Referentes-y-Benchmarking/`.
 
 ---
 
