@@ -46,8 +46,7 @@ scratch/
 *.log
 
 # Large media outputs (Video renders & heavy export batches)
-AI Content Manager/**/output/*.mp4
-AI Content Manager/**/output/*.avi
-AI Content Manager/**/output/*.mov
-AI Content Manager/carousel-studio/renders/*.png
-AI Content Manager/video-studio/renders/*.mp4
+Content Manager/video-studio/renders/*.mp4
+Content Manager/carousel-studio/renders/*.png
+Content Manager/carousel-studio/**/slides/
+Content Manager/carousel-studio/CURRENT_BATCH.json

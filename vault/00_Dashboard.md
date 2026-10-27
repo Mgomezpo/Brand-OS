@@ -24,6 +24,16 @@ marca: "{{NOMBRE_MARCA}}"
 
 ---
 
+## ⚙️ Motores del Sistema (Ejecución)
+
+| Motor | Ubicación | Comandos clave | SOP Maestro |
+| :--- | :--- | :--- | :--- |
+| 🎬 Video 9:16 | `Content Manager/video-studio/` | `npm run new-video -- <slug>` → `npm run transcribe` → skills `/cut-silences` + `/cut-mistakes` → `npm run preflight -- <slug>` | [[SOPs/video_studio\|🎬 SOP: Video Studio]] |
+| 🖼️ Carrusel 3:4 | `Content Manager/carousel-studio/` | `python batch_manager.py status` → `python batch_manager.py compile <slug>` | [[SOPs/carousel_batch\|🖼️ SOP: Batch de Carruseles]] |
+| 📦 Publicación | `Content Manager/pipeline/40_postprocessing/` | Paquete: `caption.md` + `funnel.md` + `post.json` (disparo por Zernio) | [[SOPs/funnels_publicacion\|🔗 SOP: Embudos y Publicación]] |
+
+---
+
 ## 🧠 Cerebro de Marca (Brand Brain)
 
 | Módulo | Documento | Propósito | Estado |

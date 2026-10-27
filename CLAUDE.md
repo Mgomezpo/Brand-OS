@@ -1,79 +1,123 @@
-# {{NOMBRE_MARCA}} — Brand OS · Operating Manual for Claude Code & AI Agents
+# {{NOMBRE_MARCA}} — Brand OS · Guía de Operación para Agentes de IA
 
-> **Operations Center and Content Operating System of {{NOMBRE_MARCA}}**  
-> This document establishes the canonical architecture of the workspace. Any AI agent (Claude Code, Antigravity, Codex) must strictly follow these definitions to maintain state-of-the-art deterministic quality.
+> **Centro de Operaciones y Sistema Operativo de Contenidos de {{NOMBRE_MARCA}}**  
+> Este documento establece la arquitectura canónica definitiva del workspace. Cualquier agente de IA (Antigravity, Claude, Codex, Gemini) debe seguir estrictamente estas definiciones para evitar duplicidad y mantener un estándar de calidad **tope de gama**.
 
 ---
 
-## 🏛️ The 4 Pillars of the Workspace
+## 🏛️ Los 4 Pilares del Workspace
+
+El workspace está estructurado con Obsidian en la cima comandando la fábrica de contenidos:
 
 ```
 Brand OS/
 │
-├── 🧠 vault/                  → OBSIDIAN CONTROL TOWER (Brand Brain, Kanban, SOPs & Frameworks)
-│   ├── 00_Dashboard.md        → 360° overview of brand ecosystem
-│   ├── Board.md               → Unified Kanban (Ideas ➔ Production ➔ Funnel ➔ Published)
-│   ├── Findings.md            → Content learnings, retention metrics & insights
-│   ├── Repos.md               → Technical tools, APIs & engine discoveries
-│   ├── Conceptos/             → Brand Brain (intake, core, audience, voice, visual, pillars, proof)
-│   ├── Estrategia/            → Unified scripting frameworks + empirical research
-│   ├── SOPs/                  → Master procedures (hooks, scripts, 3:4 carousels, video, funnels)
-│   └── Templates/             → Standardized project, script & batch templates
+├── 🧠 vault/                  → OBSIDIAN ARRIBA (Torre de Control & Araña de Instrucciones MD)
+│   ├── 00_Dashboard.md        → Centro de comando con visión 360° del ecosistema
+│   ├── Board.md               → Tablero Kanban unificado (Ideas ➔ Producción ➔ Funnel ➔ Publicado)
+│   ├── Findings.md            → Bitácora de aprendizajes de contenido y retención
+│   ├── Repos.md               → Banco de herramientas y descubrimientos técnicos
+│   ├── Conceptos/             → Brand Brain (intake, núcleo, audiencia, voz, visual, pilares, pruebas)
+│   ├── Estrategia/            → Frameworks de guionización + Research empírico + Referentes UNIFICADOS
+│   ├── SOPs/                  → Procedimientos maestros (hooks, guiones, carruseles 3:4, video, funnels)
+│   └── Templates/             → Plantillas estandarizadas de notas de proyecto, guiones y lotes
 │
-├── 🎨 design-system/          → CANONICAL BRAND SOURCE (CSS Tokens, SVG, 3:4 & 9:16 Grids)
-│   ├── DESIGN_SYSTEM.md       → Aspect ratio specs, token definitions & typography rules
-│   ├── tokens.css             → Surface, text and accent color variables
-│   ├── index.css              → Deterministic 3:4 slide styles (1080 × 1440 px)
-│   └── svg/                   → Clean vector graphics
+├── 🎨 design-system/          → LA FUENTE CANÓNICA DE MARCA (Tokens CSS, SVG, Grillas 3:4 y 9:16)
+│   ├── DESIGN_SYSTEM.md       → Especificación de proporciones, colores y tipografías
+│   ├── tokens.css             → Variables de superficies, lectura y acento focal
+│   ├── index.css              → Estilos deterministas de diapositivas 3:4 (1080 × 1440 px)
+│   └── svg/                   → Gráficos vectoriales limpios
 │
-├── 🚀 Content Manager/         → CONTENT FACTORY (Engines & Deterministic Automation)
-│   ├── carousel-studio/       → 3:4 Carousel engine (Playwright + batch_manager.py)
-│   ├── video-studio/          → 9:16 Video engine (HyperFrames + GSAP + ElevenLabs)
-│   ├── pipeline/              → Assembly line (40_postprocessing)
-│   └── helper/                → Funnel & distribution (Zernio comment-to-DM)
+├── 🚀 Content Manager/         → LA FÁBRICA DE CONTENIDOS (Engines y Software Determinista)
+│   ├── carousel-studio/       → Estudio de carruseles 3:4 (Playwright + batch_manager.py)
+│   ├── video-studio/          → Estudio de video 9:16 (HyperFrames + GSAP + ElevenLabs)
+│   ├── pipeline/              → Mesa de ensamblaje transversal (40_postprocessing)
+│   └── helper/                → Embudos transversales (Zernio comment-to-DM)
 │
-├── ⚙️ connections.md          → Registry of reachable engines, APIs and local renderers
-├── 📈 EXPANSIONS.md           → Scaling guide: what to add, cadences & anti-patterns
-└── 🤖 CLAUDE.md / AGENTS.md   → Canonical operating instructions
+├── ⚙️ connections.md          → Registro de motores, APIs y renderizadores alcanzables
+├── 📈 EXPANSIONS.md           → Guía de escala: qué agregar, cadencias y anti-patrones
+└── 🤖 AGENTS.md / CLAUDE.md   → Esta guía operativa
 ```
 
 ---
 
-## ⚡ Built-in Skills
+## ⚙️ Motores del Sistema — Quick Start
 
-Invoke these skills in Claude Code, Codex, or Antigravity:
+Los SOPs de `vault/SOPs/` explican el **qué** y el **por qué** de cada pieza. Esta sección explica **quién lo ejecuta y cómo**: los dos motores de producción + la mesa de publicación.
 
-| Skill | Description | When to run |
+### 🎬 Motor de Video (9:16) — `Content Manager/video-studio/`
+
+Stack: HyperFrames + GSAP + ElevenLabs Scribe + ffmpeg. Canonicidad: proporción **9:16 (1080 × 1920 px)**. Los tokens de marca salen de `design-system/tokens.css` y `vault/Conceptos/visual_identity.md`.
+> Guía profunda: `Content Manager/video-studio/README.md` + `vault/SOPs/video_studio.md`
+
+```bash
+cd "Content Manager/video-studio"
+npm install                       # solo la primera vez (requiere Node >= 22)
+npm run new-video -- <slug>       # crea el kit del proyecto en video-projects/<slug>/
+npm run demo                      # (opcional) genera un proyecto de partida para explorar
+npm run transcribe -- <archivo>   # ElevenLabs Scribe → transcript.json (timestamps por palabra)
+# Cortes, en este orden: skill /cut-silences → skill /cut-mistakes (nunca mezclar timestamps)
+npm run preflight -- <slug>       # audio joins, contraste y safe areas → final.mp4
+npm run sync:skills               # mantiene espejos .claude/ y .agents/ sincronizados
+```
+
+### 🖼️ Motor de Carrusel (3:4) — `Content Manager/carousel-studio/`
+
+Stack: fondos IA 100% limpios de texto + HTML/CSS determinista + Playwright. Canonicidad: proporción **3:4 (1080 × 1440 px)**, márgenes 96 px, Regla de 3 Colores.
+> Panel: `batch_manager.py` es el gestor determinista del batch semanal · `ROTATION.md` gobierna la vuelta activa · `BATCH_TRACKER.md` es el tablero de estado
+> Guía profunda: `vault/SOPs/carousel_batch.md`
+
+```bash
+cd "Content Manager/carousel-studio"
+npm install                       # solo la primera vez (Playwright + Chromium)
+python batch_manager.py status            # retrato del batch: qué carrusel/fondo falta
+python batch_manager.py compile <slug>    # compila carousel.html → slides/*.png (3:4)
+node capture.cjs <slug>/carousel.html    # compilación directa de una pieza suelta
+```
+
+Cada carrusel del batch vive en `batches/<vuelta>/<slug>/` con: `research.md` → `copy.md` (one-liners ≤12 palabras) → `assets/bg_0*.jpg` (fondos IA) → `carousel.html` (tokens de la línea) → `slides/*.png`.
+
+### 📦 Mesa de Publicación — `Content Manager/pipeline/40_postprocessing/`
+
+El `pipeline/` NO es un estudio: es la mesa transversal. En `40_postprocessing/<slug>/` se agrupa el paquete listo para publicar: `caption.md` + `funnel.md` + `post.json` + `media-url.txt` (SOP: `vault/SOPs/funnels_publicacion.md`, disparo por Zernio).
+
+---
+
+## ⚡ Skills Integradas (Built-in Skills)
+
+Ejecuta estas skills en Claude Code, Codex o Antigravity:
+
+| Skill | Descripción | Cuándo ejecutar |
 |---|---|---|
-| `/brand-onboard` | 7-block Brand Intake wizard | Day 1, or when defining/pivoting brand positioning. Populates `vault/Conceptos/`. |
-| `/brand-audit` | Integrity & ratio compliance audit | After onboarding, weekly, or before rendering. Verifies 3:4 & 9:16 aspect ratios, 96px safe margins, proof citations, and zero broken links. |
-| `/carousel-batch` | 3-phase production engine for 3:4 carousels | Weekly content production. Generates 5 high-converting 3:4 carousels (1080 × 1440 px). |
-| `/script-shortform` | 4-movement 9:16 video script generator | For Reels/TikTok/Shorts. Implements hook <12 words, tension, unique mechanism, and CTA with visual directions. |
-| `/grill-me` | Adversarial context interview | Before writing new content. Stress-tests angles and contrarian beliefs against the Brand Core. |
-| `/level-up` | Weekly calibration & learning loop | Weekly retro. Updates `vault/Findings.md` with retention data and `vault/Repos.md` with technical insights. |
+| `/brand-onboard` | Asistente de intake de marca en 7 bloques | Día 1, o al pivotar el posicionamiento. Puebla `vault/Conceptos/`. |
+| `/brand-audit` | Auditoría de integridad, ratios y márgenes | Tras el setup, semanalmente o antes de compilar. Verifica 3:4, 9:16, márgenes de 96px, pruebas reales y enlaces wiki. |
+| `/carousel-batch` | Motor de producción de carruseles 3:4 en 3 fases | Producción semanal. Genera 5 carruseles 3:4 deterministas (1080 × 1440 px). |
+| `/script-shortform` | Generador de guiones de video 9:16 de alta retención | Para Reels/TikTok/Shorts. 4 movimientos (hook <12 palabras, tensión, mecanismo, CTA) con direcciones visuales. |
+| `/grill-me` | Entrevista adversarial de contexto | Antes de redactar contenido. Pone a prueba ángulos y creencias contrarias contra el Brand Core. |
+| `/level-up` | Loop de calibración semanal y aprendizajes | Retro semanal. Actualiza `vault/Findings.md` con retención y `vault/Repos.md` con hallazgos técnicos. |
 
 ---
 
-## 🧠 Mandatory Reading Order for Agents
+## 🧠 Orden de Lectura Obligatorio para Agentes
 
-Before proposing, outlining, or drafting any piece of content:
+Antes de proponer o escribir cualquier contenido:
 
-1. `vault/Conceptos/brand_core.md` → Who the brand is (mission, archetype, contrarian beliefs).
-2. `vault/Conceptos/user_persona.md` → Who it speaks to (the daily scene of pain).
-3. `vault/Conceptos/positioning.md` + `offer.md` → What it sells, unique mechanism & DM keywords.
-4. `vault/Conceptos/tone_of_voice.md` → How it speaks (registers and forbidden anti-AI-slop list).
-5. `vault/Conceptos/content_pillars.md` → What it talks about & active rotation pillar.
-6. `vault/Conceptos/visual_identity.md` → How it looks (3:4 carousels, 9:16 video).
-7. `vault/Conceptos/proof_bank.md` → Real metrics and verified case studies (zero invented stats).
+1. `vault/Conceptos/brand_core.md` → Quién es la marca (misión, arquetipo, creencias contrarias).
+2. `vault/Conceptos/user_persona.md` → A quién le habla (la escena del dolor cotidiana).
+3. `vault/Conceptos/positioning.md` + `offer.md` → Qué vende, mecanismo único y keywords de DM.
+4. `vault/Conceptos/tone_of_voice.md` → Cómo habla (registros y lista negra anti-AI-slop).
+5. `vault/Conceptos/content_pillars.md` → De qué habla y cuál es la línea activa en la rotación.
+6. `vault/Conceptos/visual_identity.md` → Cómo se ve (carruseles 3:4, video 9:16).
+7. `vault/Conceptos/proof_bank.md` → Qué datos y métricas reales puede citar (cero cifras inventadas).
 
 ---
 
-## 🚫 Immutable Guardrails
+## 🚫 Reglas Inmutables para Agentes (Guardrails)
 
-1. **Vault is 100% Markdown:** Never place binary video renders (MP4s) or massive PNG exports in `vault/`.
-2. **Studios Outside Pipeline:** Video is rendered in `video-studio/` and carousels in `carousel-studio/`. `pipeline/` is only the staging area.
-3. **Canonical Carousel Format: Strict 3:4 (1080 × 1440 px).** 4:5 (1080 × 1350 px) and 1:1 square formats are strictly prohibited.
-4. **Canonical Video Format: Strict 9:16 (1080 × 1920 px).**
-5. **Zero Text in AI Images:** Backgrounds generated by AI are 100% clean of letters, logos, and UI elements. Typography is deterministically rendered via HTML/CSS.
-6. **Separation of Batch Phases:** Research ➔ Copywriting ➔ AI Visual Prompts. Never write visual prompts before copy is approved.
-7. **The 3-Color Rule:** Background (`--surface-page`), Reading (`--text-strong`), Accent (`--accent`). Only **1 highlighted word per slide** and the CTA.
+1. **El Vault es 100% Markdown de Instrucciones:** Nunca colocar archivos de salida pesados (MP4s, renders masivos de PNGs) en `vault/`.
+2. **Estudios por fuera del Pipeline:** El video se edita en `video-studio/` y los carruseles se compilan en `carousel-studio/`. El `pipeline/` es solo la mesa de trabajo y postprocesamiento.
+3. **Formato Canónico de Carruseles: Proporción 3:4 (1080 × 1440 px).** Prohibido usar 4:5 o formatos cuadrados.
+4. **Formato Canónico de Video: Proporción 9:16 (1080 × 1920 px).**
+5. **Cero Texto en Imágenes de IA:** Los fondos generados por IA se solicitan 100% limpios de letras, logos y botones. La tipografía se estampa en código HTML/CSS determinista.
+6. **Separación de Fases en Batches:** Research puro ➔ Aprobación ➔ Copy de One-Liners ➔ Prompts visuales. Prohibido redactar prompts antes de aprobar el copy.
+7. **Regla de 3 Colores:** Fondo (`--surface-page`), Lectura (`--text-strong`), Acento (`--accent`). Solo **1 palabra resaltada por pantalla** y el CTA.

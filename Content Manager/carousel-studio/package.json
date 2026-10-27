@@ -1,0 +1,14 @@
+{
+  "name": "brand-os-carousel-studio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Deterministic 3:4 carousel studio (1080 x 1440 px): AI backgrounds, HTML/CSS tokens, Playwright HTML-to-PNG compilation.",
+  "scripts": {
+    "status": "python batch_manager.py status",
+    "compile": "python batch_manager.py compile",
+    "capture": "node capture.cjs"
+  },
+  "dependencies": {
+    "playwright": "^1.59.1"
+  }
+}

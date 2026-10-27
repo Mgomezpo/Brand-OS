@@ -9,6 +9,8 @@ status: vacia-por-diseno
 
 Esta carpeta se entrega **vacía intencionalmente** en la plantilla: cada usuario monta su propio roster con los creadores de su nicho (el SOP del roster está en [[SOPs/ritual_ingesta_semanal|Ritual Semanal de Ingesta]]).
 
+> 🗺️ **Evolución planificada:** estandarizar la ingesta de referentes vía scraping (Apify). Mientras ese conector no exista, la carpeta se puebla con el proceso manual de abajo y queda vacía de perfiles.
+
 ---
 
 ## 📁 Qué va aquí (estructura por referente)

@@ -15,7 +15,7 @@
 2. Proponer al humano 1 ÁNGULO por línea.
 3. 🛑 ESPERAR APROBACIÓN.
 4. Investigar con fuentes fechadas, datos y frameworks.
-5. Guardar en Content Manager/pipeline/00_input/<vuelta>/research.md.
+5. Guardar en Content Manager/carousel-studio/batches/<vuelta>/<slug>/research.md.
             │
             ▼
 [FASE 2 · NARRATIVA Y COPY]
@@ -48,11 +48,12 @@
 ## 3. Estructura de Archivos
 
 ```text
-Content Manager/pipeline/10_processing/<slug>/
-├── copy.md          # one-liners, jerarquía y prompts
-├── assets/          # bg_01.jpg … bg_0N.jpg
-├── carousel.html    # lienzo con tokens de la línea
-└── slides/          # PNG compilados (slide-01.png …)
+Content Manager/carousel-studio/batches/<vuelta>/<slug>/
+├── research.md       # investigación de Fase 1
+├── copy.md           # one-liners, jerarquía y prompts
+├── assets/           # bg_01.jpg … bg_0N.jpg (fondos IA 3:4)
+├── carousel.html     # lienzo con tokens de la línea
+└── slides/           # PNG compilados con Playwright (slide-01.png …)
 ```
 
 ---

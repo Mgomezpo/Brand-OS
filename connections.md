@@ -13,7 +13,8 @@ Registry of every system and production engine your Brand OS can reach. Pre-conf
 | 7 | Social Distribution | Zernio (Posts & Queue) | mcp / script | api-key | `Content Manager/helper/zernio.py` |
 | 8 | Voice Narration | ElevenLabs Scribe | script / api | api-key | `Content Manager/video-studio/scripts/transcribe-elevenlabs.mjs` |
 | 9 | Design System Tokens | Deterministic CSS | native local | local | `design-system/tokens.css` & `index.css` |
-| 10 | Brand Brain Knowledge | Obsidian Markdown Vault | native local | local | `vault/` (7 core concept files) |
+| 10 | Brand Brain Knowledge | Obsidian Markdown Vault | native local | local | `vault/` (Brand Brain + SOPs + hallazgos) |
+| 11 | Referentes Ingesta (roadmap) | Apify (web scraping) | script / api | api-key | `not yet connected` — estandarizará la ingesta de `vault/Estrategia/Referentes-y-Benchmarking/` |
 
 **Mechanism options:**
 - `local`: Native script running locally in the workspace (Playwright, Python, CSS).

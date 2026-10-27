@@ -64,4 +64,4 @@
 ---
 
 ## 5. Proyectos Producidos en esta Línea
-- [[Content Manager/pipeline/10_processing/{{slug}}/copy|{{slug}}]] — {{descripcion}}
+- `{{slug}}` — {{descripcion}} — producción: `Content Manager/carousel-studio/batches/<vuelta>/{{slug}}/`

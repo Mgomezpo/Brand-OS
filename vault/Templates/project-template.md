@@ -14,7 +14,7 @@ tags: [project, content]
 > **Objetivo:** {{OBJETIVO}}  
 > **Ángulo:** {{ANGULO}}  
 > **Línea de diseño / Estética:** [[Conceptos/design_lines/line-{{linea}}|{{linea}}]]  
-> **Carpeta de producción:** `Content Manager/pipeline/{{formato}}/{{project}}/`
+> **Carpeta de producción:** carrusel 3:4 → `Content Manager/carousel-studio/batches/<vuelta>/{{project}}/` · video 9:16 → `Content Manager/video-studio/video-projects/{{project}}/`
 
 ---
 

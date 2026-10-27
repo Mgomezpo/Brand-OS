@@ -41,6 +41,48 @@ Brand OS/
 
 ---
 
+## ⚙️ Motores del Sistema — Quick Start
+
+Los SOPs de `vault/SOPs/` explican el **qué** y el **por qué** de cada pieza. Esta sección explica **quién lo ejecuta y cómo**: los dos motores de producción + la mesa de publicación.
+
+### 🎬 Motor de Video (9:16) — `Content Manager/video-studio/`
+
+Stack: HyperFrames + GSAP + ElevenLabs Scribe + ffmpeg. Canonicidad: proporción **9:16 (1080 × 1920 px)**. Los tokens de marca salen de `design-system/tokens.css` y `vault/Conceptos/visual_identity.md`.
+> Guía profunda: `Content Manager/video-studio/README.md` + `vault/SOPs/video_studio.md`
+
+```bash
+cd "Content Manager/video-studio"
+npm install                       # solo la primera vez (requiere Node >= 22)
+npm run new-video -- <slug>       # crea el kit del proyecto en video-projects/<slug>/
+npm run demo                      # (opcional) genera un proyecto de partida para explorar
+npm run transcribe -- <archivo>   # ElevenLabs Scribe → transcript.json (timestamps por palabra)
+# Cortes, en este orden: skill /cut-silences → skill /cut-mistakes (nunca mezclar timestamps)
+npm run preflight -- <slug>       # audio joins, contraste y safe areas → final.mp4
+npm run sync:skills               # mantiene espejos .claude/ y .agents/ sincronizados
+```
+
+### 🖼️ Motor de Carrusel (3:4) — `Content Manager/carousel-studio/`
+
+Stack: fondos IA 100% limpios de texto + HTML/CSS determinista + Playwright. Canonicidad: proporción **3:4 (1080 × 1440 px)**, márgenes 96 px, Regla de 3 Colores.
+> Panel: `batch_manager.py` es el gestor determinista del batch semanal · `ROTATION.md` gobierna la vuelta activa · `BATCH_TRACKER.md` es el tablero de estado
+> Guía profunda: `vault/SOPs/carousel_batch.md`
+
+```bash
+cd "Content Manager/carousel-studio"
+npm install                       # solo la primera vez (Playwright + Chromium)
+python batch_manager.py status            # retrato del batch: qué carrusel/fondo falta
+python batch_manager.py compile <slug>    # compila carousel.html → slides/*.png (3:4)
+node capture.cjs <slug>/carousel.html    # compilación directa de una pieza suelta
+```
+
+Cada carrusel del batch vive en `batches/<vuelta>/<slug>/` con: `research.md` → `copy.md` (one-liners ≤12 palabras) → `assets/bg_0*.jpg` (fondos IA) → `carousel.html` (tokens de la línea) → `slides/*.png`.
+
+### 📦 Mesa de Publicación — `Content Manager/pipeline/40_postprocessing/`
+
+El `pipeline/` NO es un estudio: es la mesa transversal. En `40_postprocessing/<slug>/` se agrupa el paquete listo para publicar: `caption.md` + `funnel.md` + `post.json` + `media-url.txt` (SOP: `vault/SOPs/funnels_publicacion.md`, disparo por Zernio).
+
+---
+
 ## ⚡ Skills Integradas (Built-in Skills)
 
 Ejecuta estas skills en Claude Code, Codex o Antigravity:
