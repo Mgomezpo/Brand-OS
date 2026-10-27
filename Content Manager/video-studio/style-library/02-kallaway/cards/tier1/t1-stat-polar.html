@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  KALLAWAY · tier1 · stat · POLAR
+  KALLAWAY Â· tier1 Â· stat Â· POLAR
   A polar-area / rose chart of glowing wedges radiating from center; each wedge
   has a different radius conveying magnitude. A hero headline value sits centered
   above with aurora bloom. Wedges animate in clockwise one by one.
@@ -31,7 +31,7 @@
                 mask-image: radial-gradient(120% 100% at 50% 60%, #000 35%, transparent 80%);
       }
 
-      /* polar SVG container – centred, slightly right of middle */
+      /* polar SVG container â€“ centred, slightly right of middle */
       #t1-stat-polar .polar-wrap {
         position: absolute; right: 160px; top: 50%; transform: translateY(-50%);
         width: 680px; height: 680px; z-index: 3;
@@ -95,7 +95,7 @@
 
       <!-- text left -->
       <div class="content">
-        <div class="kicker" data-slot="kicker">ENGAGEMENT · BY COHORT</div>
+        <div class="kicker" data-slot="kicker">ENGAGEMENT Â· BY COHORT</div>
         <div class="stat" id="polar-num" data-slot="stat">87%</div>
         <div class="label" data-slot="label">
           average weekly active learner rate across <em>all six</em> cohort segments measured
@@ -108,7 +108,7 @@
         <!--
           6 wedges, each a path. Centre 340,340. Different radii encode value.
           Radii (out of 290 max): 290, 230, 260, 180, 310 (capped 290), 200
-          Fixed values: segment angles = 60° each. Drawn as arc paths.
+          Fixed values: segment angles = 60Â° each. Drawn as arc paths.
         -->
         <svg id="polar-svg" viewBox="0 0 680 680" fill="none" xmlns="http://www.w3.org/2000/svg"
              width="680" height="680">
@@ -155,33 +155,33 @@
           <circle cx="340" cy="340" r="290" stroke="rgba(255,255,255,0.05)" stroke-width="1" fill="none"/>
 
           <!--
-            Wedge paths — each is a pie sector from center.
-            Segment i spans from angle (i*60 - 90)° to ((i+1)*60 - 90)°.
-            Radii (px): 0→285, 1→218, 2→255, 3→174, 4→290, 5→200
-            Computed large-arc-flag=0 (all < 180°).
+            Wedge paths â€” each is a pie sector from center.
+            Segment i spans from angle (i*60 - 90)Â° to ((i+1)*60 - 90)Â°.
+            Radii (px): 0â†’285, 1â†’218, 2â†’255, 3â†’174, 4â†’290, 5â†’200
+            Computed large-arc-flag=0 (all < 180Â°).
             Centre: (340,340).
           -->
-          <!-- Wedge 0: -90° → -30°, r=285 -->
+          <!-- Wedge 0: -90Â° â†’ -30Â°, r=285 -->
           <path id="pw0" d="M340,340 L340,55 A285,285 0 0,1 582.5,197.5 Z"
                 fill="url(#pg0)" stroke="rgba(55,189,248,0.40)" stroke-width="1.5"
                 filter="url(#pGlow)"/>
-          <!-- Wedge 1: -30° → 30°, r=218 -->
+          <!-- Wedge 1: -30Â° â†’ 30Â°, r=218 -->
           <path id="pw1" d="M340,340 L582.5,197.5 A218,218 0 0,1 558.8,449.6 Z"
                 fill="url(#pg1)" stroke="rgba(55,189,248,0.30)" stroke-width="1.5"
                 filter="url(#pGlow)"/>
-          <!-- Wedge 2: 30° → 90°, r=255 -->
+          <!-- Wedge 2: 30Â° â†’ 90Â°, r=255 -->
           <path id="pw2" d="M340,340 L558.8,449.6 A255,255 0 0,1 340,595 Z"
                 fill="url(#pg2)" stroke="rgba(255,255,255,0.30)" stroke-width="1.5"
                 filter="url(#pGlow)"/>
-          <!-- Wedge 3: 90° → 150°, r=174 -->
+          <!-- Wedge 3: 90Â° â†’ 150Â°, r=174 -->
           <path id="pw3" d="M340,340 L340,595 A174,174 0 0,1 166.8,427 Z"
                 fill="url(#pg3)" stroke="rgba(55,189,248,0.25)" stroke-width="1.5"
                 filter="url(#pGlow)"/>
-          <!-- Wedge 4: 150° → 210°, r=290 -->
+          <!-- Wedge 4: 150Â° â†’ 210Â°, r=290 -->
           <path id="pw4" d="M340,340 L166.8,427 A290,290 0 0,1 91.6,194.7 Z"
                 fill="url(#pg4)" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"
                 filter="url(#pGlow)"/>
-          <!-- Wedge 5: 210° → 270°, r=200 -->
+          <!-- Wedge 5: 210Â° â†’ 270Â°, r=200 -->
           <path id="pw5" d="M340,340 L91.6,194.7 A200,200 0 0,1 340,140 Z"
                 fill="url(#pg5)" stroke="rgba(55,189,248,0.28)" stroke-width="1.5"
                 filter="url(#pGlow)"/>
@@ -192,7 +192,7 @@
         </svg>
       </div>
 
-      <div class="source" data-slot="source">SOURCE · AIS PLATFORM DATA 2026</div>
+      <div class="source" data-slot="source">SOURCE Â· BRAND PLATFORM DATA 2026</div>
       <div class="vignette"></div>
       <div class="grain"></div>
     </div>

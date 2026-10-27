@@ -1,8 +1,8 @@
 <!doctype html>
 <!--
-  KALLAWAY · tier1 · stat · LAYERED
-  Three ghost copies of the headline number start offset — one above, one below,
-  one in the middle — then parallax into alignment and merge into a single sharp
+  KALLAWAY Â· tier1 Â· stat Â· LAYERED
+  Three ghost copies of the headline number start offset â€” one above, one below,
+  one in the middle â€” then parallax into alignment and merge into a single sharp
   glowing figure. The stacked translucent planes give a depth-of-field / hologram
   feel before resolving cleanly.
   Slots: kicker (~28 chars), stat (e.g. "58B"), label (~70 chars), source (~40 chars).
@@ -31,7 +31,7 @@
                 mask-image: radial-gradient(130% 110% at 50% 60%, #000 30%, transparent 78%);
       }
 
-      /* ── main layout ── */
+      /* â”€â”€ main layout â”€â”€ */
       #t1-stat-layer .content {
         position: absolute; inset: 0; z-index: 4;
         display: flex; flex-direction: column;
@@ -46,13 +46,13 @@
         text-shadow: var(--textglow-accent);
       }
 
-      /* ── layered number stack ── */
+      /* â”€â”€ layered number stack â”€â”€ */
       #t1-stat-layer .stat-stack {
         position: relative; height: 360px; width: 1200px;
         display: flex; align-items: center; justify-content: center;
       }
 
-      /* shared number style — all three planes. Solid glowing text (color +
+      /* shared number style â€” all three planes. Solid glowing text (color +
          text-shadow), NOT gradient-clipped: three stacked full-width
          background-clip:text elements fail to clip in render (gradient fills the
          box, transparent glyphs vanish). Solid text is bulletproof and still
@@ -64,19 +64,19 @@
         text-align: center; width: 100%;
       }
 
-      /* plane A — rear ghost / offset up */
+      /* plane A â€” rear ghost / offset up */
       #t1-stat-layer .plane-a {
         color: rgba(var(--accent-rgb), 0.85);
         text-shadow: 0 0 22px rgba(var(--accent-rgb),0.45);
         opacity: 0.42;
       }
-      /* plane B — mid ghost / offset down */
+      /* plane B â€” mid ghost / offset down */
       #t1-stat-layer .plane-b {
         color: rgba(255,255,255,0.85);
         text-shadow: 0 0 26px rgba(var(--accent-rgb),0.50);
         opacity: 0.55;
       }
-      /* plane C — front / sharp / final glow */
+      /* plane C â€” front / sharp / final glow */
       #t1-stat-layer .plane-c {
         color: var(--white);
         text-shadow: 0 0 30px rgba(255,255,255,0.50), 0 0 64px rgba(var(--accent-rgb),0.50);
@@ -117,7 +117,7 @@
       <div class="grid"></div>
 
       <div class="content">
-        <div class="kicker" data-slot="kicker">AI QUERIES ANSWERED · 2026</div>
+        <div class="kicker" data-slot="kicker">AI QUERIES ANSWERED Â· 2026</div>
 
         <div class="stat-stack">
           <!-- three planes of the same number -->
@@ -126,10 +126,10 @@
           <div class="plane plane-c" id="ly-pc" data-slot="stat">58B</div>
         </div>
 
-        <div class="label" data-slot="label">AI assistant queries handled by trained AIS graduates in the <em>first year post-certification</em></div>
+        <div class="label" data-slot="label">AI assistant queries handled by trained BRAND graduates in the <em>first year post-certification</em></div>
       </div>
 
-      <div class="source" data-slot="source">SOURCE · AIS USAGE REPORT 2026</div>
+      <div class="source" data-slot="source">SOURCE Â· BRAND USAGE REPORT 2026</div>
       <div class="vignette"></div>
       <div class="grain"></div>
     </div>
@@ -154,7 +154,7 @@
         .from("#t1-stat-layer .kicker",
           { autoAlpha: 0, y: 18, duration: 0.7, ease: "power3.out" }, 0.40)
 
-        /* planes stagger in at different offsets — then converge to y:0.
+        /* planes stagger in at different offsets â€” then converge to y:0.
            NO filter tween: these are gradient-clipped text; animating blur on a
            background-clip:text element breaks the clip. Depth comes from
            offset + scale + opacity instead (focus-pull via scale, not blur). */
@@ -184,7 +184,7 @@
         .from("#t1-stat-layer .source",
           { autoAlpha: 0, duration: 0.6, ease: "power2.out" }, 2.40)
 
-        /* final glow breathe on plane C — drop-shadow→drop-shadow (same filter
+        /* final glow breathe on plane C â€” drop-shadowâ†’drop-shadow (same filter
            list, safe to interpolate; matches the ring card's glow technique) */
         .to("#ly-pc",
           { filter: "drop-shadow(0 0 56px rgba(55,189,248,0.80))",

@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  KALLAWAY · tier2 · lower-third · ORBITBADGE
+  KALLAWAY Â· tier2 Â· lower-third Â· ORBITBADGE
   A small glowing avatar dot anchored lower-left with an orbiting ring satellite
   that travels a finite arc (270 degrees), then a name card slides out to its right.
   The orbit uses a rotating wrapper div so no trig/JS is needed for the arc path.
@@ -74,7 +74,7 @@
         border: 1.5px solid rgba(var(--accent-rgb), 0.20);
       }
 
-      /* Rotating wrapper — the satellite rides on this div's edge */
+      /* Rotating wrapper â€” the satellite rides on this div's edge */
       #t2-lt-obadge .orbit-rotor {
         position: absolute;
         inset: 0;
@@ -97,7 +97,7 @@
           0 0 50px rgba(var(--accent-rgb), 0.40);
       }
 
-      /* Name card — slides in from the right side of the avatar */
+      /* Name card â€” slides in from the right side of the avatar */
       #t2-lt-obadge .name-card {
         padding: 16px 28px;
         background: var(--glass-bg-dark);
@@ -165,7 +165,7 @@
         </div>
         <div class="name-card" id="obadge-card">
           <div class="name" data-slot="name">Kallaway Osei</div>
-          <div class="role" data-slot="role">AI Education Director, AIS</div>
+          <div class="role" data-slot="role">AI Education Director, BRAND</div>
         </div>
       </div>
 
@@ -190,7 +190,7 @@
       tl.from(`${C} .orbit-track`,
         { autoAlpha: 0, scale: 0.50, duration: 0.60, ease: "expo.out" }, 0.30);
 
-      /* satellite starts at top (rotor at 0deg), travels 270deg — finite arc */
+      /* satellite starts at top (rotor at 0deg), travels 270deg â€” finite arc */
       tl.set(`${C} .orbit-rotor`, { rotation: 0, transformOrigin: "50% 50%" }, 0.30);
       tl.to(`${C} .orbit-rotor`,
         { rotation: 270, duration: 1.0, ease: "power2.inOut",
@@ -210,7 +210,7 @@
       tl.from(`${C} .role`,
         { autoAlpha: 0, x: -12, duration: 0.50, ease: "power3.out" }, 1.72);
 
-      /* satellite slow continued drift — 2 more gentle passes, finite */
+      /* satellite slow continued drift â€” 2 more gentle passes, finite */
       tl.to(`${C} .orbit-rotor`,
         { rotation: 360, duration: 2.2, ease: "none",
           transformOrigin: "50% 50%" }, 2.00);
@@ -218,7 +218,7 @@
         { rotation: 420, duration: 1.8, ease: "power2.out",
           transformOrigin: "50% 50%" }, 4.20);
 
-      /* rim glow pulse on card — finite */
+      /* rim glow pulse on card â€” finite */
       tl.to(`${C} .name-card`, {
         boxShadow:
           "0 24px 70px rgba(0,0,0,0.50), 0 0 0 1px rgba(55,189,248,0.75), 0 0 32px rgba(55,189,248,0.36), inset 0 1px 0 rgba(255,255,255,0.22)",

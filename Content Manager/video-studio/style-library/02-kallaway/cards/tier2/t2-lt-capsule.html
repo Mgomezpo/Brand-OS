@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  KALLAWAY · tier2 · lower-third · CAPSULE
+  KALLAWAY Â· tier2 Â· lower-third Â· CAPSULE
   A wide pill/capsule shape with a sliding glow fill that sweeps left-to-right
   through its interior once, then settles. The name sits centered in the capsule
   and the role appears on a slim ledge below. Transparent overlay.
@@ -58,7 +58,7 @@
         -webkit-backdrop-filter: var(--glass-blur);
       }
 
-      /* The sliding glow fill — a gradient bar that sweeps through */
+      /* The sliding glow fill â€” a gradient bar that sweeps through */
       #t2-lt-cap .sweep {
         position: absolute;
         top: 0; left: -560px;
@@ -144,7 +144,7 @@
         </div>
         <div class="role-ledge">
           <div class="role-dot"></div>
-          <div class="role" data-slot="role">AI Education Director, AIS</div>
+          <div class="role" data-slot="role">AI Education Director, BRAND</div>
         </div>
       </div>
 
@@ -166,7 +166,7 @@
         { autoAlpha: 0, scaleX: 0.55, transformOrigin: "left center",
           duration: 0.72, ease: "back.out(1.4)" }, 0.14);
 
-      /* glow SWEEP left → right — single pass */
+      /* glow SWEEP left â†’ right â€” single pass */
       tl.to("#cap-sweep",
         { left: 560, duration: 0.68, ease: "power2.inOut" }, 0.30);
 
@@ -179,7 +179,7 @@
       tl.from(`${C} .role-ledge`,
         { autoAlpha: 0, y: -14, duration: 0.55, ease: "power3.out" }, 0.82);
 
-      /* capsule rim glow pulse — finite */
+      /* capsule rim glow pulse â€” finite */
       tl.to(`${C} .capsule`, {
         boxShadow:
           "0 0 0 1px rgba(55,189,248,0.45), 0 0 48px rgba(55,189,248,0.42), 0 8px 36px rgba(0,0,0,0.50), inset 0 1px 0 rgba(255,255,255,0.18)",

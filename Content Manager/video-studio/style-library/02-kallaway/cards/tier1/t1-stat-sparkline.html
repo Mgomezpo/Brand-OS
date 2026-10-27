@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  KALLAWAY · tier1 · stat · SPARKLINE
+  KALLAWAY Â· tier1 Â· stat Â· SPARKLINE
   A glowing trend sparkline (SVG path draws across the canvas from left to right);
   a glowing dot tracks the tip and the end value counts up as the line arrives.
   Aurora bloom, minimal dark canvas, bold end-value.
@@ -71,7 +71,7 @@
         font-style: normal; color: var(--text); text-shadow: var(--textglow);
       }
 
-      /* Sparkline SVG — right two-thirds of canvas */
+      /* Sparkline SVG â€” right two-thirds of canvas */
       #t1-stat-spark .spark-wrap {
         position: absolute; right: 60px; top: 50%;
         transform: translateY(-50%);
@@ -119,9 +119,9 @@
       <div class="grid"></div>
 
       <div class="left-col">
-        <div class="kicker" data-slot="kicker">MONTHLY ENROLLMENTS · 2024–2026</div>
+        <div class="kicker" data-slot="kicker">MONTHLY ENROLLMENTS Â· 2024â€“2026</div>
         <div class="stat" id="t1-stat-spark-num" data-slot="stat">47,200</div>
-        <div class="label" data-slot="label">learners enrolled per month — <em>up 6× since launch</em> and accelerating into Q3</div>
+        <div class="label" data-slot="label">learners enrolled per month â€” <em>up 6Ã— since launch</em> and accelerating into Q3</div>
       </div>
 
       <div class="spark-wrap" id="t1-stat-spark-wrap">
@@ -157,7 +157,7 @@
             fill="url(#sparkFill)" opacity="0.7"
           />
 
-          <!-- Sparkline path — hardcoded trend curve, exponential-ish growth -->
+          <!-- Sparkline path â€” hardcoded trend curve, exponential-ish growth -->
           <path id="t1-stat-spark-line"
             d="M 0 430 C 80 420, 120 410, 200 400
                C 280 390, 320 380, 400 360
@@ -180,7 +180,7 @@
         </svg>
       </div>
 
-      <div class="source" data-slot="source">SOURCE · AIS PLATFORM ANALYTICS 2026</div>
+      <div class="source" data-slot="source">SOURCE Â· BRAND PLATFORM ANALYTICS 2026</div>
 
       <div class="vignette"></div>
       <div class="grain"></div>
@@ -202,13 +202,13 @@
       lineEl.style.strokeDasharray  = totalLen;
       lineEl.style.strokeDashoffset = totalLen; /* start invisible */
 
-      /* Fill area — clip to follow the line draw */
+      /* Fill area â€” clip to follow the line draw */
       const fillLen = fillEl.getTotalLength ? fillEl.getTotalLength() : 3000;
       /* We reveal fill by opacity fade after line draws, not a dashoffset approach */
       fillEl.style.opacity = "0";
 
       const TARGET_VAL = 47200;
-      /* Sparkline waypoints (x,y in SVG coords) — used to drive tip dot position */
+      /* Sparkline waypoints (x,y in SVG coords) â€” used to drive tip dot position */
       /* Approximate point along the path for t in [0,1] */
       function sparkPoint(t) {
         /* Cubic bezier segments approximation hardcoded to match path */
@@ -246,7 +246,7 @@
             tipDotEl.setAttribute("cx", pt.x);
             tipDotEl.setAttribute("cy", pt.y);
             /* tip glow follows (positioned in px relative to spark-wrap) */
-            /* spark-wrap is 1060x480, SVG is same — scale ratio = wrap/viewBox */
+            /* spark-wrap is 1060x480, SVG is same â€” scale ratio = wrap/viewBox */
             const wrapW = 1060, wrapH = 480;
             tipGlowEl.style.left = (pt.x / 1060 * wrapW) + "px";
             tipGlowEl.style.top  = (pt.y / 480  * wrapH) + "px";

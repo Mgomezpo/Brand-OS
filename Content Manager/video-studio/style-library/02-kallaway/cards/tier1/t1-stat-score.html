@@ -1,7 +1,7 @@
 <!doctype html>
 <!--
-  KALLAWAY · tier1 · stat · SCORE
-  Big glowing score out of a total — e.g. "9.2 / 10". The numerator counts up
+  KALLAWAY Â· tier1 Â· stat Â· SCORE
+  Big glowing score out of a total â€” e.g. "9.2 / 10". The numerator counts up
   to its value; the denominator (" / 10") is dim and small to the right.
   A glass arc behind the number hints at a scale. Aurora bloom, deep vignette.
   Slots: kicker (~28 chars uppercase), stat (numerator value e.g. "9.2"),
@@ -31,7 +31,7 @@
                 mask-image: radial-gradient(120% 100% at 50% 60%, #000 35%, transparent 80%);
       }
 
-      /* Decorative arc behind score — subtle glass ring */
+      /* Decorative arc behind score â€” subtle glass ring */
       #t1-stat-score .arc-bg {
         position: absolute; left: 50%; top: 50%;
         transform: translate(-50%, -54%);
@@ -64,9 +64,9 @@
       #t1-stat-score .arc-dot.dot-max {
         left: 50%; top: -5px; transform: translateX(-50%);
       }
-      /* bottom-center = min (0) — not used visually but anchors the arc logic */
+      /* bottom-center = min (0) â€” not used visually but anchors the arc logic */
 
-      /* Score display — kicker / score / label column */
+      /* Score display â€” kicker / score / label column */
       #t1-stat-score .stage {
         position: absolute; inset: 0;
         display: flex; flex-direction: column;
@@ -194,7 +194,7 @@
         <div class="label" data-slot="label">post-course rating from <em>14,000+ learners</em> across 38 AI training modules in 2026</div>
       </div>
 
-      <div class="source" data-slot="source">SOURCE · AIS LEARNER SURVEY Q4 2026</div>
+      <div class="source" data-slot="source">SOURCE Â· BRAND LEARNER SURVEY Q4 2026</div>
 
       <div class="vignette"></div>
       <div class="grain"></div>
@@ -235,7 +235,7 @@
         .from("#t1-stat-score .score-denom",
           { autoAlpha: 0, x: -20, duration: 0.6, ease: "power3.out" }, 0.80)
 
-        /* score counts up 0.0 → 9.2 */
+        /* score counts up 0.0 â†’ 9.2 */
         .from("#t1-stat-score .score-num",
           { autoAlpha: 0, duration: 0.4, ease: "power2.out" }, 0.82)
         .to({ val: 0 }, {

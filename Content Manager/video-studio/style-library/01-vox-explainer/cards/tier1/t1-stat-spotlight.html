@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  VOX EXPLAINER · tier1 · stat · SPOTLIGHT (depth-of-field)
+  VOX EXPLAINER Â· tier1 Â· stat Â· SPOTLIGHT (depth-of-field)
   The number SHARP in a focused spotlight pool (radial light on a dark ink-ish paper),
   heavy darkened edges (strong vignette). A subtle RACK-FOCUS: number starts
   filter:blur(14px) and clears to 0 on entrance, while a faint duplicate behind
@@ -23,7 +23,7 @@
       /* === PAPER TEXTURE BASE (dark version) === */
       #t1-stat-spot .paper-base {
         position: absolute; inset: 0;
-        /* Dark paper — ink with slight warm tint */
+        /* Dark paper â€” ink with slight warm tint */
         background:
           radial-gradient(ellipse 110% 90% at 50% 48%,
             #2a231a 0%,
@@ -40,14 +40,14 @@
           repeating-linear-gradient(90deg, rgba(239,233,220,0.03) 0 1px, transparent 1px var(--grid-size));
       }
 
-      /* === SPOTLIGHT POOL — the warm circle of light === */
+      /* === SPOTLIGHT POOL â€” the warm circle of light === */
       #t1-stat-spot .spotlight {
         position: absolute;
         left: 50%; top: 46%;
         transform: translate(-50%, -50%);
         width: 1100px; height: 780px;
         border-radius: 50%;
-        /* Cool radial light — AIS-blue-tinted theatre spotlight */
+        /* Cool radial light â€” sky-blue-tinted theatre spotlight */
         background: radial-gradient(
           ellipse 72% 60% at 50% 50%,
           rgba(200,235,255,0.22) 0%,
@@ -73,7 +73,7 @@
         z-index: 1;
       }
 
-      /* === SOFT DUPLICATE STAT (always stays blurred — the out-of-focus layer) === */
+      /* === SOFT DUPLICATE STAT (always stays blurred â€” the out-of-focus layer) === */
       #t1-stat-spot .stat-blur {
         position: absolute; left: 0; right: 0; top: 50%;
         transform: translateY(-56%);
@@ -85,10 +85,10 @@
         font-variant-numeric: tabular-nums;
         filter: blur(22px);
         opacity: 0.18;
-        /* Always blurred — no rack-focus on this layer */
+        /* Always blurred â€” no rack-focus on this layer */
       }
 
-      /* === SHARP STAT — the in-focus hero (rack-focus clears blur on entrance) === */
+      /* === SHARP STAT â€” the in-focus hero (rack-focus clears blur on entrance) === */
       #t1-stat-spot .stat {
         position: absolute; left: 0; right: 0; top: 50%;
         transform: translateY(-56%);
@@ -102,7 +102,7 @@
           0 8px 32px rgba(0,0,0,0.6);
       }
 
-      /* === KICKER — paper text, subtle === */
+      /* === KICKER â€” paper text, subtle === */
       #t1-stat-spot .kicker {
         position: absolute; left: 0; right: 0; top: 120px; z-index: 5;
         text-align: center;
@@ -112,7 +112,7 @@
         opacity: 0.9;
       }
 
-      /* === LABEL — bottom center === */
+      /* === LABEL â€” bottom center === */
       #t1-stat-spot .label {
         position: absolute; left: 280px; right: 280px; bottom: 190px; z-index: 5;
         text-align: center;
@@ -137,7 +137,7 @@
         text-transform: uppercase; color: rgba(239,233,220,0.45);
       }
 
-      /* === HEAVY VIGNETTE — the defining feature === */
+      /* === HEAVY VIGNETTE â€” the defining feature === */
       #t1-stat-spot .vignette {
         position: absolute; inset: 0; pointer-events: none; z-index: 6;
         /* Very strong dark vignette to push focus to the center */
@@ -173,7 +173,7 @@
       <div class="stat" data-slot="stat">$2.1T</div>
       <div class="kicker" data-slot="kicker">THE NUMBER NO ONE SAYS OUT LOUD</div>
       <div class="label" data-slot="label">the global market that <em>AI is eating</em> right now</div>
-      <div class="source" data-slot="source">SOURCE · IMF OUTLOOK 2025</div>
+      <div class="source" data-slot="source">SOURCE Â· IMF OUTLOOK 2025</div>
       <div class="vignette"></div>
       <div class="grain"></div>
     </div>
@@ -191,7 +191,7 @@
         statBlurEl.textContent = statEl.textContent;
       }
 
-      // Grain flicker — overlay mode on dark
+      // Grain flicker â€” overlay mode on dark
       tl.fromTo("#t1-stat-spot .grain",
         { backgroundPosition: "0px 0px" },
         { backgroundPosition: "150px 130px", duration: 0.5, ease: "steps(4)", repeat: 11, yoyo: true },

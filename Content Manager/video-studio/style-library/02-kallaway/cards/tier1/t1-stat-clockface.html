@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  KALLAWAY · tier1 · stat · CLOCKFACE
+  KALLAWAY Â· tier1 Â· stat Â· CLOCKFACE
   A circular clock-face with 12 tick marks; a glowing sweep arc fills clockwise
   from 12 o'clock to the data value. Count-up number in center. Dense glow aura.
   Knob: data-pct on #clock-svg (default 75).
@@ -112,15 +112,15 @@
       <div class="grid"></div>
 
       <div class="content">
-        <div class="kicker" data-slot="kicker">TIME-ON-PLATFORM · WEEKLY AVG</div>
+        <div class="kicker" data-slot="kicker">TIME-ON-PLATFORM Â· WEEKLY AVG</div>
 
         <div class="clock-wrap">
           <div class="clock-glow"></div>
 
           <!--
-            Clock SVG: 540×540, centre (270,270), outer r=240, inner r=215 (track), arc r=215.
-            12 ticks around the face at every 30°.
-            Progress arc fills clockwise from -90° (top).
+            Clock SVG: 540Ã—540, centre (270,270), outer r=240, inner r=215 (track), arc r=215.
+            12 ticks around the face at every 30Â°.
+            Progress arc fills clockwise from -90Â° (top).
           -->
           <svg class="clock-svg" id="clock-svg" data-pct="75"
                viewBox="0 0 540 540" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -143,45 +143,45 @@
                     stroke="rgba(255,255,255,0.08)" stroke-width="20"
                     stroke-linecap="round" fill="none"/>
 
-            <!-- progress arc — dashoffset animated -->
+            <!-- progress arc â€” dashoffset animated -->
             <circle id="c-arc" cx="270" cy="270" r="215"
                     stroke="url(#cGrad)" stroke-width="20"
                     stroke-linecap="round" fill="none"
                     transform="rotate(-90 270 270)"
                     filter="url(#cGlow)"/>
 
-            <!-- 12 tick marks at 30° intervals -->
+            <!-- 12 tick marks at 30Â° intervals -->
             <!-- tick length: major (0,3,6,9) = 22px, minor = 12px. Inner edge at r=228 -->
             <!-- Using JS-generated ticks would need Math.sin, so we hardcode all 12 -->
             <!-- r_inner_major=218, r_outer_major=240; r_inner_minor=225, r_outer_major=237 -->
-            <!-- 0°(top)=270,30; 30°=377.5,110.5; 60°=454,186.5; 90°=510,270; etc -->
+            <!-- 0Â°(top)=270,30; 30Â°=377.5,110.5; 60Â°=454,186.5; 90Â°=510,270; etc -->
 
-            <!-- 12 o'clock (0°) major -->
+            <!-- 12 o'clock (0Â°) major -->
             <line x1="270" y1="30"  x2="270" y2="52"  stroke="rgba(255,255,255,0.55)" stroke-width="3" stroke-linecap="round"/>
-            <!-- 1 o'clock (30°) minor -->
+            <!-- 1 o'clock (30Â°) minor -->
             <line x1="378" y1="55"  x2="371" y2="67"  stroke="rgba(255,255,255,0.22)" stroke-width="2" stroke-linecap="round"/>
-            <!-- 2 o'clock (60°) minor -->
+            <!-- 2 o'clock (60Â°) minor -->
             <line x1="455" y1="132" x2="446" y2="139" stroke="rgba(255,255,255,0.22)" stroke-width="2" stroke-linecap="round"/>
-            <!-- 3 o'clock (90°) major -->
+            <!-- 3 o'clock (90Â°) major -->
             <line x1="488" y1="270" x2="510" y2="270" stroke="rgba(255,255,255,0.55)" stroke-width="3" stroke-linecap="round"/>
-            <!-- 4 o'clock (120°) minor -->
+            <!-- 4 o'clock (120Â°) minor -->
             <line x1="455" y1="408" x2="446" y2="401" stroke="rgba(255,255,255,0.22)" stroke-width="2" stroke-linecap="round"/>
-            <!-- 5 o'clock (150°) minor -->
+            <!-- 5 o'clock (150Â°) minor -->
             <line x1="378" y1="485" x2="371" y2="473" stroke="rgba(255,255,255,0.22)" stroke-width="2" stroke-linecap="round"/>
-            <!-- 6 o'clock (180°) major -->
+            <!-- 6 o'clock (180Â°) major -->
             <line x1="270" y1="510" x2="270" y2="488" stroke="rgba(255,255,255,0.55)" stroke-width="3" stroke-linecap="round"/>
-            <!-- 7 o'clock (210°) minor -->
+            <!-- 7 o'clock (210Â°) minor -->
             <line x1="162" y1="485" x2="169" y2="473" stroke="rgba(255,255,255,0.22)" stroke-width="2" stroke-linecap="round"/>
-            <!-- 8 o'clock (240°) minor -->
+            <!-- 8 o'clock (240Â°) minor -->
             <line x1="85"  y1="408" x2="94"  y2="401" stroke="rgba(255,255,255,0.22)" stroke-width="2" stroke-linecap="round"/>
-            <!-- 9 o'clock (270°) major -->
+            <!-- 9 o'clock (270Â°) major -->
             <line x1="30"  y1="270" x2="52"  y2="270" stroke="rgba(255,255,255,0.55)" stroke-width="3" stroke-linecap="round"/>
-            <!-- 10 o'clock (300°) minor -->
+            <!-- 10 o'clock (300Â°) minor -->
             <line x1="85"  y1="132" x2="94"  y2="139" stroke="rgba(255,255,255,0.22)" stroke-width="2" stroke-linecap="round"/>
-            <!-- 11 o'clock (330°) minor -->
+            <!-- 11 o'clock (330Â°) minor -->
             <line x1="162" y1="55"  x2="169" y2="67"  stroke="rgba(255,255,255,0.22)" stroke-width="2" stroke-linecap="round"/>
 
-            <!-- glowing tip dot at arc head — starts at top, moves with arc -->
+            <!-- glowing tip dot at arc head â€” starts at top, moves with arc -->
             <circle id="c-tip" cx="270" cy="55" r="13"
                     fill="white"
                     style="filter:drop-shadow(0 0 12px rgba(55,189,248,0.95)) drop-shadow(0 0 28px rgba(55,189,248,0.55));"/>
@@ -198,11 +198,11 @@
         </div>
 
         <div class="label" data-slot="label">
-          of scheduled weekly learning time actually used by active cohort members — <em>up 18 pts</em> from last quarter
+          of scheduled weekly learning time actually used by active cohort members â€” <em>up 18 pts</em> from last quarter
         </div>
       </div>
 
-      <div class="source" data-slot="source">SOURCE · AIS ENGAGEMENT DATA 2026</div>
+      <div class="source" data-slot="source">SOURCE Â· BRAND ENGAGEMENT DATA 2026</div>
       <div class="vignette"></div>
       <div class="grain"></div>
     </div>

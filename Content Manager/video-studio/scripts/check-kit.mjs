@@ -13,7 +13,7 @@ const files = walk(root);
 const publicMedia = new Set([
   'examples/showcase/ai-edits-everything-reveal.mp4',
   'examples/showcase/ai-edits-everything-raw-vs-edited.mp4',
-  'examples/showcase/ais-live-ad.mp4',
+  'examples/showcase/BRAND-live-ad.mp4',
   'examples/showcase/youtube-showreel.mp4',
 ]);
 if (!readFileSync(join(root,'AGENTS.md')).equals(readFileSync(join(root,'CLAUDE.md')))) fail('Root instruction files differ');

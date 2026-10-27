@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  KALLAWAY · tier1 · stat · MEGA
+  KALLAWAY Â· tier1 Â· stat Â· MEGA
   Ultra-minimal: one absolute-giant gradient number counting up dominates the
   full canvas. Deep vignette, aurora bloom, barely-visible grid. Kicker sits
   above in mono; label and source are quietly below. Nothing competes with the
@@ -21,7 +21,7 @@
         font-family: var(--font-display); overflow: hidden;
       }
 
-      /* Deeper bloom for the mega treatment — more intense */
+      /* Deeper bloom for the mega treatment â€” more intense */
       #t1-stat-mega .bloom {
         position: absolute; inset: 0; z-index: 1;
         background:
@@ -64,7 +64,7 @@
         margin-bottom: 18px;
       }
 
-      /* The mega number — as big as it gets */
+      /* The mega number â€” as big as it gets */
       #t1-stat-mega .mega-num {
         font-family: var(--font-display);
         font-weight: var(--wt-black);
@@ -83,7 +83,7 @@
         text-align: center;
       }
 
-      /* Hairline underline rule — subtly grounds the number */
+      /* Hairline underline rule â€” subtly grounds the number */
       #t1-stat-mega .rule {
         width: 560px; height: 1.5px; margin-top: 28px;
         background: linear-gradient(90deg,
@@ -116,7 +116,7 @@
         text-transform: uppercase; color: var(--text-faint); z-index: 5;
       }
 
-      /* Extra-deep vignette for mega — crushes corners to black */
+      /* Extra-deep vignette for mega â€” crushes corners to black */
       #t1-stat-mega .vignette {
         position: absolute; inset: 0; pointer-events: none; z-index: 6;
         background: radial-gradient(130% 130% at 50% 45%, transparent 42%, rgba(0,0,0,0.72) 100%);
@@ -139,10 +139,10 @@
         <div class="kicker" data-slot="kicker">TOTAL ENROLLED LEARNERS</div>
         <div class="mega-num" id="t1-stat-mega-num" data-slot="stat">2.4M</div>
         <div class="rule" id="t1-stat-mega-rule"></div>
-        <div class="label" data-slot="label">learners enrolled in AI certification programs — <em>growing 3× year over year</em></div>
+        <div class="label" data-slot="label">learners enrolled in AI certification programs â€” <em>growing 3Ã— year over year</em></div>
       </div>
 
-      <div class="source" data-slot="source">SOURCE · AIS GLOBAL PLATFORM 2026</div>
+      <div class="source" data-slot="source">SOURCE Â· BRAND GLOBAL PLATFORM 2026</div>
 
       <div class="vignette"></div>
       <div class="grain"></div>
@@ -154,7 +154,7 @@
       const tl = gsap.timeline({ paused: true });
 
       const numEl  = document.getElementById("t1-stat-mega-num");
-      /* Target: 2.4 (millions) — display with "M" suffix */
+      /* Target: 2.4 (millions) â€” display with "M" suffix */
       const target = 2.4;
 
       /* ambient grain flicker */
@@ -174,11 +174,11 @@
         .from("#t1-stat-mega .kicker",
           { autoAlpha: 0, y: 20, filter: "blur(10px)", duration: 0.8, ease: "power3.out" }, 0.60)
 
-        /* mega number — starts invisible, reveals as count runs */
+        /* mega number â€” starts invisible, reveals as count runs */
         .from("#t1-stat-mega .mega-num",
           { autoAlpha: 0, scale: 1.12, transformOrigin: "50% 50%", duration: 0.6, ease: "power2.out" }, 0.75)
 
-        /* count-up: 0.0 → 2.4 */
+        /* count-up: 0.0 â†’ 2.4 */
         .to({ val: 0 }, {
           val: target,
           duration: 1.8, ease: "power2.out",
@@ -205,7 +205,7 @@
           { opacity: 0.72, scale: 1.05, transformOrigin: "50% 120%",
             duration: 2.0, ease: "sine.inOut", repeat: 1, yoyo: true }, 3.00)
 
-        /* mega number slow drift down — "settling" */
+        /* mega number slow drift down â€” "settling" */
         .to("#t1-stat-mega .mega-num",
           { y: 8, duration: 3.5, ease: "sine.inOut" }, 2.80)
 

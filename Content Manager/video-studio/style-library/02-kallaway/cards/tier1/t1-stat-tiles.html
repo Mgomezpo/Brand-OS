@@ -1,7 +1,7 @@
 <!doctype html>
 <!--
-  KALLAWAY · tier1 · stat · TILES
-  The number broken into individual glowing digit tiles — each tile is a dark glass
+  KALLAWAY Â· tier1 Â· stat Â· TILES
+  The number broken into individual glowing digit tiles â€” each tile is a dark glass
   rectangle with a single character that springs/flips in one by one from a random
   slot-machine face to its final digit. Rich depth: each tile has edge highlight,
   backdrop blur (CSS only, no GSAP filter on gradient text), and a neon rim.
@@ -79,7 +79,7 @@
         display: block; text-align: center; width: 100%;
       }
 
-      /* Separator tile (comma, dot) — narrower, no border box */
+      /* Separator tile (comma, dot) â€” narrower, no border box */
       #t1-stat-tiles .tile-sep {
         width: 60px; height: 220px;
         display: flex; align-items: flex-end; justify-content: center;
@@ -130,11 +130,11 @@
         <div class="tiles-row" id="tiles-row" data-slot="stat" data-stat="24,891"></div>
 
         <div class="label" data-slot="label">
-          total certificates issued this year — <em>more than all previous years</em> combined since platform launch
+          total certificates issued this year â€” <em>more than all previous years</em> combined since platform launch
         </div>
       </div>
 
-      <div class="source" data-slot="source">SOURCE · AIS CERTIFICATE REGISTRY 2026</div>
+      <div class="source" data-slot="source">SOURCE Â· BRAND CERTIFICATE REGISTRY 2026</div>
       <div class="vignette"></div>
       <div class="grain"></div>
     </div>
@@ -148,7 +148,7 @@
       const rowEl  = document.getElementById("tiles-row");
       const rawStat = rowEl.getAttribute("data-stat") || "24,891";
 
-      /* Slot-machine cycle characters — fixed sequence (deterministic) */
+      /* Slot-machine cycle characters â€” fixed sequence (deterministic) */
       const CYCLE = ["8","3","5","1","9","2","7","0","6","4"];
 
       const tileEls = [];  /* {el, charEl, final} for digit tiles only */

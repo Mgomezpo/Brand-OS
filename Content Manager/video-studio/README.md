@@ -15,6 +15,20 @@ motion graphics with HyperFrames and GSAP.
 - **Short-form editing:** reels, YouTube Shorts, hook and payoff planning, precise captions, moving B-roll, and audio review.
 - A synthetic starter composition and editing fixture that need no footage or API key.
 
+## Brand connection (Brand OS design system)
+
+This studio is the video engine of the Brand OS workspace and inherits the
+brand's visual identity from the workspace-level design system:
+
+- **`../../design-system/DESIGN_SYSTEM.md`** — proportions, color surfaces, and typography spec.
+- **`../../design-system/tokens.css`** — CSS custom properties (`--surface-page`, `--text-strong`, `--accent`).
+- **`../../vault/Conceptos/visual_identity.md`** and `design_lines/` — per-brand lines; 9:16 (1080×1920) is the canonical video ratio.
+
+When composing a video for a brand, read those files first and map each brand
+token to the composition's CSS variables instead of inventing local palettes.
+Appendix styles in `style-library/` are generic craft references; brand identity
+always overrides them.
+
 ## Tools and optional services
 
 The kit ships with an **ElevenLabs Scribe transcription helper** and optional
@@ -102,14 +116,13 @@ The skill includes library chapters, a HUD template, and Node tools to analyze a
 reference video, measure a music take's beat grid, splice it onto the cut grid,
 and premix sound effects.
 
-## Existing teaching examples
+## Project workspace
 
-`video-projects/` keeps a set of teaching example compositions alongside the
-`make-a-video`, `short-form-video`, and `website-to-hyperframes` skills.
-Use `short-form-edit` for new reels; `short-form-video` documents the legacy
-short-form compositions. New projects under `video-projects/` and `raw-media/`
-are gitignored automatically; files already tracked by Git remain tracked.
-Create a new project for your own footage.
+`video-projects/` is where your own videos live. Create each project with
+`npm run new-video -- my-video`; everything under it (footage, transcripts,
+compositions, renders) is gitignored and never committed. The `examples/` folder
+holds only synthetic fixtures with no personal media. New skill-based patterns
+are documented by their skills and in [docs/](docs/).
 
 ## Explore and customize
 

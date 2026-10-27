@@ -4,7 +4,7 @@
 
 ---
 
-## 1. El Bucle de 4 Capas (Operating Loop — Nate Herk)
+## 1. El Bucle de 4 Capas (Operating Loop)
 
 ```
 [1. RAW] ➔ [2. WIKI] ➔ [3. RULES & SKILLS] ➔ [4. VERIFICATION]

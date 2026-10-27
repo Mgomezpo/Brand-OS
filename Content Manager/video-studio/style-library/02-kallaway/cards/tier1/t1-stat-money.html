@@ -1,12 +1,12 @@
 <!doctype html>
 <!--
-  KALLAWAY · tier1 · stat · MONEY
+  KALLAWAY Â· tier1 Â· stat Â· MONEY
   A big currency figure ("$1.2M", "$840K", "$3.5B") that counts up with a
   gradient glow. Handles a $ prefix and K/M/B suffix: count-up interpolates
-  the numeric portion 0→target; prefix and suffix are static. Aurora bloom,
+  the numeric portion 0â†’target; prefix and suffix are static. Aurora bloom,
   glass surface, breathing glow.
   Knob: data-value (numeric, no commas) + data-prefix + data-suffix on
-        #t1-st-money-knob (defaults: 1200000 → prefix "$", suffix "M", display "1.2M").
+        #t1-st-money-knob (defaults: 1200000 â†’ prefix "$", suffix "M", display "1.2M").
   Slots: kicker, stat (display value string e.g. "$1.2M"), label (<em>), source.
 -->
 <html>
@@ -72,7 +72,7 @@
         pointer-events: none; z-index: 0;
       }
 
-      /* Currency symbol — smaller, floated top-right like typography convention */
+      /* Currency symbol â€” smaller, floated top-right like typography convention */
       #t1-st-money .prefix {
         font-family: var(--font-display);
         font-weight: var(--wt-black);
@@ -151,7 +151,7 @@
       <div class="grid"></div>
 
       <div class="content">
-        <div class="kicker" data-slot="kicker">TOTAL CREATOR EARNINGS · 2026</div>
+        <div class="kicker" data-slot="kicker">TOTAL CREATOR EARNINGS Â· 2026</div>
 
         <div style="position:relative;">
           <div class="stat-glow" id="t1-st-money-glow"></div>
@@ -167,10 +167,10 @@
           </div>
         </div>
 
-        <div class="label" data-slot="label">paid out to certified creators through the <em>AIS partner network</em> this year</div>
+        <div class="label" data-slot="label">paid out to certified creators through the <em>BRAND partner network</em> this year</div>
       </div>
 
-      <div class="source" data-slot="source">SOURCE · AIS PARTNER NETWORK 2026</div>
+      <div class="source" data-slot="source">SOURCE Â· BRAND PARTNER NETWORK 2026</div>
 
       <div class="vignette"></div>
       <div class="grain"></div>
@@ -189,7 +189,7 @@
       const decimals = parseInt(knobEl.getAttribute("data-decimals"), 10);
       const dec      = isNaN(decimals) ? 1 : decimals;
 
-      /* Compute the scaled target for the display (e.g. 1200000 → 1.2 for "M") */
+      /* Compute the scaled target for the display (e.g. 1200000 â†’ 1.2 for "M") */
       const divisors = { K: 1e3, M: 1e6, B: 1e9 };
       const div      = divisors[suffix.toUpperCase()] || 1;
       const target   = rawVal / div;

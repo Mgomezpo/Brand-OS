@@ -49,6 +49,12 @@ accept paths from the working directory. `style-library/registry.json` indexes
 cards; each style has a DESIGN.md, CSS tokens, and named text slots.
 See `style-templates/README.md` for whole-scene templates.
 
+Brand identity comes from the workspace-level design system, not from these
+generic styles: read `../../design-system/tokens.css` and
+`../../design-system/DESIGN_SYSTEM.md` plus `../../vault/Conceptos/visual_identity.md`,
+and map brand tokens into each composition's CSS variables (9:16, 1080×1920,
+is the canonical video ratio).
+
 Preserve raw files. Use a new output filename for each editing stage. Archive
 obsolete work. Video projects, personal footage, transcripts, credentials, and
 renders are gitignored. Do not add personal footage to library examples.

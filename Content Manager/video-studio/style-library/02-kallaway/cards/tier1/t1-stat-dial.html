@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  KALLAWAY · tier1 · stat · DIAL
+  KALLAWAY Â· tier1 Â· stat Â· DIAL
   Radial gauge dial with a glowing needle that swings to the value; large number
   counts up in the center of the dial arc. Aurora bloom, glass surface, breathing glow.
   Knob: data-pct on #t1-stat-dial-svg (default 72).
@@ -124,7 +124,7 @@
       <div class="grid"></div>
 
       <div class="content">
-        <div class="kicker" data-slot="kicker">LEARNER CONFIDENCE · 2026 SURVEY</div>
+        <div class="kicker" data-slot="kicker">LEARNER CONFIDENCE Â· 2026 SURVEY</div>
 
         <div class="dial-container">
           <div class="dial-glow"></div>
@@ -167,7 +167,7 @@
             <g stroke="rgba(255,255,255,0.20)" stroke-width="1.5">
               <!-- ticks hardcoded at 0,12.5,25,37.5,50,62.5,75,87.5,100 pct of 220deg arc, r=250, cx=280, cy=310 -->
               <!-- angle = -200 + pct/100*220 (degrees) -->
-              <!-- 0%: -200deg: cos=-0.9397, sin=-0.342 → from (280-250*0.9397, 310-250*0.342)=(45.1,224.5) to r=230 -->
+              <!-- 0%: -200deg: cos=-0.9397, sin=-0.342 â†’ from (280-250*0.9397, 310-250*0.342)=(45.1,224.5) to r=230 -->
               <line x1="45" y1="224" x2="58" y2="228"/>
               <line x1="89" y1="115" x2="99" y2="124"/>
               <line x1="186" y1="42" x2="191" y2="53"/>
@@ -179,7 +179,7 @@
               <line x1="500" y1="297" x2="490" y2="289"/>
             </g>
 
-            <!-- Needle — rotates around pivot (280, 310) -->
+            <!-- Needle â€” rotates around pivot (280, 310) -->
             <g id="t1-stat-dial-needle" transform="rotate(-200, 280, 310)" filter="url(#needleGlow)">
               <!-- needle line from center to near arc -->
               <line x1="280" y1="310" x2="280" y2="75" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
@@ -200,7 +200,7 @@
         <div class="label" data-slot="label">of students rate their practical AI skills as <em>job-ready</em> after completing the program</div>
       </div>
 
-      <div class="source" data-slot="source">SOURCE · AIS OUTCOMES REPORT 2026</div>
+      <div class="source" data-slot="source">SOURCE Â· BRAND OUTCOMES REPORT 2026</div>
 
       <div class="vignette"></div>
       <div class="grain"></div>
@@ -219,7 +219,7 @@
       const numEl    = document.getElementById("t1-stat-dial-num");
 
       /* Compute arc dasharray for the track path.
-         Path goes from -200deg to +20deg (220deg sweep). r=250, so arc length = 2π*250*(220/360) ≈ 959.9 */
+         Path goes from -200deg to +20deg (220deg sweep). r=250, so arc length = 2Ï€*250*(220/360) â‰ˆ 959.9 */
       const arcLen = 2 * Math.PI * 250 * (220 / 360);
       arcEl.style.strokeDasharray  = arcLen;
       arcEl.style.strokeDashoffset = arcLen; /* start empty */

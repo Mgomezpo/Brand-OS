@@ -1,8 +1,8 @@
 <!doctype html>
 <!--
-  KALLAWAY · tier2 · lower-third · SIDEBRACKET
+  KALLAWAY Â· tier2 Â· lower-third Â· SIDEBRACKET
   A name card flanked by one big glowing L-bracket on its left that draws itself
-  on — two strokes tracing top+left edges. The bracket glows blue; name and role
+  on â€” two strokes tracing top+left edges. The bracket glows blue; name and role
   sit inside the implied frame. Transparent overlay over live footage.
   Slots: name (~26 chars), role (~40 chars).
 -->
@@ -34,7 +34,7 @@
         z-index: 1;
       }
 
-      /* Outer wrapper — bracket + text together */
+      /* Outer wrapper â€” bracket + text together */
       #t2-lt-sbrk .wrapper {
         position: absolute;
         left: 80px; bottom: 120px;
@@ -124,7 +124,7 @@
 
         <div class="text-block">
           <div class="name" data-slot="name">Kallaway Osei</div>
-          <div class="role" data-slot="role">AI Education Director, AIS</div>
+          <div class="role" data-slot="role">AI Education Director, BRAND</div>
         </div>
       </div>
 
@@ -182,7 +182,7 @@
       tl.from(`${C} .role`,
         { autoAlpha: 0, x: -12, duration: 0.55, ease: "power3.out" }, 0.94);
 
-      /* bracket glow pulse — finite */
+      /* bracket glow pulse â€” finite */
       tl.to(vertEl,
         { attr: { "stroke-opacity": 0.40 }, duration: 1.0,
           ease: "sine.inOut", repeat: 3, yoyo: true }, 1.80);

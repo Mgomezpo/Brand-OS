@@ -1,4 +1,4 @@
-# Reference breakdown: the Opus 5.5 "CLAUDE / MOTION REEL"
+# Reference breakdown: the house reference reel
 
 Source: a benchmark 15-second motion reel (September 2026). 1920x1080, 60fps, 15.06s, 900 frames. Analyzed with `scripts/analyze-reference.mjs` (6fps contact sheets, per-frame luminance difference, audio RMS, and onsets).
 
@@ -31,7 +31,7 @@ Source: a benchmark 15-second motion reel (September 2026). 1920x1080, 60fps, 15
 ## Persistent HUD (every frame)
 
 - Corner crop marks, 30px arms, inset about 36px.
-- Top left: `CLAUDE  /  MOTION REEL`. Top right: `â— 1920Ã—1080 Â· 60P Â· 128 BPM`. The dot blinks like a REC light.
+- Top left: `BRAND  /  MOTION REEL`. Top right: `â— 1920Ã—1080 Â· 60P Â· 128 BPM`. The dot blinks like a REC light.
 - Bottom left: `TC 00:00:02:36` running timecode. Bottom center: a tick ruler that fills as a progress bar. Bottom right: `02 Â· KINETIC TYPE` (the reel uses a dash between number and name).
 - Mono, all caps, tracking about 0.2em, about 16px, 85% white on dark or 85% ink on paper. The HUD flips color with the background.
 - A faint dot grid covers the dark frames.

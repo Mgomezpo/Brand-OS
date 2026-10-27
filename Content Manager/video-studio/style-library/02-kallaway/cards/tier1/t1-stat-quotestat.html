@@ -1,10 +1,10 @@
 <!doctype html>
 <!--
-  KALLAWAY · tier1 · stat · QUOTESTAT
+  KALLAWAY Â· tier1 Â· stat Â· QUOTESTAT
   A glowing pull-quote where the big stat number lives inline within a short
   declarative sentence. The number blazes white/blue gradient; surrounding prose
   glows softer. Left-aligned, editorial, high-drama.
-  Slots: stat (the inline number, e.g. "4.2×"), label (full sentence with {{stat}}
+  Slots: stat (the inline number, e.g. "4.2Ã—"), label (full sentence with {{stat}}
          placeholder already merged), source (~40 chars).
 -->
 <html>
@@ -59,7 +59,7 @@
         z-index: 4; display: flex; flex-direction: column; gap: 0;
       }
 
-      /* The sentence – built of prose spans + stat span */
+      /* The sentence â€“ built of prose spans + stat span */
       #t1-stat-qstat .sentence {
         font-family: var(--font-display); font-weight: var(--wt-bold);
         font-size: 88px; line-height: 1.12; letter-spacing: var(--track-snug);
@@ -117,14 +117,14 @@
 
       <div class="content">
         <div class="sentence">
-          Students who finish&nbsp;<span class="stat-inline" id="qs-num" data-slot="stat">4.2×</span>&nbsp;more likely<br>to land a <em style="color:var(--accent);text-shadow:var(--textglow-accent);-webkit-text-fill-color:initial;filter:none;">paying role</em> within 90&nbsp;days
+          Students who finish&nbsp;<span class="stat-inline" id="qs-num" data-slot="stat">4.2Ã—</span>&nbsp;more likely<br>to land a <em style="color:var(--accent);text-shadow:var(--textglow-accent);-webkit-text-fill-color:initial;filter:none;">paying role</em> within 90&nbsp;days
         </div>
         <div class="label-line" data-slot="label">
           compared to self-taught peers with <em>no structured curriculum</em> or mentored feedback loop
         </div>
       </div>
 
-      <div class="source" data-slot="source">SOURCE · AIS OUTCOMES SURVEY 2026</div>
+      <div class="source" data-slot="source">SOURCE Â· BRAND OUTCOMES SURVEY 2026</div>
       <div class="vignette"></div>
       <div class="grain"></div>
     </div>
@@ -134,7 +134,7 @@
       window.__timelines = window.__timelines || {};
       const tl = gsap.timeline({ paused: true });
 
-      /* Count-up: stat inline reads "4.2×" — animate 0.0→4.2, keep × suffix */
+      /* Count-up: stat inline reads "4.2Ã—" â€” animate 0.0â†’4.2, keep Ã— suffix */
       const qsNumEl  = document.getElementById("qs-num");
       const qsTarget = 4.2;
 
@@ -161,11 +161,11 @@
         .from("#t1-stat-qstat .sentence",
           { autoAlpha: 0, x: -40, filter: "blur(14px)", duration: 1.05, ease: "power4.out" }, 0.65)
 
-        /* count-up the inline stat number 0→4.2× once sentence is visible */
+        /* count-up the inline stat number 0â†’4.2Ã— once sentence is visible */
         .to({ val: 0 }, {
           val: qsTarget, duration: 1.4, ease: "power2.out",
           onUpdate: function() {
-            qsNumEl.textContent = this.targets()[0].val.toFixed(1) + "×";
+            qsNumEl.textContent = this.targets()[0].val.toFixed(1) + "Ã—";
           }
         }, 1.00)
 

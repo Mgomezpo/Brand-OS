@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  KALLAWAY · tier1 · stat · COMPASSTAT
+  KALLAWAY Â· tier1 Â· stat Â· COMPASSTAT
   A compass-style glowing dial ring with a sharp pointer needle that swings from
   the left (0%) to the knob value position on the arc. Tick marks ring the dial;
   the stat count-up plays as the needle swings. The pointer tip glows bright blue.
@@ -31,7 +31,7 @@
                 mask-image: radial-gradient(130% 110% at 50% 60%, #000 30%, transparent 78%);
       }
 
-      /* ── layout ── */
+      /* â”€â”€ layout â”€â”€ */
       #t1-stat-compass .content {
         position: absolute; inset: 0; z-index: 4;
         display: flex; flex-direction: column;
@@ -114,7 +114,7 @@
       <div class="grid"></div>
 
       <div class="content">
-        <div class="kicker" data-slot="kicker">CURRICULUM READINESS · SPRING 2026</div>
+        <div class="kicker" data-slot="kicker">CURRICULUM READINESS Â· SPRING 2026</div>
 
         <div class="dial-wrap">
           <div class="dial-glow" id="t1-stat-compass-glow"></div>
@@ -136,17 +136,17 @@
               </linearGradient>
             </defs>
 
-            <!-- outer track ring (full semicircle, 0 to 180°) -->
-            <!-- arc from 180° (left) to 0° (right) = bottom half omitted, top half shown -->
+            <!-- outer track ring (full semicircle, 0 to 180Â°) -->
+            <!-- arc from 180Â° (left) to 0Â° (right) = bottom half omitted, top half shown -->
             <!-- Using stroke-dasharray on a full circle: semicircle = half circumference -->
-            <!-- r=228, circ=2πr≈1432, half=716 -->
+            <!-- r=228, circ=2Ï€râ‰ˆ1432, half=716 -->
             <circle cx="270" cy="270" r="228"
                     stroke="rgba(255,255,255,0.07)" stroke-width="18"
                     stroke-dasharray="716 716"
                     transform="rotate(180 270 270)"
                     stroke-linecap="round"/>
 
-            <!-- glowing arc fill — animated dashoffset -->
+            <!-- glowing arc fill â€” animated dashoffset -->
             <circle id="cp-arc" cx="270" cy="270" r="228"
                     stroke="url(#cp-arc-grad)" stroke-width="18"
                     stroke-dasharray="0 1432"
@@ -154,10 +154,10 @@
                     stroke-linecap="round"
                     filter="url(#cp-glow)"/>
 
-            <!-- tick marks — 11 ticks spaced across 180° (0%,10%,...,100%) -->
-            <!-- pre-computed at angles 0°=left(180°) to 180°=right(0°) in SVG coordinates -->
+            <!-- tick marks â€” 11 ticks spaced across 180Â° (0%,10%,...,100%) -->
+            <!-- pre-computed at angles 0Â°=left(180Â°) to 180Â°=right(0Â°) in SVG coordinates -->
             <!-- tick group rotated around center 270,270 -->
-            <!-- ticks at -90° (top), each 18° apart spanning 180° -->
+            <!-- ticks at -90Â° (top), each 18Â° apart spanning 180Â° -->
             <g id="cp-ticks" opacity="0.35">
               <!-- 0deg=left=270 angle in our dial: SVG angle=180deg -->
               <line x1="270" y1="42" x2="270" y2="62" stroke="rgba(55,189,248,0.6)" stroke-width="1.5"
@@ -192,8 +192,8 @@
             <text x="486" y="310" fill="rgba(240,238,233,0.40)"
                   font-size="22" font-family="Space Mono, monospace">100</text>
 
-            <!-- needle group — rotates around pivot at 270,270 -->
-            <!-- starts at 180° (left side) = rotation -90°; target 73% = 0.73×180=131.4° → rotation=131.4-90=41.4° -->
+            <!-- needle group â€” rotates around pivot at 270,270 -->
+            <!-- starts at 180Â° (left side) = rotation -90Â°; target 73% = 0.73Ã—180=131.4Â° â†’ rotation=131.4-90=41.4Â° -->
             <g id="cp-needle" transform="rotate(-90 270 270)">
               <!-- needle shaft -->
               <line x1="270" y1="270" x2="270" y2="80"
@@ -213,10 +213,10 @@
           </div>
         </div>
 
-        <div class="label" data-slot="label">instructors rated as <em>curriculum-ready</em> after completing the AIS certification track</div>
+        <div class="label" data-slot="label">instructors rated as <em>curriculum-ready</em> after completing the BRAND certification track</div>
       </div>
 
-      <div class="source" data-slot="source">SOURCE · AIS INSTRUCTOR SURVEY 2026</div>
+      <div class="source" data-slot="source">SOURCE Â· BRAND INSTRUCTOR SURVEY 2026</div>
       <div class="vignette"></div>
       <div class="grain"></div>
     </div>
@@ -232,9 +232,9 @@
       const numEl   = document.getElementById("t1-stat-compass-num");
       const pct     = parseFloat(svgEl.getAttribute("data-pct")) || 73;
 
-      /* arc: semicircle circ = π × r = π × 228 ≈ 716 */
+      /* arc: semicircle circ = Ï€ Ã— r = Ï€ Ã— 228 â‰ˆ 716 */
       const arcLen  = Math.PI * 228;
-      /* needle rotates from -90° (left) to (-90 + pct/100×180)° */
+      /* needle rotates from -90Â° (left) to (-90 + pct/100Ã—180)Â° */
       const startRot = -90;
       const endRot   = -90 + (pct / 100) * 180;
 

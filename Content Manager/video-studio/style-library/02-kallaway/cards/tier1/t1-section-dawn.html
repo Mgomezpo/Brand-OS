@@ -1,9 +1,9 @@
 <!doctype html>
 <!--
-  KALLAWAY · tier1 · section · DAWN
+  KALLAWAY Â· tier1 Â· section Â· DAWN
   Full-screen chapter takeover. A warm-to-cool gradient "dawn" light rises up
-  from the very bottom of the canvas — warm orange-amber at the horizon fading
-  to the signature AIS blue higher up, like a sunrise viewed from space. The
+  from the very bottom of the canvas â€” warm orange-amber at the horizon fading
+  to the signature sky blue higher up, like a sunrise viewed from space. The
   title sits in the upper zone, its text glowing with a cool-blue halo above
   the warm horizon. The horizon line itself is a faint glowing edge.
   Slots: kicker (~16 chars), headline (~52 chars).
@@ -21,8 +21,8 @@
         font-family: var(--font-display); overflow: hidden;
       }
 
-      /* ── DAWN GRADIENT — rises from bottom ─────────────────────────── */
-      /* Warm lower zone — amber/orange at the horizon */
+      /* â”€â”€ DAWN GRADIENT â€” rises from bottom â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+      /* Warm lower zone â€” amber/orange at the horizon */
       #t1-sec-dawn .dawn-warm {
         position: absolute;
         left: 0; right: 0;
@@ -34,13 +34,13 @@
           transparent 72%);
         z-index: 1;
       }
-      /* Cool upper bloom — the blue sky zone */
+      /* Cool upper bloom â€” the blue sky zone */
       #t1-sec-dawn .dawn-cool {
         position: absolute; inset: 0;
         background: var(--bloom-bottom);
         z-index: 1; opacity: 0.55;
       }
-      /* Horizon line — thin glowing edge where warm meets dark */
+      /* Horizon line â€” thin glowing edge where warm meets dark */
       #t1-sec-dawn .horizon {
         position: absolute;
         left: 0; right: 0;
@@ -76,7 +76,7 @@
         z-index: 2;
       }
 
-      /* Dot grid — visible mostly in the cool upper zone */
+      /* Dot grid â€” visible mostly in the cool upper zone */
       #t1-sec-dawn .grid {
         position: absolute; inset: 0; z-index: 1;
         background-image: var(--dot); background-size: var(--dot-size);
@@ -85,7 +85,7 @@
                 mask-image: radial-gradient(120% 90% at 50% 30%, #000 35%, transparent 80%);
       }
 
-      /* ── CONTENT — upper zone ────────────────────────────────────────── */
+      /* â”€â”€ CONTENT â€” upper zone â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
       #t1-sec-dawn .content {
         position: absolute; left: 0; right: 0;
         top: 210px;
@@ -131,7 +131,7 @@
       <div class="grid"></div>
 
       <div class="content">
-        <div class="kicker" data-slot="kicker">— The Beginning —</div>
+        <div class="kicker" data-slot="kicker">â€” The Beginning â€”</div>
         <div class="headline" data-slot="headline">A New Era of Learning<br>Starts <em>Right Here</em></div>
       </div>
 
@@ -144,7 +144,7 @@
       window.__timelines = window.__timelines || {};
       const tl = gsap.timeline({ paused: true });
 
-      /* Grain flicker — deterministic */
+      /* Grain flicker â€” deterministic */
       tl.fromTo("#t1-sec-dawn .grain",
             { backgroundPosition: "0px 0px" },
             { backgroundPosition: "120px 90px", duration: 0.6, ease: "none", repeat: 11, yoyo: true }, 0);
@@ -155,7 +155,7 @@
         .from("#t1-sec-dawn .grid",
             { autoAlpha: 0, duration: 1.2, ease: "power2.out" }, 0.2);
 
-      /* Dawn warm light rises from below — starts off-canvas, slides up */
+      /* Dawn warm light rises from below â€” starts off-canvas, slides up */
       tl.from("#t1-sec-dawn .dawn-warm",
             { autoAlpha: 0, y: 200, duration: 1.6, ease: "power3.out" }, 0.20);
 
@@ -171,11 +171,11 @@
       tl.from("#t1-sec-dawn .kicker",
             { autoAlpha: 0, y: 20, filter: "blur(10px)", duration: 0.75, ease: "power3.out" }, 1.0);
 
-      /* Headline glides in — focus pull */
+      /* Headline glides in â€” focus pull */
       tl.from("#t1-sec-dawn .headline",
             { autoAlpha: 0, y: 36, filter: "blur(18px)", duration: 1.0, ease: "power4.out" }, 1.25);
 
-      /* Dawn warm glow breathes — finite pulse suggesting a sun rising */
+      /* Dawn warm glow breathes â€” finite pulse suggesting a sun rising */
       tl.to("#t1-sec-dawn .dawn-warm",
             { opacity: 0.75, duration: 1.6, ease: "sine.inOut", repeat: 2, yoyo: true }, 2.2);
 

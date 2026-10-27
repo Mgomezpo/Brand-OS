@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  KALLAWAY · tier1 · stat · ORBITMOONS
+  KALLAWAY Â· tier1 Â· stat Â· ORBITMOONS
   A large glowing central number is orbited by 2 small satellite "moon" stats on
   subtle elliptical paths. The moons enter with orbital easing and carry short
   supporting stats. Breathes with a gentle orbital drift after entrance.
@@ -31,12 +31,12 @@
                 mask-image: radial-gradient(130% 110% at 50% 60%, #000 30%, transparent 78%);
       }
 
-      /* ── orbit SVG (decorative ellipse rings) ── */
+      /* â”€â”€ orbit SVG (decorative ellipse rings) â”€â”€ */
       #t1-stat-moons .orbit-svg {
         position: absolute; inset: 0; width: 1920px; height: 1080px; z-index: 2;
       }
 
-      /* ── central hub ── */
+      /* â”€â”€ central hub â”€â”€ */
       #t1-stat-moons .hub {
         position: absolute;
         left: 50%; top: 50%; transform: translate(-50%, -50%);
@@ -67,7 +67,7 @@
         text-shadow: var(--textglow-accent); margin-top: 10px; position: relative; z-index: 2;
       }
 
-      /* ── moon pill cards ── */
+      /* â”€â”€ moon pill cards â”€â”€ */
       #t1-stat-moons .moon {
         position: absolute; z-index: 5;
         background: var(--glass-bg);
@@ -90,9 +90,9 @@
         text-transform: uppercase; color: var(--text-dim);
       }
 
-      /* moon1 — upper-right */
+      /* moon1 â€” upper-right */
       #t1-stat-moons .moon1 { left: 1220px; top: 240px; }
-      /* moon2 — lower-left */
+      /* moon2 â€” lower-left */
       #t1-stat-moons .moon2 { left: 280px; top: 640px; }
 
       #t1-stat-moons .source {
@@ -160,7 +160,7 @@
         <div class="moon-lbl">satisfaction score</div>
       </div>
 
-      <div class="source" data-slot="source">SOURCE · AIS PLATFORM DATA 2026</div>
+      <div class="source" data-slot="source">SOURCE Â· BRAND PLATFORM DATA 2026</div>
       <div class="vignette"></div>
       <div class="grain"></div>
     </div>
@@ -212,7 +212,7 @@
         .from("#t1-stat-moons .source",
           { autoAlpha: 0, duration: 0.6, ease: "power2.out" }, 2.10)
 
-        /* slow orbital drift — moons gently arc */
+        /* slow orbital drift â€” moons gently arc */
         .to("#mn-m1", { x: 20, y: -14, duration: 4.0, ease: "sine.inOut" }, 2.5)
         .to("#mn-m2", { x: -20, y: 14, duration: 4.0, ease: "sine.inOut" }, 2.5)
 

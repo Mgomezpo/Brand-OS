@@ -1,7 +1,7 @@
 <!doctype html>
 <!--
-  KALLAWAY · tier1 · stat · WATERFALL
-  Waterfall chart — bars build step-by-step, each offset vertically from the last,
+  KALLAWAY Â· tier1 Â· stat Â· WATERFALL
+  Waterfall chart â€” bars build step-by-step, each offset vertically from the last,
   left-to-right, accumulating to a glowing total. Each bar's height animates in
   with a spring. The final "Total" bar is accent-white and brighter.
   Slots: kicker (~28 chars), stat (total value, e.g. "$3.2M"), label (~65 chars),
@@ -31,7 +31,7 @@
                 mask-image: radial-gradient(120% 100% at 50% 60%, #000 35%, transparent 80%);
       }
 
-      /* chart area — centred with stat above */
+      /* chart area â€” centred with stat above */
       #t1-stat-water .chart-wrap {
         position: absolute; left: 140px; right: 140px; top: 80px; bottom: 140px;
         z-index: 4; display: flex; flex-direction: column; gap: 0;
@@ -97,7 +97,7 @@
 
       <div class="chart-wrap">
         <div class="header">
-          <div class="kicker" data-slot="kicker">REVENUE BUILD · FY 2026</div>
+          <div class="kicker" data-slot="kicker">REVENUE BUILD Â· FY 2026</div>
           <div class="stat" id="wf-num" data-slot="stat">$3.2M</div>
         </div>
 
@@ -105,11 +105,11 @@
           Waterfall bars. Canvas width ~1640px inside padding. 5 +1 total bars.
           Bar widths=190px, gap=58px. Chart height ~580px.
           Baseline y=580. Bars (values normalized, max 580):
-          Bar0 "Courses"   +220 → y_top=360, height=220  (starts at 360)
-          Bar1 "Certs"     +165 → y_top=195, height=165  (starts at 195)
-          Bar2 "Coaching"  +110 → y_top=85,  height=110  (starts at 85)
-          Bar3 "Events"    +75  → y_top=10,  height=75   (starts at 10)
-          Bar4 "Refunds"   -55  → y_top=65,  height=55   (negative bar, red-tint)
+          Bar0 "Courses"   +220 â†’ y_top=360, height=220  (starts at 360)
+          Bar1 "Certs"     +165 â†’ y_top=195, height=165  (starts at 195)
+          Bar2 "Coaching"  +110 â†’ y_top=85,  height=110  (starts at 85)
+          Bar3 "Events"    +75  â†’ y_top=10,  height=75   (starts at 10)
+          Bar4 "Refunds"   -55  â†’ y_top=65,  height=55   (negative bar, red-tint)
           Bar5 "TOTAL"     whole height=515 (sum 220+165+110+75-55=515) bottom=65, top=65
           x positions: 0,248,496,744,992,1312 (wider total)
         -->
@@ -187,16 +187,16 @@
           <text id="wv1" x="343"  y="185" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="22" font-weight="700" fill="rgba(255,255,255,0.70)">+$1.0M</text>
           <text id="wv2" x="591"  y="75"  text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="22" font-weight="700" fill="rgba(255,255,255,0.70)">+$680K</text>
           <text id="wv3" x="839"  y="0"   text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="22" font-weight="700" fill="rgba(255,255,255,0.70)">+$460K</text>
-          <text id="wv4" x="1087" y="0"   text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="22" font-weight="700" fill="rgba(255,138,92,0.85)">−$340K</text>
+          <text id="wv4" x="1087" y="0"   text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="22" font-weight="700" fill="rgba(255,138,92,0.85)">âˆ’$340K</text>
           <text id="wv5" x="1422" y="55"  text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="24" font-weight="800" fill="rgba(255,255,255,0.92)">$3.2M</text>
         </svg>
 
         <div class="label" data-slot="label">
-          course revenue leads the stack — <em>coaching upsells</em> and certification bundles compound each cohort
+          course revenue leads the stack â€” <em>coaching upsells</em> and certification bundles compound each cohort
         </div>
       </div>
 
-      <div class="source" data-slot="source">SOURCE · AIS FINANCE DATA 2026</div>
+      <div class="source" data-slot="source">SOURCE Â· BRAND FINANCE DATA 2026</div>
       <div class="vignette"></div>
       <div class="grain"></div>
     </div>

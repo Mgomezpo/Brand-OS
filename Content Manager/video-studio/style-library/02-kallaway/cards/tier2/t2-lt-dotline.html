@@ -1,9 +1,9 @@
 <!doctype html>
 <!--
-  KALLAWAY · tier2 · lower-third · DOTLINE
+  KALLAWAY Â· tier2 Â· lower-third Â· DOTLINE
   A glowing leader line draws from a fixed anchor node (left edge) to a small
   neon marker dot, then a name+role block fades in beside it. The connector is
-  the visual hero — a dashed SVG path that animates-draws left-to-right. Sits
+  the visual hero â€” a dashed SVG path that animates-draws left-to-right. Sits
   over live footage; only the component paints.
   Slots: name (~26 chars), role (~40 chars).
 -->
@@ -35,7 +35,7 @@
         z-index: 1;
       }
 
-      /* The whole assembly — anchored lower-left */
+      /* The whole assembly â€” anchored lower-left */
       #t2-lt-dotl .assembly {
         position: absolute;
         left: 80px; bottom: 148px;
@@ -92,7 +92,7 @@
         color: var(--white);
         text-shadow: var(--textglow);
         line-height: 1.0;
-        /* frosted underlay inline — no extra div */
+        /* frosted underlay inline â€” no extra div */
         background: rgba(10, 14, 20, 0.50);
         backdrop-filter: blur(14px) saturate(120%);
         -webkit-backdrop-filter: blur(14px) saturate(120%);
@@ -154,7 +154,7 @@
         <!-- Name + role text block -->
         <div class="text-block">
           <div class="name" data-slot="name">Dr. Sarah Chen</div>
-          <div class="role" data-slot="role">AI Curriculum Director, AIS Academy</div>
+          <div class="role" data-slot="role">AI Curriculum Director, BRAND Academy</div>
         </div>
       </div>
 
@@ -171,7 +171,7 @@
       tl.from(`${C} .local-bloom`,
         { autoAlpha: 0, scale: 0.55, duration: 1.1, ease: "power2.out" }, 0);
 
-      /* line appears then draws via dashoffset: 220 → 0 */
+      /* line appears then draws via dashoffset: 220 â†’ 0 */
       const lineEl = document.getElementById("dotl-line");
       tl.to(lineEl, { opacity: 1, duration: 0.18, ease: "none" }, 0.15);
       tl.to({ offset: 220 }, {
@@ -196,7 +196,7 @@
         { autoAlpha: 0, x: -16, filter: "blur(6px)",
           duration: 0.55, ease: "power3.out" }, 1.18);
 
-      /* marker glow pulse — finite */
+      /* marker glow pulse â€” finite */
       tl.to(`${C} .marker`, {
         boxShadow: "0 0 0 4px rgba(55,189,248,0.22), 0 0 22px rgba(55,189,248,1.00), 0 0 44px rgba(55,189,248,0.55)",
         duration: 1.0, ease: "sine.inOut", repeat: 3, yoyo: true }, 2.0);
