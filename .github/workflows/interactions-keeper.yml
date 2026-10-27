@@ -1,53 +1,44 @@
-name: Repo lockdown keeper
+name: Repo lockdown (manual)
 
-# Guardián del blindaje del repo.
-# GitHub disena los "interaction limits" para expirar por defecto (max 1 mes via API),
-# asi que este workflow renueva el limite `collaborators_only` cada 6 horas para que
-# outsiders nunca puedan abrir PRs, issues ni comentarios en el repo.
+# Boton MANUAL de respaldo para renovar el blindaje del repo.
+# Disparo: gh workflow run interactions-keeper.yml --repo Mgomezpo/Brand-OS
+# (o web UI > Actions > Repo lockdown (manual) > Run workflow).
 #
-# Enlaces de referencia:
-# - Branch protection de `main` (sin force push, sin borrado, incluye admins) es
-#   persistente y se gestiona directo en GitHub: Settings > Branches > Branch protection.
-# - Este workflow SOLO corre en el repo original. En forks se apaga (guard de abajo),
-#   asi que usar Brand-OS como plantilla no hereda tareas que fallen.
+# Importante: el GITHUB_TOKEN de Actions NO tiene permiso 'administration'
+# sobre la API de configuracion del repositorio, por eso este workflow NO
+# usa horario automatico. Sin el secret GH_ADMIN_TOKEN este job no toca
+# nada (solo avisa). El renovador oficial y automatico es la tarea
+# programada local de Windows 'BrandOS-Renovar-Interacciones-GitHub',
+# que ejecuta gh CLI con el token del keyring del owner.
+#
+# Si el owner quiera delegar la renovacion a GitHub (opcional): crear un
+# PAT fino (fine-grained) de Mgomezpo con permiso Administration: write
+# restringido SOLO a este repo y guardarlo como secret GH_ADMIN_TOKEN.
 
 on:
-  schedule:
-    - cron: "21 */6 * * *" # cada 6 horas (renewal margin: expiracion es 24 h)
   workflow_dispatch:
 
-permissions:
-  administration: write
-
 jobs:
-  renew-interaction-limits:
-    if: github.repository == 'Mgomezpo/Brand-OS'
+  renew:
     runs-on: ubuntu-latest
     steps:
-      - name: Renovar interaction limit -> solo colaboradores
+      - name: Renovar interaction limit y verificar proteccion de main
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
         run: |
-          gh api -X PUT repos/"$GITHUB_REPOSITORY"/interaction-limits \
-            -f limit=collaborators_only -f expiry=one_day
-          gh api repos/"$GITHUB_REPOSITORY"/interaction-limits \
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::warning::Sin secret GH_ADMIN_TOKEN no se renueva nada desde Aqui. Uso: schtasks /Run /TN BrandOS-Renovar-Interacciones-GitHub (local, fuente de verdad)."
+            exit 0
+          fi
+          gh api --method PUT repos/Mgomezpo/Brand-OS/interaction-limits \
+            --field limit=collaborators_only --field expiry=one_month \
             --jq '{limit: .limit, expires_at: .expires_at}'
-
-  assert-branch-protection:
-    if: github.repository == 'Mgomezpo/Brand-OS'
-    runs-on: ubuntu-latest
-    needs: renew-interaction-limits
-    steps:
-      - name: Verificar que main sigue blindada (sin force push, sin borrado)
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          state="$(gh api repos/"$GITHUB_REPOSITORY"/branches/main/protection \
+          state="$(gh api repos/Mgomezpo/Brand-OS/branches/main/protection \
             --jq '{enforce_admins: .enforce_admins.enabled, allow_force_pushes: .allow_force_pushes.enabled, allow_deletions: .allow_deletions.enabled}')"
-          echo "main protection: $state"
+          echo "Proteccion de main: $state"
           if [ "$(echo "$state" | grep -c '"allow_force_pushes":false')" -ne 1 ] || \
              [ "$(echo "$state" | grep -c '"allow_deletions":false')" -ne 1 ] || \
              [ "$(echo "$state" | grep -c '"enforce_admins":true')" -ne 1 ]; then
-            echo "::error::La proteccion de main cambio! Restaurala en Settings > Branches."
+            echo "::error::La proteccion de main se perdio. Restaurar en Settings > Branches."
             exit 1
           fi

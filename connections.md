@@ -12,6 +12,12 @@
 | 4 | **Zernio** (publicación + embudo) | cola de posts y comment-to-DM (`Content Manager/helper/zernio.py`) | ❌ **llaves vacías** | publicación manual | `ZERNIO_API_KEY` · `ZERNIO_PROFILE_ID` · `ZERNIO_ACCOUNT_ID` |
 | 5 | **Apify** (roadmap) | ingesta estándar de `vault/Estrategia/Referentes-y-Benchmarking/` | ❌ **roadmap** | copiar/pegar manual | `APIFY_API_TOKEN` |
 
+## Gobernanza del repo GitHub (blindaje, 2026-10-27)
+
+- **Repo:** `Mgomezpo/Brand-OS` (público, base plantilla). **Branch protection en `main`:** sin force push, sin borrado, aplicable a admin (`enforce_admins`). Los agents y humanos con push normal a `main` siguen trabajando igual.
+- **Interaction limits `collaborators_only`:** nadie fuera de colaboradores puede abrir PRs, issues ni comentar. GitHub expira este límite por diseño → se renueva **1 mes** cada vez con la tarea local `BrandOS-Renovar-Interacciones-GitHub` (día 1 de cada mes, 09:03) que corre `C:\Users\mgome\.brand-os\renew-interaction-limits.cmd` usando el token `gh` del keyring. Log: `C:\Users\mgome\.brand-os\renewal.log`.
+- **Renovación manual:** `schtasks /Run /TN BrandOS-Renovar-Interacciones-GitHub`. Alternativa remota: `gh workflow run interactions-keeper.yml --repo Mgomezpo/Brand-OS` (solo hace el trabajo si existe el secret opcional `GH_ADMIN_TOKEN`; el `GITHUB_TOKEN` de Actions no tiene permiso `administration`).
+
 ## Al activar una conexión
 
 1. Llena la llave en `.env` (nunca la subas a git).
