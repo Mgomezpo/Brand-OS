@@ -31,9 +31,10 @@ Los proyectos pueden vivir en `batches/<vuelta>/<slug>/` o directamente en `caro
 
 | Archivo | Papel |
 | :--- | :--- |
-| `ROTATION.md` | Rotación pentagonal de líneas: 1 carrusel por línea y vuelta |
 | `BATCH_TRACKER.md` | Tablero de estado del lote semanal |
 | `CURRENT_BATCH.json` | Estado interno del gestor (efímero, ignorado por git) |
+
+**Puntero de rotación (vuelta activa y líneas):** `../../vault/Conceptos/content_pillars.md` (§4).
 
 ## Reglas canónicas (inquebrantables)
 

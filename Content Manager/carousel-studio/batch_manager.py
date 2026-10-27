@@ -3,9 +3,11 @@
 batch_manager.py — Gestor Determinista del Batch Semanal de Carruseles (Brand OS)
 
 Permite:
-  1. new-week : Inicializar el lote semanal de 5 carruseles leyendo ROTATION.md.
-  2. status   : Escanear las carpetas assets/ de cada carrusel, chulear fondos subidos y mostrar qué falta.
-  3. compile  : Renderizar los carruseles que tengan todos sus fondos completos usando Playwright.
+  1. status   : Escanear las carpetas assets/ de cada carrusel, chulear fondos subidos y mostrar qué falta.
+  2. compile  : Renderizar los carruseles que tengan todos sus fondos completos usando Playwright.
+
+El lote activo (`CURRENT_BATCH.json`) se crea a mano o por el skill: 5 carruseles, 1 por línea,
+según el puntero de rotación de `vault/Conceptos/content_pillars.md` (§4).
 """
 
 import os
@@ -18,7 +20,6 @@ from datetime import datetime
 
 ROOT_DIR = Path(__file__).resolve().parent
 PROJECTS_DIR = ROOT_DIR
-ROTATION_FILE = ROOT_DIR / "ROTATION.md"
 BATCH_TRACKER_FILE = ROOT_DIR / "BATCH_TRACKER.md"
 CURRENT_BATCH_FILE = ROOT_DIR / "CURRENT_BATCH.json"
 
@@ -95,7 +96,7 @@ def update_tracker_md(batch_data):
     for item in batch_data.get("carousels", []):
         slug = item["slug"]
         line = item["line"]
-        expected = item.get("slides_count", 5)
+        expected = item.get("slides_count", 7)
         check = check_carousel_assets(slug, expected)
         
         status_icon = "⏳ Pendiente"
@@ -149,7 +150,8 @@ def cmd_status():
     batch = load_current_batch()
     if not batch:
         print("⚠️ No hay ningún batch activo en CURRENT_BATCH.json.")
-        print("Corré `python batch_manager.py new-week` para iniciar uno nuevo.")
+        print("Crea `CURRENT_BATCH.json` con 1 carrusel por línea (puntero: `../../vault/Conceptos/content_pillars.md` §4):")
+        print('   {"title": "Vuelta 01", "vuelta": "Vuelta 01", "carousels": [{"index": 1, "slug": "<slug>", "line": "<id>", "slides_count": 7}, ...]}')
         return
 
     update_tracker_md(batch)
@@ -161,7 +163,7 @@ def cmd_status():
     for item in batch.get("carousels", []):
         slug = item["slug"]
         line = item["line"]
-        expected = item.get("slides_count", 5)
+        expected = item.get("slides_count", 7)
         check = check_carousel_assets(slug, expected)
         
         dots = "".join(["[✓]" if i not in check["missing_indices"] else "[ ]" for i in range(1, expected + 1)])
@@ -224,10 +226,10 @@ def main():
     elif action in {"compile", "render"} and len(sys.argv) >= 3:
         cmd_compile(sys.argv[2])
     elif action in {"new-week", "init"}:
-        print("💡 Para inicializar la nueva vuelta de rotación, el agente o skill generará los 5 carruseles con sus One-Liners y prompts cinematográficos.")
+        print("💡 El puntero de la vuelta activa vive en `vault/Conceptos/content_pillars.md` (§4).")
         cmd_status()
     else:
-        print(f"Uso: python batch_manager.py [status | compile <slug> | new-week]")
+        print(f"Uso: python batch_manager.py [status | compile <slug>]")
 
 if __name__ == "__main__":
     main()

@@ -65,7 +65,7 @@ npm run sync:skills               # mantiene espejos .claude/ y .agents/ sincron
 ### 🖼️ Motor de Carrusel (3:4) — `Content Manager/carousel-studio/`
 
 Stack: fondos IA 100% limpios de texto + HTML/CSS determinista + Playwright. Canonicidad: proporción **3:4 (1080 × 1440 px)**, márgenes 96 px, Regla de 3 Colores.
-> Panel: `batch_manager.py` es el gestor determinista del batch semanal · `ROTATION.md` gobierna la vuelta activa · `BATCH_TRACKER.md` es el tablero de estado
+> Panel: `batch_manager.py` es el gestor determinista del batch semanal · puntero de rotación: `vault/Conceptos/content_pillars.md` (§4) · `BATCH_TRACKER.md` es el tablero de estado
 > Guía profunda: `vault/SOPs/carousel_batch.md`
 
 ```bash

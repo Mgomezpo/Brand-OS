@@ -104,7 +104,7 @@ Brand OS/
 ├── EXPANSIONS.md                      ← Scaling guide: what to add as you grow, cadences & anti-patterns
 ├── LICENSE                            ← MIT License + Trademark notices
 ├── connections.md                     ← Registry of reachable engines, APIs and local renderers
-├── NOTEBOOK.md                        ← Runbook of ALL skills + connection cost policy (how to RUN this OS)
+├── .env.example                       ← ALL external connection keys (copy to .env; free defaults need NO key)
 ├── .gitignore                         ← Excludes private captures, heavy media & node_modules
 │
 ├── .claude/skills/                    ← Interactive skills for Claude Code

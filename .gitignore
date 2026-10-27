@@ -21,6 +21,7 @@ env/
 venv/
 myenv/
 .venv/
+.env
 build/
 develop-eggs/
 dist/

@@ -1,7 +1,7 @@
 # {{SISTEMA_VISUAL}} Carousel Strategy — 5 líneas, 5 objetivos
 
 > Referencia **estable** para la skill `/carousel-batch` (residente de `Content Manager/carousel-studio/`) y las skills de diseño. El estado mutable
-> (qué línea toca ahora) vive en `Content Manager/carousel-studio/ROTATION.md`, no aquí.
+> (qué línea toca ahora) vive en `vault/Conceptos/content_pillars.md` (§4), no aquí.
 
 ## Por qué carruseles
 

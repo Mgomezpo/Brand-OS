@@ -15,7 +15,7 @@ Nunca inventes reglas nuevas: si algún número de este archivo choca con los SO
 
 ## Fase 0 — Contexto del batch
 
-1. Lee `ROTATION.md` de este estudio: vuelta activa y sus líneas.
+1. Lee `../../vault/Conceptos/content_pillars.md` (§4): el puntero de rotación (vuelta activa y líneas que tocan).
 2. El batch produce **5 carruseles** (1 por línea). La **publicación** se dosifica 1–2 carruseles/semana según `../../vault/Estrategia/Frameworks-de-Guionizacion/matriz_de_formatos.md` (reels: TOFU; carrusel: MOFU de guardados).
 
 ## Fase 1 — Ángulo + Research (aprobación antes que todo)
@@ -55,7 +55,7 @@ Actualiza `BATCH_TRACKER.md` (columna Estado Copy). 🛑 Gate: sin copy aprobado
    ```
    Canvas **1080 × 1440 px** (3:4); el motor exporta a **2× DPI (PNG 2160 × 2880)**.
 5. Checklist pre-render (`../../vault/SOPs/carousels.md` §4): ratio verificado, sin "developer mockup trap", 3 colores, 2 tipografías, ≥96 px, 1 acento por slide, cifras en `../../vault/Conceptos/proof_bank.md`, copy pasa la lista negra de `../../vault/Conceptos/tone_of_voice.md`.
-6. Actualiza `BATCH_TRACKER.md` (compilado) y los checkboxes de la vuelta en `ROTATION.md`; el paquete final sale por `../postprocessing/<slug>/` (SOP: `../../vault/SOPs/funnels_publicacion.md`, caption en 4 bloques según `../../vault/SOPs/carousels.md` §3).
+6. Actualiza `BATCH_TRACKER.md` (compilado) y el puntero de la vuelta en `../../vault/Conceptos/content_pillars.md` (§4); el paquete final sale por `../postprocessing/<slug>/` (SOP: `../../vault/SOPs/funnels_publicacion.md`, caption en 4 bloques según `../../vault/SOPs/carousels.md` §3).
 
 ## Mantenimiento
 

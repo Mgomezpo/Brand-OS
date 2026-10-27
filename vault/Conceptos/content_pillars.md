@@ -11,7 +11,7 @@ status: pendiente
 
 ## 1. Filosofía de Rotación
 
-Una marca no publica ocurrencias aisladas. Cada lote ("Vuelta") contiene **1 pieza por pilar**, en orden fijo, siguiendo un puntero en `ROTATION` (sección 4).
+Una marca no publica ocurrencias aisladas. Cada lote ("Vuelta") contiene **1 pieza por pilar**, en orden fijo, siguiendo el puntero de la sección 4 de este documento.
 
 ---
 
