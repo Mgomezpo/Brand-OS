@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Zernio MCP & REST CLI helper for the AI Content Manager.
+Zernio MCP & REST CLI helper for the Content Manager.
 Allows executing Zernio MCP tools and managing comment->DM automations.
 
 Usage:
