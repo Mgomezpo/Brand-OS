@@ -6,7 +6,7 @@ Capa operativa del Brand OS: los **motores de producción** (video 9:16 y carrus
 
 | Carpeta | Papel | Comando de entrada |
 | :--- | :--- | :--- |
-| `video-studio/` | Motor de video 9:16 (1080 × 1920 px): HyperFrames + GSAP + ElevenLabs Scribe. Proyectos en `video-studio/video-projects/<slug>/` | `npm run new-video -- <slug>` |
+| `video-studio/` | Motor de video 9:16 (1080 × 1920 px): HyperFrames + GSAP. Transcripción: Whisper local gratis por defecto; ElevenLabs Scribe opcional de pago. Proyectos en `video-studio/video-projects/<slug>/` | `npm run new-video -- <slug>` |
 | `carousel-studio/` | Motor de carruseles 3:4 (1080 × 1440 px): fondos IA + HTML/CSS determinista + Playwright. Proyectos en `carousel-studio/batches/<vuelta>/<slug>/` | `python batch_manager.py status` |
 | `postprocessing/` | Mesa de publicación: paquete por pieza con `caption.md` + `funnel.md` + `post.json` + `media-url.txt` | `python helper/zernio.py post-package postprocessing/<slug>` |
 | `helper/` | Automatización: `zernio.py` (MCP + REST de Zernio, disparo comment-to-DM), `auto_source_image.py` (búsqueda ubicativa de imágenes) | ver docstring de cada script |
@@ -15,7 +15,7 @@ Capa operativa del Brand OS: los **motores de producción** (video 9:16 y carrus
 
 ## ⚙️ Setup
 
-1. **Video:** `cd video-studio && npm install` (Node ≥ 22) · credenciales: `video-studio/.env.example` → `.env` (ElevenLabs opcional; Whisper local no requiere key).
+1. **Video:** `cd video-studio && npm install` (Node ≥ 22) · transcripción gratis vía Whisper ya incluida en el kit (`hyperframes transcribe`); el `.env` solo se necesita si activas ElevenLabs u otro proveedor de pago (`video-studio/.env.example` → `.env`).
 2. **Carrusel:** `cd carousel-studio && npm install` (Playwright + Chromium).
 3. **Funnels (Zernio):** copia `.env.example` → `.env` en esta carpeta y rellena `ZERNIO_API_KEY` + `ZERNIO_PROFILE_ID` + `ZERNIO_ACCOUNT_ID`. Primeras 2 cuentas conectadas gratis.
 

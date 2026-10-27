@@ -6,12 +6,12 @@ Registry of every system and production engine your Brand OS can reach. Pre-conf
 |---|---|---|---|---|---|
 | 1 | 3:4 Carousel Engine | Playwright (Node.js) | script + headless | local | `Content Manager/carousel-studio/capture.cjs` |
 | 2 | 9:16 Video Engine | HyperFrames + GSAP | script + render | local | `Content Manager/video-studio/` |
-| 3 | Transcripción & Audio | ElevenLabs Scribe / Whisper | script + API | api-key / local | `Content Manager/video-studio/scripts/transcribe-elevenlabs.mjs` |
+| 3 | Transcripción | Whisper local (whisper.cpp) — **default gratis** / ElevenLabs Scribe — opcional de pago | CLI local / API | local sin key / api-key | gratis: `hyperframes transcribe` · pago: `scripts/transcribe-elevenlabs.mjs` |
 | 4 | Silence & Mistake Cuts | Video Studio cut-silences / cut-mistakes | skill + script | local | `Content Manager/video-studio/.claude/skills/` |
 | 5 | AI Visual Backgrounds | Recraft / FLUX / Midjourney | prompt pipeline | api / manual | Clean AI prompts (zero text), CSS compositing |
 | 6 | Funnel & DM Automation | Zernio (Comment-to-DM) | mcp / webhook | api-key | `Content Manager/helper/zernio.py` |
 | 7 | Social Distribution | Zernio (Posts & Queue) | mcp / script | api-key | `Content Manager/helper/zernio.py` |
-| 8 | Voice Narration | ElevenLabs Scribe | script / api | api-key | `Content Manager/video-studio/scripts/transcribe-elevenlabs.mjs` |
+| 8 | Voz Narrada (TTS) | **Grabar voz real (default gratis)** · ElevenLabs TTS como **placeholder** pendiente de activar | manual / API | micrófono / api-key | placeholder no wired: activar con key en `video-studio/.env` y documentar en `vault/Repos.md` |
 | 9 | Design System Tokens | Deterministic CSS | native local | local | `design-system/tokens.css` & `index.css` |
 | 10 | Brand Brain Knowledge | Obsidian Markdown Vault | native local | local | `vault/` (Brand Brain + SOPs + hallazgos) |
 | 11 | Referentes Ingesta (roadmap) | Apify (web scraping) | script / api | api-key | `not yet connected` — estandarizará la ingesta de `vault/Estrategia/Referentes-y-Benchmarking/` |

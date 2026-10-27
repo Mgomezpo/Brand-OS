@@ -30,7 +30,7 @@ Brand OS/
 │
 ├── 🚀 Content Manager/         → LA FÁBRICA DE CONTENIDOS (Engines y Software Determinista)
 │   ├── carousel-studio/       → Estudio de carruseles 3:4 (Playwright + batch_manager.py)
-│   ├── video-studio/          → Estudio de video 9:16 (HyperFrames + GSAP + ElevenLabs)
+│   ├── video-studio/          → Estudio de video 9:16 (HyperFrames + GSAP + Whisper local)
 │   ├── postprocessing/        → Mesa de publicación (paquetes <slug>/ → Zernio)
 │   └── helper/                → Embudos transversales (Zernio comment-to-DM)
 │
@@ -47,7 +47,7 @@ Los SOPs de `vault/SOPs/` explican el **qué** y el **por qué** de cada pieza. 
 
 ### 🎬 Motor de Video (9:16) — `Content Manager/video-studio/`
 
-Stack: HyperFrames + GSAP + ElevenLabs Scribe + ffmpeg. Canonicidad: proporción **9:16 (1080 × 1920 px)**. Los tokens de marca salen de `design-system/tokens.css` y `vault/Conceptos/visual_identity.md`.
+Stack: HyperFrames + GSAP + ffmpeg. Transcripción: **Whisper local gratis por defecto** (whisper.cpp vía `hyperframes transcribe`); ElevenLabs Scribe es opcional de pago. Canonicidad: proporción **9:16 (1080 × 1920 px)**. Los tokens de marca salen de `design-system/tokens.css` y `vault/Conceptos/visual_identity.md`.
 > Guía profunda: `Content Manager/video-studio/README.md` + `vault/SOPs/video_studio.md`
 
 ```bash
@@ -55,7 +55,8 @@ cd "Content Manager/video-studio"
 npm install                       # solo la primera vez (requiere Node >= 22)
 npm run new-video -- <slug>       # crea el kit del proyecto en video-projects/<slug>/
 npm run demo                      # (opcional) genera un proyecto de partida para explorar
-npm run transcribe -- <archivo>   # ElevenLabs Scribe → transcript.json (timestamps por palabra)
+hyperframes transcribe           # Whisper local gratis → transcript.json (timestamps por palabra)
+npm run transcribe -- <archivo>  # alternativa de pago: ElevenLabs Scribe (requiere key en .env)
 # Cortes, en este orden: skill /cut-silences → skill /cut-mistakes (nunca mezclar timestamps)
 npm run preflight -- <slug>       # audio joins, contraste y safe areas → final.mp4
 npm run sync:skills               # mantiene espejos .claude/ y .agents/ sincronizados

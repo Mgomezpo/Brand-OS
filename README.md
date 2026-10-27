@@ -104,6 +104,7 @@ Brand OS/
 ├── EXPANSIONS.md                      ← Scaling guide: what to add as you grow, cadences & anti-patterns
 ├── LICENSE                            ← MIT License + Trademark notices
 ├── connections.md                     ← Registry of reachable engines, APIs and local renderers
+├── NOTEBOOK.md                        ← Runbook of ALL skills + connection cost policy (how to RUN this OS)
 ├── .gitignore                         ← Excludes private captures, heavy media & node_modules
 │
 ├── .claude/skills/                    ← Interactive skills for Claude Code
@@ -134,7 +135,7 @@ Brand OS/
 │
 └── 🚀 Content Manager/             ← THE FACTORY (Deterministic Software Engines)
     ├── carousel-studio/               ← 3:4 Carousel engine (Playwright + batch_manager.py)
-    ├── video-studio/                  ← 9:16 Video engine (HyperFrames + GSAP + ElevenLabs Scribe)
+    ├── video-studio/                  ← 9:16 Video engine (HyperFrames + GSAP + Whisper local)
     ├── postprocessing/                ← Publication table (packages ready to post)
     └── helper/                        ← Funnel & publishing scripts (Zernio comment-to-DM + distribution)
 ```

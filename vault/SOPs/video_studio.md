@@ -1,7 +1,7 @@
 # SOP: Video Studio (Edición Shortform)
 
 > **Propósito:** Flujo paso a paso para editar videos verticales con ritmo cinematográfico, cortes quirúrgicos y la estética de {{NOMBRE_MARCA}}.  
-> **Stack canónico:** el Video Studio — HyperFrames + GSAP + ElevenLabs Scribe + ffmpeg.
+> **Stack canónico:** el Video Studio — HyperFrames + GSAP + ffmpeg (transcripción: **Whisper local gratis por defecto**; ElevenLabs Scribe opcional de pago).
 
 ---
 
@@ -21,7 +21,7 @@
 ```
 
 1. **Crear proyecto:** `npm run new-video -- <slug>` desde `Content Manager/video-studio/`.
-2. **Transcripción:** ElevenLabs Scribe → `npm run transcribe` → `transcript.json` con timestamps por palabra. Fallback: Whisper local.
+2. **Transcripción:** Whisper local gratis → `hyperframes transcribe` → `transcript.json` con timestamps por palabra. Opcional de pago: ElevenLabs Scribe → `npm run transcribe` (requiere key en `video-studio/.env`).
 3. **Cortar silencios:** usar skill `/cut-silences` → genera video editado + transcripción retimeada.
 4. **Cortar errores:** usar skill `/cut-mistakes` con el video y transcript del paso anterior (nunca mezclar timestamps originales con metraje editado).
 5. **Overlays de marca:**
