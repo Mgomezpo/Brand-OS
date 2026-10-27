@@ -1,51 +1,58 @@
 ---
 name: carousel-batch
-description: Guided 3-phase production engine for weekly 3:4 carousels (1080 x 1440 px). Strictly separates research, copywriting of punchy one-liners, text-free AI visual prompts, and deterministic HTML/CSS compilation.
+description: Guided 3-phase engine for the weekly 3:4 carousel batch (1080 × 1440 px canvas, 1 carousel per design line). Canonical sources are the SOPs — this skill is the operator. Strictly separates research, human approval, copywriting of punchy one-liners, per-line AI visual prompts, and deterministic Playwright compilation.
 ---
 
 ## What this skill does
 
-Guides the creation of high-converting, authority-building carousels in the canonical **3:4 aspect ratio (1080 × 1440 px)**. It enforces the immutable rule of separating cognitive copywriting from visual asset generation.
+Runs the weekly carousel batch: **1 carrusel por cada línea de diseño activa** (rotación pentagonal). Este skill es el **operador**; el canon vive en la documentación y prevalece sobre este archivo:
 
-## The 3-Phase Batch Protocol
+- **Protocolo y fases:** `vault/SOPs/carousel_batch.md`
+- **Fórmula de slides y dirección de arte:** `vault/SOPs/carousels.md`
+- **Comandos y anatomía de archivos:** `Content Manager/carousel-studio/README.md`
 
-### Phase 1: Research & Angle Selection
-1. Read `vault/Conceptos/content_pillars.md` to identify the active pillar for the batch.
-2. Cross-reference `vault/Conceptos/user_persona.md` to select a specific scene of pain or micro-frustration.
-3. Select the angle with the router `vault/Estrategia/Frameworks-de-Guionizacion/decision_tree.md`, which routes to the real framework library:
-   - **Quiebre Cognitivo:** `quiebre_de_creencia` (desmantelar una creencia falsa) · `fuga_invisible` (exponer el coste oculto).
-   - **Autoridad y Sistemas:** `demostracion_de_mecanismo` (prueba en vivo del sistema propio) · `desglose_paso_a_paso` (metodología replicable).
-   - **Storytelling y Lore:** `arco_tres_actos` (vivencia propia) · `leccion_de_trinchera` (principio aprendido en batalla).
-   - **Conversión y Cierre:** `activacion_lead_magnet` (recurso a cambio de interacción) · `polarizacion_cualificada` (filtrar del grupo ideal).
-4. Propose 3 hook variations (≤ 12 words each, ideally 8–10) for user approval before drafting slides.
+Nunca inventes reglas nuevas: si algún número de este archivo choca con los SOPs, ganan los SOPs.
 
-### Phase 2: Copywriting of One-Liners (5 to 8 Slides)
-Once the hook is approved, write the slide-by-slide copy strictly adhering to these rules:
-- **Slide 1 (Cover / Hook):** Maximum 12 words (ideally 8–10). High tension. 1 highlighted word in `--accent`.
-- **Slide 2 (The Villain / The Flawed Premise):** Validate the pain. Call out the flawed industry practice.
-- **Slide 3 (The Reframe / Shift):** Introduce the brand's contrarian belief.
-- **Slides 4-6 (The Mechanism / Proof):** 1 actionable concept per slide. Bullet points must be one-liners (no paragraphs). Cite verified metrics from `vault/Conceptos/proof_bank.md`.
-- **Slide 7 (Summary / Takeaway):** The single mental model to remember.
-- **Slide 8 (Call to Action):** Explicit action with the DM keyword from `vault/Conceptos/offer.md` (e.g., "Comenta `SISTEMA` y te envío la plantilla en PDF por DM").
+## Fase 0 — Contexto del batch
 
-**Copy Constraints:**
-- Maximum 25 words per slide.
-- Strict 3-color rule: background (`--surface-page`), text (`--text-strong`), accent (`--accent`).
-- Only **1 single word highlighted** in `--accent` per slide.
+1. Lee `Content Manager/carousel-studio/ROTATION.md`: vuelta activa y sus líneas.
+2. El batch produce **5 carruseles** (1 por línea). La **publicación** se dosifica 1–2 carruseles/semana según `vault/Estrategia/Frameworks-de-Guionizacion/matriz_de_formatos.md` (reels: TOFU; carrusel: MOFU de guardados).
 
-### Phase 3: AI Prompts & Deterministic Compilation
-**RULE: Prohibited to write prompts before Phase 2 copy is signed off.**
+## Fase 1 — Ángulo + Research (aprobación antes que todo)
 
-1. **AI Background Prompts:**
-   - Prompts must generate background imagery ONLY.
-   - Every prompt MUST include: `"pure background texture, minimalist, architectural, ultra high resolution, cinematic lighting, absolutely no text, no letters, no logos, no typography, clean negative space"`.
-2. **HTML/CSS Assembly:**
-   - Build `<slug>/carousel.html` loading `design-system/index.css` (which imports `design-system/tokens.css`) and applying the design line tokens of this carousel.
-   - Ensure 96px padding safe margins on top, bottom, and sides.
-3. **Deterministic Render:**
+1. Lee `vault/Conceptos/content_pillars.md` (pilar activo por línea) y cruza la escena de dolor de `vault/Conceptos/user_persona.md`.
+2. Selecciona el ángulo con el router `vault/Estrategia/Frameworks-de-Guionizacion/decision_tree.md` (8 frameworks reales en 4 ramas).
+3. Propón **1 ángulo por línea con 2–3 variantes de hook** (≤ 12 palabras, ideal 8–10).
+4. 🛑 **ESPERAR APROBACIÓN HUMANA** — prohibido redactar slides ni prompts con hooks no aprobados.
+5. Con el ángulo aprobado: investiga con **fuentes fechadas**, datos y frameworks → guarda `Content Manager/carousel-studio/batches/<vuelta>/<slug>/research.md`. Toda cifra citada debe existir en `vault/Conceptos/proof_bank.md`.
+
+## Fase 2 — Copy (Fórmula Canónica de 7 Slides)
+
+Estructura pegada al canon (`vault/SOPs/carousels.md` §2): `[1 Cover] → [2 Dolor] → [3 Giro] → [4 Tesis] → [5 Mecanismo 1-2-3] → [6 Prueba] → [7 CTA]` — variantes por arquetipo editorial en `vault/Conceptos/design_lines/line-<id>.md`.
+
+Escribe `<slug>/copy.md`:
+
+- **One-liner monumental por slide ≤ 12 palabras** (incluido el Hero Cover). `copy.md` es la fuente del texto.
+- Máximo 25 palabras por slide; los bullets son one-liners (nunca párrafos).
+- **Regla de 3 colores** con tokens de la línea: `--surface-page` (fondo) · `--text-strong`/`--text-body` (lectura) · `--accent` — **1 sola palabra en acento por slide**.
+- Slide 7 (CTA): acción explícita con la keyword de DM de `vault/Conceptos/offer.md` en MAYÚSCULAS.
+- Hero Cover según la Ley del Hero Cover (`vault/SOPs/carousels.md` §1).
+- Doble registro tipográfico: display de la línea + acento serif itálica donde aplique.
+
+Actualiza `BATCH_TRACKER.md` (columna Estado Copy). 🛑 Gate: sin copy aprobado, Fase 3 no arranca.
+
+## Fase 3 — Prompts Visuales (por línea) + Compilación
+
+**RULE: prohibido escribir prompts antes de que el copy esté aprobado.**
+
+1. Los prompts de fondo se **anclan a la línea** (`vault/Conceptos/design_lines/line-<id>.md` §4): medio visual nativo, sujetos permitidos/prohibidos, sintaxis `[SCENE]` · `[SUBJECT]` · `[LIGHTING]` · `[CINEMATOGRAPHY & OPTICS]`, **prompt negativo canónico** de `vault/Conceptos/visual_identity.md`, encuadre 3:4 con sujeto en el 35–40% inferior/lateral y 55–65% superior limpio.
+2. Genera `assets/bg_01.jpg … bg_0N.jpg` (IA **100% limpia** de texto: sin letras, números, logos ni botones) → mini-auditoría visual de limpieza → guarda bajo el slug.
+3. Construye `<slug>/carousel.html` cargando `design-system/index.css` (que importa `design-system/tokens.css`) + los tokens de la línea de este carrusel; márgenes de 96 px en todos los bordes.
+4. Compila (desde `Content Manager/carousel-studio/`):
    ```bash
-   cd "Content Manager/carousel-studio"
    python batch_manager.py compile <slug>   # pieza del batch: carousel.html → slides/*.png
    npm run capture -- <slug>/carousel.html  # compilación de una pieza suelta
    ```
-   - Exporta PNG pixel-perfect a exactamente 1080 × 1440 px.
+   Canvas **1080 × 1440 px** (3:4); el motor exporta a **2× DPI (PNG 2160 × 2880)**.
+5. Checklist pre-render (`vault/SOPs/carousels.md` §4): ratio verificado, sin "developer mockup trap", 3 colores, 2 tipografías, ≥96 px, 1 acento por slide, cifras en `proof_bank.md`, copy pasa la lista negra de `tone_of_voice.md`.
+6. Actualiza `BATCH_TRACKER.md` (compilado) y los checkboxes de la vuelta en `ROTATION.md`; el paquete final sale por `../postprocessing/<slug>/` (SOP: `vault/SOPs/funnels_publicacion.md`, caption en 4 bloques según `vault/SOPs/carousels.md` §3).
