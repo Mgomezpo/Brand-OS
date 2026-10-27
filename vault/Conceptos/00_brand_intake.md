@@ -61,4 +61,4 @@ status: pendiente
 30. Referencias que ama y anti-referencias prohibidas.
 31. ¿Cuántas líneas de diseño rotar (recomendado 3–5) y mapa funnel por línea (BOF/MOF/TOF)?
 
-**Salidas del Bloque 8** (contrato de enchufado): `design-system/tokens.css` + `DESIGN_SYSTEM.md` regenerados con los tokens de marca, `visual_identity.md` lleno (`status: completo`), `design_lines/index.md` + `line-<id>.md` por línea, `carousel-studio/BATCH_TRACKER.md` con la columna Línea real, y `{{NOMBRE_MARCA}}` reemplazado en `AGENTS.md`, `CLAUDE.md` y `README.md`.
+**Salidas del Bloque 8** (contrato de enchufado): `design-system/tokens.css` + `DESIGN_SYSTEM.md` regenerados con los tokens de marca, `visual_identity.md` lleno (`status: completo`), `design_lines/index.md` + `line-<id>.md` por línea, y `{{NOMBRE_MARCA}}` reemplazado en `AGENTS.md`, `CLAUDE.md` y `README.md`.

@@ -55,7 +55,7 @@ Marca el gate de copy en la conversación: 🛑 **sin copy aprobado por el dueñ
    ```
    Canvas **1080 × 1440 px** (3:4); el motor exporta a **2× DPI (PNG 2160 × 2880)**.
 5. Checklist pre-render (`../../vault/SOPs/carousels.md` §4): ratio verificado, sin "developer mockup trap", 3 colores, 2 tipografías, ≥96 px, 1 acento por slide, cifras en `../../vault/Conceptos/proof_bank.md`, copy pasa la lista negra de `../../vault/Conceptos/tone_of_voice.md`.
-6. Actualiza `BATCH_TRACKER.md` (compilado) y el puntero de la vuelta en `../../vault/Conceptos/content_pillars.md` (§4); el paquete final sale por `../postprocessing/<slug>/` (SOP: `../../vault/SOPs/funnels_publicacion.md`, caption en 4 bloques según `../../vault/SOPs/carousels.md` §3).
+6. Corre `python batch_manager.py status` tras compilar para verificar el lote (el estado vive en la consola del gestor, no en tableros persistidos) y avanza el puntero de la vuelta en `../../vault/Conceptos/content_pillars.md` (§4); el paquete final sale por `../postprocessing/<slug>/` (SOP: `../../vault/SOPs/funnels_publicacion.md`, caption en 4 bloques según `../../vault/SOPs/carousels.md` §3).
 
 ## Mantenimiento
 

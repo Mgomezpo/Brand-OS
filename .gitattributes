@@ -1,0 +1,31 @@
+# Brand OS — line endings normalized once and forever:
+# every text file is stored as LF in the repo AND checked out as LF
+# (Windows included) — no more CRLF dupes or warning noise on commit.
+* text=auto eol=lf
+
+# Binary assets — never convert, even if content sniffing is wrong.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.ico binary
+*.icns binary
+*.pdf binary
+*.mp4 binary
+*.mov binary
+*.webm binary
+*.m4v binary
+*.mp3 binary
+*.wav binary
+*.m4a binary
+*.flac binary
+*.ogg binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.eot binary
+*.zip binary
+*.7z binary
+*.wasm binary

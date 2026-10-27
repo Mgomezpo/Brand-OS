@@ -31,8 +31,7 @@ Los proyectos pueden vivir en `batches/<vuelta>/<slug>/` o directamente en `caro
 
 | Archivo | Papel |
 | :--- | :--- |
-| `BATCH_TRACKER.md` | Tablero de estado del lote semanal |
-| `CURRENT_BATCH.json` | Estado interno del gestor (efímero, ignorado por git) |
+| `CURRENT_BATCH.json` | Estado interno del gestor (efímero, ignorado por git). El estado del lote se consulta **en vivo** con `python batch_manager.py status` — no hay tablero persistido. |
 
 **Puntero de rotación (vuelta activa y líneas):** `../../vault/Conceptos/content_pillars.md` (§4).
 

@@ -75,7 +75,6 @@ Con las respuestas + `tone_of_voice.md` + el arquetipo de `brand_core.md`, el ag
 - `design-system/DESIGN_SYSTEM.md` — secciones Color y Tipografía actualizadas con la paleta derivada y el nombre de la marca.
 - `vault/Conceptos/visual_identity.md` — placeholders `{{SISTEMA_VISUAL}}`, `{{ATMOSFERA}}`, tablas HEX/fuentes llenas; `status: completo`.
 - `vault/Conceptos/design_lines/` — duplica `_line_template.md` por cada línea elegida (`line-<id>.md` con arquetipo, pilar, funnel, tokens derivados de la paleta y posible variación de medio) y completa la tabla de `index.md`.
-- `Content Manager/carousel-studio/BATCH_TRACKER.md` — columna Línea con los IDs reales de cada carrusel del batch.
 - `vault/00_Dashboard.md` — filas de estado (`pendiente` → `completo` para intake y visual).
 
 ---

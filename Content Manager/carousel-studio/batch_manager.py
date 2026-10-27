@@ -16,11 +16,9 @@ import json
 import re
 import subprocess
 from pathlib import Path
-from datetime import datetime
 
 ROOT_DIR = Path(__file__).resolve().parent
 PROJECTS_DIR = ROOT_DIR
-BATCH_TRACKER_FILE = ROOT_DIR / "BATCH_TRACKER.md"
 CURRENT_BATCH_FILE = ROOT_DIR / "CURRENT_BATCH.json"
 
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp"}
@@ -79,73 +77,6 @@ def check_carousel_assets(carousel_slug, expected_count=5):
         "found_files": found_files
     }
 
-def update_tracker_md(batch_data):
-    lines = [
-        f"# BATCH TRACKER — {batch_data.get('title', 'Semana Actual')}",
-        f"> **Vuelta:** {batch_data.get('vuelta', 'Vuelta')} | **Fecha de Creación:** {batch_data.get('created_at', '')}",
-        f"> **Última Verificación:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
-        "",
-        "---",
-        "",
-        "## Resumen del Batch (5 Carruseles de Rotación)",
-        "",
-        "| # | Línea | Tema / Slug | Fondos Listos | Estado | Acción Inmediata |",
-        "| :-: | :--- | :--- | :---: | :---: | :--- |"
-    ]
-
-    for item in batch_data.get("carousels", []):
-        slug = item["slug"]
-        line = item["line"]
-        expected = item.get("slides_count", 7)
-        check = check_carousel_assets(slug, expected)
-        
-        status_icon = "⏳ Pendiente"
-        action = f"Subir bg_{check['missing_indices'][0]:02d}..." if check["missing_indices"] else "Listo para compilar"
-        
-        # Check if slides already compiled
-        slides_dir = PROJECTS_DIR / slug / "slides"
-        compiled = False
-        if slides_dir.exists() and any(slides_dir.glob("slide-*.png")):
-            compiled = True
-
-        if compiled:
-            status_icon = "🚀 En Cola (Publicación)"
-            action = "Listo para Zernio"
-        elif check["found_count"] >= expected:
-            status_icon = "✅ Fondos Completos"
-            action = f"`batch_manager.py compile {slug}`"
-
-        progress_bar = f"{check['found_count']}/{expected} (" + "".join(["🟢" if i not in check["missing_indices"] else "⚪" for i in range(1, expected + 1)]) + ")"
-        lines.append(f"| {item['index']} | `{line}` | [{slug}](./{slug}/copy.md) | {progress_bar} | {status_icon} | {action} |")
-
-    lines.extend([
-        "",
-        "---",
-        "",
-        "## ¿Qué hay que hacer ahora?",
-        ""
-    ])
-
-    # Find the first carousel that has missing images
-    pending_found = False
-    for item in batch_data.get("carousels", []):
-        slug = item["slug"]
-        expected = item.get("slides_count", 7)
-        check = check_carousel_assets(slug, expected)
-        if check["missing_indices"]:
-            pending_found = True
-            next_idx = check["missing_indices"][0]
-            lines.append(f"👉 **Siguiente paso:** En `{slug}` falta **`bg_{next_idx:02d}.jpg`**.")
-            lines.append(f"Copiá la imagen generada en: `batches/<vuelta>/{slug}/assets/bg_{next_idx:02d}.jpg`")
-            break
-
-    if not pending_found:
-        lines.append("🎉 **¡Todos los fondos del batch están completos!**")
-        lines.append("Podés compilar cada pieza con `batch_manager.py compile <slug>` (o `npm run capture -- <slug>/carousel.html`).")
-
-    with open(BATCH_TRACKER_FILE, "w", encoding="utf-8") as f:
-        f.write("\n".join(lines) + "\n")
-
 def cmd_status():
     batch = load_current_batch()
     if not batch:
@@ -154,7 +85,6 @@ def cmd_status():
         print('   {"title": "Vuelta 01", "vuelta": "Vuelta 01", "carousels": [{"index": 1, "slug": "<slug>", "line": "<id>", "slides_count": 7}, ...]}')
         return
 
-    update_tracker_md(batch)
     print("=" * 68)
     print(f"📊 ESTADO DEL BATCH: {batch.get('title', 'Semana')} ({batch.get('vuelta', '')})")
     print("=" * 68)
@@ -186,7 +116,6 @@ def cmd_status():
         print("✨ ¡Todos los carruseles tienen sus fondos completos!")
     else:
         print("💡 Para revisar los prompts de cada slide, abrí `copy.md` en la carpeta del carrusel.")
-    print("El archivo `BATCH_TRACKER.md` ha sido actualizado.")
     print("=" * 68)
 
 def cmd_compile(slug):
