@@ -1,7 +1,7 @@
 # SOP: Catálogo y Fórmulas Maestras de Hooks
 
 > **Propósito:** Fórmulas de apertura y patrones de interrupción para detener el scroll en los primeros 3 segundos (video) o 0.8 s (portada de carrusel).
-> **Antes de usar:** cargar `Conceptos/voice/tone_of_voice.md` y `audience/user_persona.md` (la escena del dolor es la mejor fuente de hooks).
+> **Antes de usar:** cargar `Conceptos/tone_of_voice.md` y `Conceptos/user_persona.md` (la escena del dolor es la mejor fuente de hooks).
 
 ---
 

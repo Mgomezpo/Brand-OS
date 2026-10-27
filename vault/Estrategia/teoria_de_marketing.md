@@ -22,7 +22,7 @@
 - La gente no compra productos: **contrata** una solución para progresar en una circunstancia.
 - La demografía no explica la compra. La explican las **4 fuerzas**: Push (dolor) + Pull (atracción) vs Ansiedad + Hábito.
 - El contenido más efectivo describe con precisión quirúrgica **el momento** en que se siente la fricción.
-- Plantilla de marca: `Conceptos/audience/jtbd_forces.md`.
+- Plantilla de marca: `Conceptos/jtbd_forces.md`.
 
 ---
 

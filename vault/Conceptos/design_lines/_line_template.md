@@ -64,4 +64,4 @@
 ---
 
 ## 5. Proyectos Producidos en esta Línea
-- [[Content Manager/pipeline/20_carruseles/{{slug}}/copy|{{slug}}]] — {{descripcion}}
+- [[Content Manager/pipeline/10_processing/{{slug}}/copy|{{slug}}]] — {{descripcion}}

@@ -24,7 +24,7 @@ tags: [referente, benchmarking, studio]
 
 ## 2. Anatomía Visual y Formatos Dominantes
 
-- **Formato insignia:** {{REELS_9X16 / CARRUSELES_4X5}}
+- **Formato insignia:** {{REELS_9X16 / CARRUSELES_3X4}}
 - **Tratamiento gráfico:** {{TIPOGRAFIA_DESNUDA / B-ROLL_DINAMICO / MOCKUPS}}
 - **Paleta y contraste:** {{COLORES_DOMINANTES}}
 

@@ -19,7 +19,7 @@ tags: [weekly, retro, planning]
 ---
 
 ## 2. 🎯 Plan del Siguiente Lote (Vuelta de Rotación)
-Puntero de rotación: `Conceptos/strategy/content_pillars.md` §4
+Puntero de rotación: `Conceptos/content_pillars.md` §4
 
 | Día | Pieza / Línea | Framework | Keyword DM | Responsable / Estado |
 | :--- | :--- | :--- | :--- | :--- |

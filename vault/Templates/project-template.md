@@ -21,7 +21,7 @@ tags: [project, content]
 ## 📋 Checklist de Avance
 - [ ] Idea y ángulo aprobados
 - [ ] Copy / Guion redactado según framework
-- [ ] Revisión contra `Conceptos/voice/tone_of_voice.md`
+- [ ] Revisión contra `Conceptos/tone_of_voice.md`
 - [ ] Assets visuales generados y aprobados
 - [ ] Paquete de postprocesamiento (`caption.md`, `funnel.md`, `post.json`)
 - [ ] Programado en plataforma de publicación

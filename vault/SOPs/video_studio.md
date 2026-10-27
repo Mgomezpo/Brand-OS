@@ -9,7 +9,7 @@
 
 1. **Ritmo acelerado pero legible:** cero silencios, cero retomas. Duración típica 30–75 s.
 2. **Zooms dinámicos:** punch-in 1.15×–1.25× en cada cambio de idea; la cámara nunca queda estática > 3–4 s.
-3. **Identidad visual:** overlays según `Conceptos/visual/visual_identity.md` §6 (colores, tipografías, sombras, acento).
+3. **Identidad visual:** overlays según `Conceptos/visual_identity.md` §6 (colores, tipografías, sombras, acento).
 4. **Leer antes de editar:** `Content Manager/video-studio/MOTION_PHILOSOPHY.md` + DESIGN.md del proyecto.
 
 ---

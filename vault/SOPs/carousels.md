@@ -1,7 +1,7 @@
 # SOP: Carruseles Editoriales (3:4)
 
 > **Propósito:** Estándar de estructura, copy y dirección de arte para carruseles de alto valor en Instagram / LinkedIn.
-> **Inputs:** línea de diseño (`Conceptos/design_lines/`), pilar y keyword (`strategy/content_pillars.md`).
+> **Inputs:** línea de diseño (`Conceptos/design_lines/`), pilar y keyword (`Conceptos/content_pillars.md`).
 
 ---
 

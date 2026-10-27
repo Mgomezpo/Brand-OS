@@ -57,5 +57,5 @@ tags: [script, video, shortform]
 ## 📋 Checklist de Validación Pre-Rodaje
 - [ ] Gancho auditivo < 12 palabras sin preámbulos
 - [ ] Doble codificación: texto en pantalla complementa o contradice, no repite
-- [ ] Métrica o dato presente en `Conceptos/reality/proof_bank.md`
-- [ ] Pasa lista negra de `Conceptos/voice/tone_of_voice.md`
+- [ ] Métrica o dato presente en `Conceptos/proof_bank.md`
+- [ ] Pasa lista negra de `Conceptos/tone_of_voice.md`

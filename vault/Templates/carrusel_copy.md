@@ -1,6 +1,6 @@
 ---
 slug: "{{slug}}"
-formato: carrusel-4x5
+formato: carrusel-3x4
 linea_diseno: "{{linea}}"
 pilar: "{{pilar}}"
 slides_totales: 7

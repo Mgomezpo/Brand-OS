@@ -58,7 +58,7 @@ status: pendiente
 - **Composición:** sujeto en tercio inferior/lateral, 55–65 % superior limpio para tipografía.
 - **Prompt negativo canónico:** `text, letters, numbers, logos, watermark, UI, buttons, {{EXTRA}}`
 
-> Guía completa de prompting: `Estrategia/carruseles/guias-de-prompting.md` y `libreria-prompts-fondos.md`.
+> Guía completa de prompting: `Estrategia/Carruseles-y-Prompting/guias-de-prompting.md` y `libreria-prompts-fondos.md`.
 
 ---
 

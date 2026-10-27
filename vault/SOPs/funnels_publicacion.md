@@ -19,7 +19,7 @@
 [NURTURE]         {{SECUENCIA_POSTERIOR}} (email, agenda, oferta de entrada)
 ```
 
-Keywords y recursos: `Conceptos/identity/offer.md` §2.
+Keywords y recursos: `Conceptos/offer.md` §2.
 
 ---
 
