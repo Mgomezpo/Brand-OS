@@ -1,6 +1,11 @@
 /* ==========================================================================
-   Brand OS — Tokens Canónicos de Diseño
-   Sobrescribir estos valores con los tokens específicos de cada marca
+   Brand OS — Tokens Canónicos de Diseño (formato completo de producción)
+   FUENTE PRIMARIA de identidad. Los dos motores (carousel-studio, video-studio)
+   consumen este archivo directamente; los estilos "brand" de la style-library
+   lo importan y derivan de él. Los estilos genéricos (vestuario: vox-explainer,
+   youtube-influencer) son archivos de estilo independientes.
+   Regeneración: SOLO vía /brand-onboard Bloque 8. Nombres de variable = API
+   estable: cambiar SOLO valores; jamás renombrar o borrar una variable.
    ========================================================================== */
 
 :root {
@@ -19,26 +24,70 @@
   /* --- Acento Focal (Reservado para 1 palabra y CTA) --- */
   --accent:          #ffd60a;
   --accent-contrast: #000000;
+  --accent-rgb:      255, 214, 10;   /* tripleta para construir rgba() derivados */
 
   /* --- Familias Tipográficas --- */
   --font-display:    "Anton", sans-serif;
   --font-serif:      "Newsreader", serif;
   --font-body:       "Hanken Grotesk", sans-serif;
   --font-mono:       "Space Mono", monospace;
+  /* aliases del contrato style-library (ver style-library/GUIDE.md) */
+  --font-label:      var(--font-mono);   /* kickers técnicos, badges, specs */
+  --font-hand:       var(--font-serif);  /* notas a mano, matiz editorial */
 
-  /* --- Jerarquía de Tamaños (Base 1080px) --- */
+  /* --- Pesos & Tracking --- */
+  --wt-reg:          400;
+  --wt-med:          500;
+  --wt-bold:         700;
+  --wt-black:        900;
+  --track-tight:     -0.02em;   /* display y titulares */
+  --track-wide:      0.16em;    /* labels en mayúsculas */
+
+  /* --- Jerarquía de Tamaños — Carrusel (base 1080px) --- */
   --text-hero:       72px;
   --text-title:      54px;
   --text-subtitle:   32px;
   --text-body-size:  24px;
   --text-badge:      18px;
 
+  /* --- Jerarquía de Tamaños — Video 9:16 (1080 × 1920) --- */
+  --size-mega:       240px;    /* número o palabra monumental */
+  --size-display:    110px;    /* titular de takeover */
+  --size-title:      72px;     /* título de sección */
+  --size-headline:   48px;     /* titular de overlay */
+  --size-body:       32px;     /* lectura */
+  --size-label:      22px;     /* kicker o etiqueta técnica */
+  --size-tiny:       18px;     /* créditos, fine print */
+
   /* --- Espaciado & Geometría --- */
-  --safe-margin:     96px;
+  --safe-margin:     96px;     /* margen de seguridad perimetral (todo formato) */
+  --pad:             48px;     /* inset de composición de video */
   --radius-sm:       4px;
   --radius-md:       8px;
   --radius-lg:       16px;
 
-  /* --- Sombras Duras Zero-Blur --- */
+  /* --- Sombras Duras Zero-Blur (prohibido desenfoque) --- */
+  --shadow-hard-sm:  3px 3px 0px #000000;
   --shadow-hard:     6px 6px 0px #000000;
+  --shadow-hard-lg:  8px 8px 0px #000000;
+
+  /* --- Movimiento (firma: pop snappy con settle rápido, cero blur SaaS) --- */
+  --ease-snap:       cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:         cubic-bezier(0.4, 0, 1, 1);
+  --ease-out:        cubic-bezier(0, 0, 0.2, 1);
+  --gsap-pop:        back.out(2.4);   /* pop con leve anticipación */
+  --gsap-punch:      power4.out;      /* punch-in de cámara en keyword */
+  --dur-in:          0.35s;
+  --dur-out:         0.25s;
+
+  /* --- Texturas (deterministas, semilla fija — cero azar en render) --- */
+  --tex-halftone:      radial-gradient(circle at center, var(--text-strong) 1.2px, transparent 1.6px);
+  --tex-halftone-size: 8px 8px;
+  --tex-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+
+  /* --- Contrato style-library (API común que todo estilo debe exponer) --- */
+  --bg:              var(--surface-page);
+  --fg:              var(--text-strong);
+  --muted:           var(--text-muted);
+  /* --accent ya definido arriba — el contrato lo reutiliza directamente */
 }

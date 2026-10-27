@@ -4,6 +4,7 @@
   "name": "Vox Explainer",
   "number": "01",
   "status": "draft",
+  "scope": "generic",
   "inspiration": "Vox-style animated documentary / explainer. Paper-collage of old engravings and halftone photos, masked and outlined; high-contrast serif type; one signature blue shape per beat; hand-drawn arrows; choppy low-shutter stop-motion with camera moves into shallow 3D depth. Reference images in references/.",
   "summary": "Editorial paper-collage explainer. Use for history, research, and idea-driven storytelling where archive imagery and a strong narrative voice carry the piece.",
   "palette": {

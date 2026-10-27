@@ -36,6 +36,7 @@ for (const dir of styleDirs) {
 
   styles.push({
     id: m.id, number: m.number, name: m.name, status: m.status ?? "draft",
+    scope: m.scope ?? "generic",
     folder: dir, inspiration: m.inspiration ?? null,
     palette: m.palette ?? null, fonts: m.fonts ?? null,
     cardCount: cards.length,

@@ -6,7 +6,7 @@ Una sola verdad visual. Todo carrusel y video debe estampar `design-system/token
 
 | Archivo | Papel |
 | :--- | :--- |
-| `tokens.css` | Los ~20 tokens canónicos: `--surface-page`, `--text-strong`, `--accent`, `--font-display`, margen de 96px, radios. **Consumidos por los dos motores.** |
+| `tokens.css` | Los tokens canónicos completos: superficies, lectura, acento (+ tripleta RGB), familias, pesos, tracking, escalas de tamaño (carrusel base 1080 y video 9:16), geometría, sombras duras, movimiento y texturas deterministas. **Fuente primaria de los dos motores y de los estilos brand de la style-library.** |
 | `index.css` | Estilos deterministas de las diapositivas 3:4 (1080×1440): `.slide-frame`, `.slide-bg`, `.slide-content`. Importa `tokens.css` y consume todo vía `var(--token)`. |
 | `DESIGN_SYSTEM.md` | Especificación textual del sistema: Regla de 3 Roles, familias tipográficas, grillas y negativo obligatorio. |
 | `svg/` | Gráficos vectoriales limpios de la marca (logo, iconografía de línea). |
@@ -16,9 +16,11 @@ Una sola verdad visual. Todo carrusel y video debe estampar `design-system/token
 > ⚠️ Los **nombres de variables son API estable**: los dos motores dependen de ellos. Al regenerar la marca, cambia SOLO los valores; jamás renombres una variable.
 
 ```text
-design-system/tokens.css
+design-system/tokens.css  ← FUENTE PRIMARIA
 ├─→ carousel-studio: <slug>/carousel.html → carga ../../design-system/index.css (3:4 · slides/*.png)
 ├─→ video-studio:    su AGENTS.md indica mapear tokens → variables CSS por composición (9:16)
+├─→ video-studio/style-library: estilos con "scope": "brand" importan tokens.css (ej. 03-pop-comic);
+│   los "scope": "generic" son vestuario independiente (01-vox-explainer, 02-youtube-influencer)
 ├─→ vault/Conceptos/visual_identity.md   (tablas HEX/fuentes = espejo legible de tokens.css)
 └─→ vault/Conceptos/design_lines/        (tokens y prompts por línea de diseño)
 ```

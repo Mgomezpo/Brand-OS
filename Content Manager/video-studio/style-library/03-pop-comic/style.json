@@ -4,6 +4,7 @@
   "name": "Comic Brand Style ({{NOMBRE_MARCA}})",
   "number": "03",
   "status": "ready",
+  "scope": "brand",
   "inspiration": "Comic europeo de línea clara, estética fanzine editorial, sombras duras cel-shaded (zero-blur), papel crema #faf6ee y amarillo señal #ffd60a.",
   "summary": "Estilo oficial de la marca personal {{NOMBRE_MARCA}}. Tinta negra densa, tarjetas con sombra proyectada dura, números gigantes en Anton y ritmo dinámico.",
   "palette": {

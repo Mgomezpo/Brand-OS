@@ -1,3 +1,7 @@
+<p align="center">
+  <img src=".github/assets/banner.jpg" alt="Brand OS — Content Operating System" width="100%" />
+</p>
+
 # Brand OS: Operating System for Brands & Deterministic Content Creation
 
 A complete, MIT-licensed starter kit and production factory that turns Claude Code, Codex, or Antigravity into your personal **Brand Operating System (Brand OS)**. Audience: creators, founders, marketing engineers, B2B consultants, and creative agencies building compounding brand authority.

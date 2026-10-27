@@ -80,6 +80,24 @@ Agent 3 asks the registry for "a `tier1` `stat` card in style `vox-explainer`", 
 
 Motion is half the identity, so previews are short MP4 loops (2-3s) + a poster PNG, one per card, in the style's `preview/`. Because each card is a valid composition, a preview is produced by rendering the card on its own (via the HyperFrames CLI) and grabbing frame 1 as the poster. The preview script is added once the first real card exists (so it's tested against something real).
 
+## Design-system primacy — brand vs generic styles
+
+`design-system/tokens.css` (workspace root — four levels up from a style's
+`tokens.css`) is the **primary source of identity** for the whole OS. Every
+style declares its relationship to it via `"scope"` in `style.json`:
+
+- `"scope": "brand"` — the style **imports** the canonical tokens
+  (`@import url("../../../../design-system/tokens.css")`) and derives accent,
+  fonts, weights, video size scale, and motion from them; it only adds its own
+  canvas/shape variation on top (see `03-pop-comic/tokens.css`). When the brand
+  regenerates (`/brand-onboard` Bloque 8), brand styles inherit automatically.
+- `"scope": "generic"` — a self-contained wardrobe file: reference looks from
+  the outside world. It never imports brand tokens (see `01-vox-explainer`,
+  `02-youtube-influencer`).
+
+Common contract every style must expose regardless of scope: `--bg`, `--fg`,
+`--accent`, `--muted`, `--font-display`, `--font-body`, `--font-mono`.
+
 ## Notes
 
 - `style-templates/` (dark-graph-paper, left-glass-popout) are **reference only** - not part of this library. Borrow ideas, don't port wholesale.
