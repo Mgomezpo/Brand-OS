@@ -35,6 +35,6 @@
 
 ## 3. Conexión con el Funnel
 
-1. Mover `final.mp4` a `Content Manager/pipeline/40_postprocessing/<slug>/`.
+1. Mover `final.mp4` a `Content Manager/postprocessing/<slug>/`.
 2. Crear `caption.md` con CTA y keyword.
 3. Activar el funnel → `SOPs/funnels_publicacion.md`.

@@ -31,7 +31,7 @@ Brand OS/
 ├── 🚀 Content Manager/         → LA FÁBRICA DE CONTENIDOS (Engines y Software Determinista)
 │   ├── carousel-studio/       → Estudio de carruseles 3:4 (Playwright + batch_manager.py)
 │   ├── video-studio/          → Estudio de video 9:16 (HyperFrames + GSAP + ElevenLabs)
-│   ├── pipeline/              → Mesa de publicación transversal (40_postprocessing → Zernio)
+│   ├── postprocessing/        → Mesa de publicación (paquetes <slug>/ → Zernio)
 │   └── helper/                → Embudos transversales (Zernio comment-to-DM)
 │
 ├── ⚙️ connections.md          → Registro de motores, APIs y renderizadores alcanzables
@@ -77,9 +77,9 @@ node capture.cjs <slug>/carousel.html    # compilación directa de una pieza sue
 
 Cada carrusel del batch vive en `batches/<vuelta>/<slug>/` con: `research.md` → `copy.md` (one-liners ≤12 palabras) → `assets/bg_0*.jpg` (fondos IA) → `carousel.html` (tokens de la línea) → `slides/*.png`.
 
-### 📦 Mesa de Publicación — `Content Manager/pipeline/40_postprocessing/`
+### 📦 Mesa de Publicación — `Content Manager/postprocessing/`
 
-El `pipeline/` NO es un estudio: es la mesa transversal. En `40_postprocessing/<slug>/` se agrupa el paquete listo para publicar: `caption.md` + `funnel.md` + `post.json` + `media-url.txt` (SOP: `vault/SOPs/funnels_publicacion.md`, disparo por Zernio).
+En `postprocessing/<slug>/` se agrupa el paquete listo para publicar: `caption.md` + `funnel.md` + `post.json` + `media-url.txt` (SOP: `vault/SOPs/funnels_publicacion.md`, disparo por Zernio). No es un estudio: aquí solo desembarcan piezas terminadas.
 
 ---
 

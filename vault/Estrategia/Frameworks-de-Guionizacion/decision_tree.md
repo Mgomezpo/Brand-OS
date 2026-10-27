@@ -58,4 +58,4 @@ Ver [[matriz_de_formatos]].
 1. Validar la voz contra `Conceptos/tone_of_voice.md`.
 2. Verificar que toda cifra exista en `Conceptos/proof_bank.md`.
 3. Gancho en el segundo cero, sin relleno.
-4. Persistir el entregable en el motor correspondiente (`carousel-studio/batches/<vuelta>/<slug>/` o `video-studio/video-projects/<slug>/`) y el paquete de publicación en `pipeline/40_postprocessing/<slug>/`.
+4. Persistir el entregable en el motor correspondiente (`carousel-studio/batches/<vuelta>/<slug>/` o `video-studio/video-projects/<slug>/`) y el paquete de publicación en `postprocessing/<slug>/`.

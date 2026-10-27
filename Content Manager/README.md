@@ -8,10 +8,10 @@ Capa operativa del Brand OS: los **motores de producción** (video 9:16 y carrus
 | :--- | :--- | :--- |
 | `video-studio/` | Motor de video 9:16 (1080 × 1920 px): HyperFrames + GSAP + ElevenLabs Scribe. Proyectos en `video-studio/video-projects/<slug>/` | `npm run new-video -- <slug>` |
 | `carousel-studio/` | Motor de carruseles 3:4 (1080 × 1440 px): fondos IA + HTML/CSS determinista + Playwright. Proyectos en `carousel-studio/batches/<vuelta>/<slug>/` | `python batch_manager.py status` |
-| `pipeline/40_postprocessing/` | Mesa de publicación transversal: paquete `<slug>/` con `caption.md` + `funnel.md` + `post.json` + `media-url.txt` | `python helper/zernio.py post-package <path_40_postprocessing>` |
+| `postprocessing/` | Mesa de publicación: paquete por pieza con `caption.md` + `funnel.md` + `post.json` + `media-url.txt` | `python helper/zernio.py post-package postprocessing/<slug>` |
 | `helper/` | Automatización: `zernio.py` (MCP + REST de Zernio, disparo comment-to-DM), `auto_source_image.py` (búsqueda ubicativa de imágenes) | ver docstring de cada script |
 
-> `pipeline/` NO es un estudio ni aquí se produce nada: solo organiza el paquete final listo para publicar (SOP: `vault/SOPs/funnels_publicacion.md`).
+> `postprocessing/` NO es un estudio ni aquí se produce nada: solo organiza el paquete final listo para publicar (SOP: `vault/SOPs/funnels_publicacion.md`).
 
 ## ⚙️ Setup
 

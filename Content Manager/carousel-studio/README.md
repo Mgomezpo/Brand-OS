@@ -41,4 +41,4 @@ Los proyectos pueden vivir en `batches/<vuelta>/<slug>/` o directamente en `caro
 2. **Márgenes de 96 px** y **Regla de 3 Colores**: `--surface-page` fondo, `--text-strong` lectura, `--accent` acento (1 palabra por slide + CTA).
 3. **Cero texto en la IA:** fondos sin letras, números, logos ni botones.
 4. **Fases separadas:** Research → Aprobación → Copy → Prompts visuales. Nunca compilar prompts antes de aprobar el copy.
-5. El paquete de publicación sale por `../../pipeline/40_postprocessing/` (SOP: `../../vault/SOPs/funnels_publicacion.md`).
+5. El paquete de publicación sale por `../postprocessing/` (SOP: `../../vault/SOPs/funnels_publicacion.md`).

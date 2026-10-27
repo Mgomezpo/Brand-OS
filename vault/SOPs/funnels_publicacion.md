@@ -25,7 +25,7 @@ Keywords y recursos: `Conceptos/offer.md` §2.
 
 ## 2. Paquete de Postprocesado
 
-`Content Manager/pipeline/40_postprocessing/<slug>/`
+`Content Manager/postprocessing/<slug>/`
 
 | Archivo | Contenido |
 | :--- | :--- |

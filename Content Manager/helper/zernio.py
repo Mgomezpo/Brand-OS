@@ -11,7 +11,7 @@ Usage:
     python helper/zernio.py automations list
     python helper/zernio.py automations create --name "funnel test" --keyword TEST --dm "Link: https://..."
     python helper/zernio.py automations delete <id>
-    python helper/zernio.py post-package <path_to_40_postprocessing_dir>
+    python helper/zernio.py post-package <path_to_postprocessing_pkg>
 """
 import sys
 import os
@@ -243,7 +243,7 @@ def handle_automations(args):
         print(f"OK — deleted {auto_id}")
 
 def handle_post_package(args):
-    """Reads a 40_postprocessing package folder (caption.md, funnel.md, post.json) and triggers Zernio."""
+    """Reads a postprocessing package folder (caption.md, funnel.md, post.json) and triggers Zernio."""
     if not args:
         sys.exit("Usage: python helper/zernio.py post-package <path_to_package_dir>")
     pkg_dir = Path(args[0])
