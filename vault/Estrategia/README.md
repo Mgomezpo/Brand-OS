@@ -26,7 +26,7 @@
 
 4. nicktarmo/                             ──►  Framework: Polarización Cualificada & Lead Magnets
    • Sistemas de monetización y Creator Economy     • Frameworks-de-Guionizacion/04_conversion_y_cierre/
-   • Triggers Comment-to-DM con keyword             • Embudos Zernio/Metricool (SOPs/funnels_publicacion.md)
+   • Triggers Comment-to-DM con keyword             • Embudos Zernio (SOPs/funnels_publicacion.md)
 
 5. Arquitectura-de-Contenido/             ──►  Gobernanza y Motor Determinista
    • Manifiesto IA vs Determinismo                  • Cero plantillas Canva; render vía Playwright/HyperFrames

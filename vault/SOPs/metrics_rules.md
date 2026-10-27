@@ -1,7 +1,7 @@
 # Reglas de Métricas, Diagnóstico e Iteración de Contenido
 
 ---
-**Pilar:** `brain/03_studio/feedback/`  
+**Pilar:** `vault/SOPs/` (feedback loop de publicación)
 **Propósito:** Cuantificar el desempeño del contenido publicado, diagnosticar anomalías de retención y aplicar iteraciones algorítmicas precisas al siguiente lote de guiones.  
 ---
 

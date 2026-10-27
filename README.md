@@ -4,7 +4,7 @@ A complete, MIT-licensed starter kit and production factory that turns Claude Co
 
 Brand OS personalizes itself to your brand via the `/brand-onboard` wizard. Use `/grill-me` whenever you need to stress-test a raw concept or contrarian angle. Use `/carousel-batch` to produce pixel-perfect **3:4 carousels (1080 × 1440 px)** in 3 decoupled phases, `/script-shortform` to generate high-retention **9:16 shortform video scripts (1080 × 1920 px)**, `/brand-audit` to verify aspect ratios and proof citations, and `/level-up` to turn weekly retention metrics into compounding brand intelligence.
 
-> **Brand OS** bridges the gap between high-level brand strategy and deterministic code execution. Obsidian acts as the cognitive control tower (`vault/`), a deterministic CSS design system guarantees visual standards (`design-system/`), and headless engines (`AI Content Manager/`) render publication-ready assets with mathematical precision.
+> **Brand OS** bridges the gap between high-level brand strategy and deterministic code execution. Obsidian acts as the cognitive control tower (`vault/`), a deterministic CSS design system guarantees visual standards (`design-system/`), and headless engines (`Content Manager/`) render publication-ready assets with mathematical precision.
 
 ---
 
@@ -87,7 +87,7 @@ The kit includes setup, production engines, adversarial testing, quality audits,
 4. **Answer the 7 intake blocks:** Have your brand mission, target audience pain, core offer, and sample copy ready (~15 mins).
 5. **Produce your first batch:**
    - Ask: *"Run `/carousel-batch` to produce our first 3:4 carousel batch on our active pillar."*
-   - Render the slides deterministically: `node "AI Content Manager/carousel-studio/capture.cjs"`.
+   - Render the slides deterministically: `node "Content Manager/carousel-studio/capture.cjs"`.
 6. **Day 7:** Run `/brand-audit` to verify aspect ratio compliance, proof citations, and safe zones.
 7. **Day 14:** Run `/level-up` to capture weekly retention discoveries into `vault/Findings.md`.
 
@@ -132,11 +132,11 @@ Brand OS/
 │   ├── index.css                      ← Deterministic 3:4 slide styles (1080 × 1440 px)
 │   └── svg/                           ← Clean vector assets
 │
-└── 🚀 AI Content Manager/             ← THE FACTORY (Deterministic Software Engines)
+└── 🚀 Content Manager/             ← THE FACTORY (Deterministic Software Engines)
     ├── carousel-studio/               ← 3:4 Carousel engine (Playwright + batch_manager.py)
     ├── video-studio/                  ← 9:16 Video engine (HyperFrames + GSAP + Whisper)
     ├── pipeline/                      ← Assembly line & post-processing
-    └── helper/                        ← Funnel automation scripts (Zernio comment-to-DM + Metricool)
+    └── helper/                        ← Funnel & publishing scripts (Zernio comment-to-DM + distribution)
 ```
 
 ---

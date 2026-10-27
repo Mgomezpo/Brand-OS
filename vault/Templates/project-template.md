@@ -14,7 +14,7 @@ tags: [project, content]
 > **Objetivo:** {{OBJETIVO}}  
 > **Ángulo:** {{ANGULO}}  
 > **Línea de diseño / Estética:** [[Conceptos/design_lines/line-{{linea}}|{{linea}}]]  
-> **Carpeta de producción:** `AI Content Manager/pipeline/{{formato}}/{{project}}/`
+> **Carpeta de producción:** `Content Manager/pipeline/{{formato}}/{{project}}/`
 
 ---
 

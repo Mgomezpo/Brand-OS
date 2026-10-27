@@ -29,7 +29,7 @@ tags: [board, content-os]
 
 ## ⏳ Esperando Assets / Fondos IA
 
-## 📢 Funnel & Programación (Zernio / Metricool)
+## 📢 Funnel & Programación (Zernio)
 
 ## ✅ Publicados / Archivo
 

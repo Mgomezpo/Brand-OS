@@ -25,7 +25,7 @@ Performs an exhaustive, 6-axis operational audit of the Brand OS workspace. Awar
 - **Pass criterion:** Safe margins and token hierarchy verified in CSS and render templates.
 
 ### 4. Proof Bank Cross-Referencing (Anti-Hallucination)
-- Inspects all drafts, templates, and batch files in `vault/` and `AI Content Manager/`.
+- Inspects all drafts, templates, and batch files in `vault/` and `Content Manager/`.
 - Extracts every statistic, dollar figure, multiplier, percentage, and case study claim.
 - Cross-references each claim against `vault/Conceptos/proof_bank.md`.
 - **Pass criterion:** Every metric cited has an explicit entry in `proof_bank.md`. Any ungrounded claim is flagged as a high-risk defect.

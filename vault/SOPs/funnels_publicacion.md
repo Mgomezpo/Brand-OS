@@ -1,7 +1,7 @@
 # SOP: Funnels Comment-to-DM & Publicación Multicanal
 
 > **Propósito:** Vincular cualquier pieza (Reel o Carrusel) a un embudo automatizado de DM y programar su publicación.
-> **Herramientas de referencia:** Zernio (DM automation) · Metricool (programación). Reemplazables por {{HERRAMIENTA_DM}} / {{HERRAMIENTA_PUBLICACION}}.
+> **Herramienta canónica:** Zernio (automatización de DM y distribución multicanal). Reemplazable por {{HERRAMIENTA_DM}}.
 
 ---
 
@@ -25,7 +25,7 @@ Keywords y recursos: `Conceptos/identity/offer.md` §2.
 
 ## 2. Paquete de Postprocesado
 
-`AI Content Manager/pipeline/40_postprocessing/<slug>/`
+`Content Manager/pipeline/40_postprocessing/<slug>/`
 
 | Archivo | Contenido |
 | :--- | :--- |

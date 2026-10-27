@@ -1,7 +1,7 @@
 # Matriz Estratégica de Formatos: Reels vs. Carruseles vs. Historias
 
 ---
-**Pilar:** `brain/03_studio/frameworks/`  
+**Pilar:** `vault/Estrategia/Frameworks-de-Guionizacion/`  
 **Propósito:** Definir el rol psicológico, el comportamiento algorítmico y la función de conversión de cada formato en redes sociales (Instagram, TikTok, LinkedIn). Establece cómo se orquestan los formatos para armar una estrategia de contenido coherente sin canibalizar objetivos.  
 ---
 

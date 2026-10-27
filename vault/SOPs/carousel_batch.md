@@ -15,7 +15,7 @@
 2. Proponer al humano 1 ÁNGULO por línea.
 3. 🛑 ESPERAR APROBACIÓN.
 4. Investigar con fuentes fechadas, datos y frameworks.
-5. Guardar en AI Content Manager/pipeline/20_carruseles/<vuelta>/research.md.
+5. Guardar en Content Manager/pipeline/20_carruseles/<vuelta>/research.md.
             │
             ▼
 [FASE 2 · NARRATIVA Y COPY]
@@ -48,7 +48,7 @@
 ## 3. Estructura de Archivos
 
 ```text
-AI Content Manager/pipeline/20_carruseles/<slug>/
+Content Manager/pipeline/20_carruseles/<slug>/
 ├── copy.md          # one-liners, jerarquía y prompts
 ├── assets/          # bg_01.jpg … bg_0N.jpg
 ├── carousel.html    # lienzo con tokens de la línea

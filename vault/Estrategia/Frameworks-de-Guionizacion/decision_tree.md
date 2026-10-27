@@ -58,4 +58,4 @@ Ver [[matriz_de_formatos]].
 1. Validar la voz contra `Conceptos/voice/tone_of_voice.md`.
 2. Verificar que toda cifra exista en `Conceptos/reality/proof_bank.md`.
 3. Gancho en el segundo cero, sin relleno.
-4. Persistir el entregable en `AI Content Manager/pipeline/10_guiones/` o `20_carruseles/`.
+4. Persistir el entregable en `Content Manager/pipeline/10_guiones/` o `20_carruseles/`.

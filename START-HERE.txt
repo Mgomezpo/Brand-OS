@@ -18,8 +18,8 @@ Skills at your command:
 If skills do not appear, verify that you opened the root Brand OS folder (containing AGENTS.md, CLAUDE.md, and README.md), ensure .claude and .agents are present, and restart your agent.
 
 Format Guarantees:
-- Carousels: Canonical 3:4 aspect ratio (1080 x 1440 px) rendered via AI Content Manager/carousel-studio.
-- Shortform Video: Canonical 9:16 aspect ratio (1080 x 1920 px) rendered via AI Content Manager/video-studio.
+- Carousels: Canonical 3:4 aspect ratio (1080 x 1440 px) rendered via Content Manager/carousel-studio.
+- Shortform Video: Canonical 9:16 aspect ratio (1080 x 1920 px) rendered via Content Manager/video-studio.
 - Backgrounds: AI-generated images are 100% clean of text; typography is stamped deterministically in code.
 
 MIT License. Copyright 2026 Brand OS Contributors.

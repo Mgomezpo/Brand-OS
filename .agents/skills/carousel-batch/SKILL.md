@@ -39,11 +39,11 @@ Once the hook is approved, write the slide-by-slide copy strictly adhering to th
    - Prompts must generate background imagery ONLY.
    - Every prompt MUST include: `"pure background texture, minimalist, architectural, ultra high resolution, cinematic lighting, absolutely no text, no letters, no logos, no typography, clean negative space"`.
 2. **HTML/CSS Assembly:**
-   - Map slide copy to the deterministic HTML template in `AI Content Manager/carousel-studio/`.
+   - Map slide copy to the deterministic HTML template in `Content Manager/carousel-studio/`.
    - Ensure 96px padding safe margins on top, bottom, and sides.
 3. **Deterministic Render:**
    - Execute Playwright render script:
      ```bash
-     node "AI Content Manager/carousel-studio/capture.cjs"
+     node "Content Manager/carousel-studio/capture.cjs"
      ```
    - Exports pixel-perfect PNGs at exactly 1080 × 1440 px.

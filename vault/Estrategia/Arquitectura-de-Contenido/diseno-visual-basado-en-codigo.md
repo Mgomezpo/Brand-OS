@@ -51,7 +51,7 @@ Inspirado en la filosofía de {{AGENTE_ESTUDIO}} Rubin, el minimalismo de Apple 
   - **Titulares (`.saas-title`):** `Fraunces`, Serif Humanista (300 a 400), 58px / 64px, letter-spacing -0.025em.
   - **Cuerpo de Texto (`.saas-body`):** `Outfit`, sans-serif moderna cálida a 26px.
   - **Kickers, Sellos y Datos (`.saas-seal-badge`):** `JetBrains Mono` con `letter-spacing: 0.32em` estricto en mayúsculas.
-  - **Anotación Manuscrita de {{AGENTE_ESTUDIO}} (`.saas-rick-note`):** `Reenie Beanie`, cursive a 30px en tono amarillo de nota adhesiva (`#F2D77B`).
+  - **Anotación Manuscrita de {{AGENTE_ESTUDIO}} (`.handwritten-note`):** `Reenie Beanie`, cursive a 30px en tono amarillo de nota adhesiva (`#F2D77B`).
 * **Paneles y Superficies:**
   - Paneles planos con radio 0px (`border-radius: 0px` estricto según DESIGN.md).
   - Borde izquierdo de 4px en carmesí `#9F1522`.

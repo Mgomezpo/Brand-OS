@@ -26,11 +26,11 @@ Brand OS/
 │   ├── index.css              → Deterministic 3:4 slide styles (1080 × 1440 px)
 │   └── svg/                   → Clean vector graphics
 │
-├── 🚀 AI Content Manager/     → CONTENT FACTORY (Engines & Deterministic Automation)
+├── 🚀 Content Manager/         → CONTENT FACTORY (Engines & Deterministic Automation)
 │   ├── carousel-studio/       → 3:4 Carousel engine (Playwright + batch_manager.py)
-│   ├── video-studio/          → 9:16 Video engine (HyperFrames + GSAP + Whisper)
+│   ├── video-studio/          → 9:16 Video engine (HyperFrames + GSAP + ElevenLabs)
 │   ├── pipeline/              → Assembly line (40_postprocessing)
-│   └── helper/                → Funnel automations (Zernio comment-to-DM + Metricool)
+│   └── helper/                → Funnel & distribution (Zernio comment-to-DM)
 │
 ├── ⚙️ connections.md          → Registry of reachable engines, APIs and local renderers
 ├── 📈 EXPANSIONS.md           → Scaling guide: what to add, cadences & anti-patterns

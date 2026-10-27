@@ -15,8 +15,8 @@ La estructura de Brand OS debe operar como un estudio de diseño y producción d
 | `vault/` | Torre de control en Obsidian. Contiene el cerebro de marca, tablero Kanban, bitácora de hallazgos, repositorios, estrategias y SOPs. |
 | `vault/Conceptos/` | Brand Brain unificado: intake, brand core, persona, posicionamiento, oferta, voz, pilares y banco de pruebas. |
 | `design-system/` | Fuente canónica de diseño. Proporciones 3:4 (1080 × 1440 px), tokens CSS, tipografías y vectores limpios. |
-| `AI Content Manager/` | Motores de renderizado y automatización: `carousel-studio/`, `video-studio/`, `pipeline/` y `helper/`. |
-| `connections.md` | Registro de motores y servicios integrados (Playwright, Whisper, Zernio, Metricool). |
+| `Content Manager/` | Motores de renderizado y automatización: `carousel-studio/`, `video-studio/`, `pipeline/` y `helper/`. |
+| `connections.md` | Registro de motores y servicios integrados (Playwright, Whisper, Zernio). |
 | `CLAUDE.md` / `AGENTS.md` | Manuales operativos raíz para Claude Code, Antigravity y Codex. |
 | `.claude/skills/` y `.agents/skills/` | Paquetes de skills: `/brand-onboard`, `/brand-audit`, `/carousel-batch`, `/script-shortform`, `/grill-me`, `/level-up`. |
 
@@ -27,9 +27,9 @@ La estructura de Brand OS debe operar como un estudio de diseño y producción d
 | Superficie | Cuándo agregar | Por qué |
 |---|---|---|
 | `vault/Conceptos/design_lines/` | Tienes 2+ sub-estilos visuales (ej. editorial oscuro, high-contrast minimal, infográfico). | Permite al carrusel alternar paletas de tokens sin romper la grilla 3:4 base. |
-| `AI Content Manager/video-studio/style-library/` | Creas nuevos templates de animación en GSAP o HyperFrames. | Reutilización de transiciones y overlays cinemáticos sin reescribir código. |
+| `Content Manager/video-studio/style-library/` | Creas nuevos templates de animación en GSAP o HyperFrames. | Reutilización de transiciones y overlays cinemáticos sin reescribir código. |
 | `references/case-studies/` | Cierras clientes o acumulas métricas de retención sobresalientes. | Nutre directamente a `vault/Conceptos/proof_bank.md` para respaldar copies con datos duros. |
-| `brands/{cliente-id}/` | Operas como agencia gestionando múltiples marcas. | Arquitectura multitenant: cada cliente tiene su propio `vault/` aislado compartiendo los motores de `AI Content Manager/`. |
+| `brands/{cliente-id}/` | Operas como agencia gestionando múltiples marcas. | Arquitectura multitenant: cada cliente tiene su propio `vault/` aislado compartiendo los motores de `Content Manager/`. |
 | `references/{tool}-api.md` | Integras una nueva API de redes, webhook de ManyChat o conector MCP. | Documentación técnica investigada una sola vez (`vault/Repos.md`). |
 | `audits/` | Se generan reportes automáticos al ejecutar `/brand-audit`. | Bitácora de calidad, verificación de márgenes seguros y cumplimiento de ratios. |
 
@@ -46,7 +46,7 @@ La estructura de Brand OS debe operar como un estudio de diseño y producción d
 
 ## 🚫 Anti-patrones (Qué NO hacer)
 
-- **Prohibido guardar renders pesados en `vault/`:** Los MP4 finales y lotes de PNGs van en `AI Content Manager/` o almacenamiento en la nube; el vault es 100% Markdown liviano.
+- **Prohibido guardar renders pesados en `vault/`:** Los MP4 finales y lotes de PNGs van en `Content Manager/` o almacenamiento en la nube; el vault es 100% Markdown liviano.
 - **Prohibido romper la proporción 3:4 en carruseles:** No uses formatos 4:5 (1080 × 1350 px) ni cuadrados. La norma universal de Brand OS es 1080 × 1440 px.
 - **Prohibido solicitar texto en imágenes de IA:** Los fondos se generan 100% limpios de letras y logos. La tipografía siempre se estampa en HTML/CSS determinista.
 - **Prohibido inventar datos en los guiones:** Todo número citado debe existir previamente en `vault/Conceptos/proof_bank.md`.

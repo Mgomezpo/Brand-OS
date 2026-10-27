@@ -28,11 +28,11 @@ Brand OS/
 │   ├── index.css              → Estilos deterministas de diapositivas 3:4 (1080 × 1440 px)
 │   └── svg/                   → Gráficos vectoriales limpios
 │
-├── 🚀 AI Content Manager/     → LA FÁBRICA DE CONTENIDOS (Engines y Software Determinista)
+├── 🚀 Content Manager/         → LA FÁBRICA DE CONTENIDOS (Engines y Software Determinista)
 │   ├── carousel-studio/       → Estudio de carruseles 3:4 (Playwright + batch_manager.py)
-│   ├── video-studio/          → Estudio de video 9:16 (HyperFrames + GSAP + Whisper)
+│   ├── video-studio/          → Estudio de video 9:16 (HyperFrames + GSAP + ElevenLabs)
 │   ├── pipeline/              → Mesa de ensamblaje transversal (40_postprocessing)
-│   └── helper/                → Embudos transversales (Zernio comment-to-DM + Metricool)
+│   └── helper/                → Embudos transversales (Zernio comment-to-DM)
 │
 ├── ⚙️ connections.md          → Registro de motores, APIs y renderizadores alcanzables
 ├── 📈 EXPANSIONS.md           → Guía de escala: qué agregar, cadencias y anti-patrones

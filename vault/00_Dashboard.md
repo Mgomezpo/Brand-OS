@@ -17,7 +17,7 @@ marca: "{{NOMBRE_MARCA}}"
 | **🎠 Carruseles en Lote (3:4)** | [[SOPs/carousel_batch|🎠 SOP: Batch de Carruseles]] | Rotación pentagonal, proporción 3:4 y compilación Playwright |
 | **🎠 Anatomía Editorial (3:4)** | [[SOPs/carousels|📐 SOP: Carruseles Editoriales]] | Fórmula de 7 slides, Hero Cover y caption en 4 bloques |
 | **🎯 Catálogo de Hooks** | [[SOPs/hooks|🎯 SOP: Hooks Maestros]] | 6 arquetipos neurocognitivos (<12 palabras) y filtros anti-cliché |
-| **📢 Embudos & Automatización** | [[SOPs/funnels_publicacion|📢 SOP: Embudos Zernio & Metricool]] | Triggers comment-to-DM con keyword y programación multicanal |
+| **📢 Embudos & Automatización** | [[SOPs/funnels_publicacion|📢 SOP: Embudos y Publicación Zernio]] | Triggers comment-to-DM con keyword y programación multicanal |
 | **📅 Protocolo de Grabación** | [[SOPs/production_protocol|📅 SOP: Batching y Cadencia]] | Grabación en bloque semanal y calendario de publicaciones |
 | **🔬 Ingesta de Referentes** | [[SOPs/ritual_ingesta_semanal|🔬 SOP: Ritual Semanal de Ingesta]] | Monitoreo y deconstrucción de creadores de alta señal |
 | **📊 Métricas y Feedback** | [[SOPs/metrics_rules|📊 SOP: Reglas de Métricas]] | Hook Rate >60%, Saves >6% y diagnóstico de caídas narrativas |

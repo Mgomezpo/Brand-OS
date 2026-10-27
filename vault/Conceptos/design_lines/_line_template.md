@@ -64,4 +64,4 @@
 ---
 
 ## 5. Proyectos Producidos en esta Línea
-- [[AI Content Manager/pipeline/20_carruseles/{{slug}}/copy|{{slug}}]] — {{descripcion}}
+- [[Content Manager/pipeline/20_carruseles/{{slug}}/copy|{{slug}}]] — {{descripcion}}
