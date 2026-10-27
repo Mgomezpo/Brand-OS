@@ -31,7 +31,7 @@ Brand OS/
 ├── 🚀 Content Manager/         → LA FÁBRICA DE CONTENIDOS (Engines y Software Determinista)
 │   ├── carousel-studio/       → Estudio de carruseles 3:4 (Playwright + batch_manager.py)
 │   ├── video-studio/          → Estudio de video 9:16 (HyperFrames + GSAP + ElevenLabs)
-│   ├── pipeline/              → Mesa de ensamblaje transversal (40_postprocessing)
+│   ├── pipeline/              → Mesa de publicación transversal (40_postprocessing → Zernio)
 │   └── helper/                → Embudos transversales (Zernio comment-to-DM)
 │
 ├── ⚙️ connections.md          → Registro de motores, APIs y renderizadores alcanzables

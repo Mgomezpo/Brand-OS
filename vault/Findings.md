@@ -5,7 +5,7 @@ tags: [findings, learning]
 # Findings de Contenido y Negocio
 
 > Log corrido de aprendizajes de **negocio/contenido** para {{NOMBRE_MARCA}} (qué funcionó, qué no, por red, reacción de audiencia, anomalías de retención).
-> Para aprendizajes técnicos/creativos de producción de video, consultar la bitácora técnica de producción.
+> Para aprendizajes técnicos/creativos de producción de video, consultar la bitácora técnica: `Content Manager/video-studio/docs/LEARNINGS.md`.
 
 Formato por entrada: fecha, red(es), qué se observó, qué vamos a probar distinto.
 
