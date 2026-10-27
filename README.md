@@ -2,7 +2,7 @@
 
 A complete, MIT-licensed starter kit and production factory that turns Claude Code, Codex, or Antigravity into your personal **Brand Operating System (Brand OS)**. Audience: creators, founders, marketing engineers, B2B consultants, and creative agencies building compounding brand authority.
 
-Brand OS personalizes itself to your brand via the `/brand-onboard` wizard. Use `/grill-me` whenever you need to stress-test a raw concept or contrarian angle. Use `/carousel-batch` to produce pixel-perfect **3:4 carousels (1080 × 1440 px)** in 3 decoupled phases, `/script-shortform` to generate high-retention **9:16 shortform video scripts (1080 × 1920 px)**, `/brand-audit` to verify aspect ratios and proof citations, and `/level-up` to turn weekly retention metrics into compounding brand intelligence.
+Start with the `/using-brand-os-skills` guide — it maps the whole system and routes every task. Brand OS personalizes itself to your brand via the `/brand-onboard` wizard. Use `/grill-me` whenever you need to stress-test a raw concept or contrarian angle. Use the resident skill `carousel-batch` inside `Content Manager/carousel-studio/` to produce pixel-perfect **3:4 carousels (1080 × 1440 px)** in 3 decoupled phases, `/script-shortform` to generate high-retention **9:16 shortform video scripts (1080 × 1920 px)**, `/brand-audit` to verify aspect ratios and proof citations, and `/level-up` to turn weekly retention metrics into compounding brand intelligence.
 
 > **Brand OS** bridges the gap between high-level brand strategy and deterministic code execution. Obsidian acts as the cognitive control tower (`vault/`), a deterministic CSS design system guarantees visual standards (`design-system/`), and headless engines (`Content Manager/`) render publication-ready assets with mathematical precision.
 
@@ -70,7 +70,7 @@ The kit includes setup, production engines, adversarial testing, quality audits,
 |---|---|---|
 | `/brand-onboard` | Setup wizard (one-time) | Day 1, immediately after clone. 8-block intake interview (Block 8 designs and wires the whole design system). Populates `vault/Conceptos/` + `design-system/` and customizes all manuals. |
 | `/brand-audit` | Evidence-based integrity check | Weekly or before batching. Verifies strict 3:4 and 9:16 ratios, 96px safe margins, proof citations, zero broken links, and saves a dated report in `audits/`. |
-| `/carousel-batch` | 3-phase production engine | Weekly batch day. Guides topic selection, writes 5-8 punchy slides, outputs text-free AI prompts, and triggers Playwright render. |
+| `/carousel-batch` | Resident skill of `Content Manager/carousel-studio/` — 3-phase production engine | Weekly batch day, in a session opened inside the studio. Canon: `vault/SOPs/carousel_batch.md` + `carousels.md`. Guides topic selection, writes the canonical 7 slides, outputs text-free AI prompts per design line, and triggers Playwright render (canvas 1080 × 1440, export 2×). |
 | `/script-shortform` | 4-movement video script generator | For Reels/TikTok/Shorts. Hook <12 words, tension, unique mechanism, and CTA with visual directions and sound cues. |
 | `/grill-me` | Adversarial context interview | Before drafting. Stress-tests ideas, angles, and contrarian beliefs against the Brand Brain. Saves captures in `brainstorms/`. |
 | `/level-up` | Weekly calibration loop | Weekly retro. Turns published metrics and audience comments into permanent learnings in `vault/Findings.md` and `vault/Repos.md`. |
@@ -107,9 +107,9 @@ Brand OS/
 ├── .gitignore                         ← Excludes private captures, heavy media & node_modules
 │
 ├── .claude/skills/                    ← Interactive skills for Claude Code
+│   ├── using-brand-os-skills/         ← Orchestration guide (start here)
 │   ├── brand-onboard/
 │   ├── brand-audit/
-│   ├── carousel-batch/
 │   ├── script-shortform/
 │   ├── grill-me/
 │   └── level-up/

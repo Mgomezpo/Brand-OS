@@ -15,10 +15,10 @@ La estructura de Brand OS debe operar como un estudio de diseño y producción d
 | `vault/` | Torre de control en Obsidian. Contiene el cerebro de marca, tablero Kanban, bitácora de hallazgos, repositorios, estrategias y SOPs. |
 | `vault/Conceptos/` | Brand Brain unificado: intake, brand core, persona, posicionamiento, oferta, voz, pilares y banco de pruebas. |
 | `design-system/` | Fuente canónica de diseño. Proporciones 3:4 (1080 × 1440 px), tokens CSS, tipografías y vectores limpios. |
-| `Content Manager/` | Motores de renderizado y automatización: `carousel-studio/`, `video-studio/`, `pipeline/` y `helper/`. |
-| `connections.md` | Registro de motores y servicios integrados (Playwright, Whisper, Zernio). |
+| `Content Manager/` | Motores de renderizado y automatización: `carousel-studio/`, `video-studio/`, `postprocessing/` y `helper/`. |
+| `connections.md` | Registro de motores y servicios integrados (Playwright, ElevenLabs Scribe, Zernio). |
 | `CLAUDE.md` / `AGENTS.md` | Manuales operativos raíz para Claude Code, Antigravity y Codex. |
-| `.claude/skills/` y `.agents/skills/` | Paquetes de skills: `/brand-onboard`, `/brand-audit`, `/carousel-batch`, `/script-shortform`, `/grill-me`, `/level-up`. |
+| `.claude/skills/` y `.agents/skills/` | Guía orquestadora `/using-brand-os-skills` + skills de marca: `/brand-onboard`, `/brand-audit`, `/script-shortform`, `/grill-me`, `/level-up`. La skill `/carousel-batch` vive **residente** en `Content Manager/carousel-studio/.claude/skills/`. |
 
 ---
 

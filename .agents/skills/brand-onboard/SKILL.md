@@ -92,4 +92,4 @@ When all 8 blocks are confirmed:
 
 **The Wow Moment:** Prompt the user:
 
-> *"Tu Brand Brain está completo, tu sistema de diseño es tuyo y único, y cada carrusel 3:4 y cada video 9:16 ya saldrá con tu paleta y tus fuentes. ¿Listo para producir? Escribe `/carousel-batch` para compilar tus primeros 5 carruseles 3:4 o `/script-shortform` para redactar tu primer guion 9:16."*
+> *"Tu Brand Brain está completo, tu sistema de diseño es tuyo y único, y cada carrusel 3:4 y cada video 9:16 ya saldrá con tu paleta y tus fuentes. ¿Listo para producir? Abre sesión en `Content Manager/carousel-studio/` y usa su skill residente `/carousel-batch` para compilar tus primeros 5 carruseles 3:4, o escribe `/script-shortform` para redactar tu primer guion 9:16."*

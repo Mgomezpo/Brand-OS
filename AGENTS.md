@@ -89,9 +89,10 @@ Ejecuta estas skills en Claude Code, Codex o Antigravity:
 
 | Skill | Descripción | Cuándo ejecutar |
 |---|---|---|
+| `/using-brand-os-skills` | **Guía de orquestación del OS**: mapa de anillos (vault, design-system, studios), lectura del Brand Brain y router de tareas | **Siempre** — es la entrada al sistema. Cárgala antes de producir contenido o con un OS recién clonado. |
 | `/brand-onboard` | Asistente de intake de marca en 8 bloques (incluye generar el **Sistema de Diseño** sin pedir HEX) | Día 1, o al pivotar el posicionamiento. Puebla `vault/Conceptos/` y enchufa `design-system/` a los dos motores. |
 | `/brand-audit` | Auditoría de integridad, ratios y márgenes | Tras el setup, semanalmente o antes de compilar. Verifica 3:4, 9:16, márgenes de 96px, pruebas reales y enlaces wiki. |
-| `/carousel-batch` | Motor de producción de carruseles 3:4 en 3 fases | Producción semanal. Genera 5 carruseles 3:4 deterministas (1080 × 1440 px). |
+| `/carousel-batch` | Skill **residente de `carousel-studio`**: operador del batch 3:4 (el canon son los SOPs del vault) | Producción semanal, abriendo sesión en `Content Manager/carousel-studio/`. Produce 5 carruseles 3:4 (canvas 1080 × 1440 px, export 2× = 2160 × 2880). |
 | `/script-shortform` | Generador de guiones de video 9:16 de alta retención | Para Reels/TikTok/Shorts. 4 movimientos (hook <12 palabras, tensión, mecanismo, CTA) con direcciones visuales. |
 | `/grill-me` | Entrevista adversarial de contexto | Antes de redactar contenido. Pone a prueba ángulos y creencias contrarias contra el Brand Core. |
 | `/level-up` | Loop de calibración semanal y aprendizajes | Retro semanal. Actualiza `vault/Findings.md` con retención y `vault/Repos.md` con hallazgos técnicos. |
