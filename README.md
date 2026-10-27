@@ -14,7 +14,7 @@ Start with the `/using-brand-os-skills` guide — it maps the whole system and r
 
 ## 🎯 The Litmus Test
 
-> **"While you're not at your desk, your Brand OS takes one raw idea, seeds it into your brand brain, routes it through proven cognitive frameworks, and compiles a pixel-perfect 3:4 carousel and 9:16 video script faster and more consistently than you'd produce yourself."**
+> **"In one operator session, your Brand OS takes one raw idea, seeds it into your brand brain, routes it through proven cognitive frameworks, and compiles a pixel-perfect 3:4 carousel and 9:16 video script — faster and more consistently than you'd produce yourself. The system compiles; you approve."**
 
 Every design decision, token, and SOP in this kit rolls up to that test. If a layer or script doesn't contribute to producing repeatable authority content, it doesn't ship.
 
