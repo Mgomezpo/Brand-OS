@@ -10,7 +10,7 @@ Conducts an interactive, structured 8-block interview to extract the complete Br
 1. `brand_core.md` (Mission, archetype, contrarian beliefs, brand narrative)
 2. `user_persona.md` (Target audience, the daily scene of pain, micro-frustrations)
 3. `positioning.md` (Category, enemy, unique mechanism, unfair advantage)
-4. `offer.md` (Core offer, deliverables, pricing tier, DM funnel keyword)
+4. `offer.md` (Core offer, deliverables, pricing tier)
 5. `tone_of_voice.md` (Communication registers, vocabulary rules, forbidden AI-slop blacklist)
 6. `content_pillars.md` (The 4 content lines, weekly rotation schedule, ratio)
 7. `proof_bank.md` (Verified metrics, client case studies, data points, testimonials)
@@ -37,10 +37,11 @@ Ask **one question at a time**. Never overwhelm the user by dumping all blocks a
 - ¿En qué categoría juegas y quién es tu "enemigo común" (una mentalidad obsoleta, una práctica tóxica de la industria o un falso gurú)?
 - ¿Cuál es tu Mecanismo Único (el método, sistema o framework propio con nombre memorable que resuelve el problema)?
 
-### Block 4: Oferta y Embudo de Conversión
+### Block 4: Oferta
 - ¿Qué vendes concretamente (mentoría, consultoría, software, curso, producto de alta gama)?
-- ¿Cuál es tu palabra clave para el embudo de comentarios a DM (ej. "SISTEMA", "AUDITORIA", "GROWTH")?
-- ¿Qué lead magnet o activo de alto valor reciben al enviar esa palabra?
+- ¿Cuál es el entregable principal y el rango de precio o nivel de la oferta?
+
+> No preguntes por CTA, palabra clave de DM ni lead magnet: eso se define después, en la mesa de publicación (`vault/SOPs/funnels_publicacion.md`).
 
 ### Block 5: Tono de Voz y Lista Negra Anti-AI-Slop
 - Pega 1 o 2 textos reales que hayas escrito (posts, emails o guiones) que representen tu tono natural.

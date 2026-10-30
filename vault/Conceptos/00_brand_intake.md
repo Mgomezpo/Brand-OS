@@ -30,10 +30,10 @@ status: pendiente
 12. Mecanismo único con nombre memorable (el "cómo" propietario).
 13. Contra qué alternativas compite (incluida "no hacer nada").
 
-## Bloque 4 · Oferta y Embudo → `Conceptos/offer.md`
-14. Qué vende exactamente (producto/servicio, precio, formato de entrega).
-15. Keyword de DM para el funnel de comentarios (ej. `SISTEMA`, `AUDITORIA`).
-16. Lead magnet o activo que reciben al enviar la palabra.
+## Bloque 4 · Oferta → `Conceptos/offer.md`
+14. Qué vende exactamente (producto/servicio, formato de entrega).
+15. Entregable principal y rango de precio o nivel de la oferta.
+16. Qué incluye y qué NO incluye la oferta.
 
 ## Bloque 5 · Voz → `Conceptos/tone_of_voice.md`
 17. Idioma, país/región y trato (tú / vos / usted).
